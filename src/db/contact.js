@@ -32,7 +32,7 @@ const contactInfo = [
 		id: 4,
 		iconId: 4,
 		title: "Instagram",
-		numberOrId: "@rodrigomnd",
+		numberOrId: "@rodrigocvmd",
 		href: "https://www.instagram.com/rodrigomnd/",
 	},
 	{
