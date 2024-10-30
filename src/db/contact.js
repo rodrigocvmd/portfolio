@@ -3,14 +3,14 @@ const contactInfo = [
 		id: 0,
 		iconId: 0,
 		title: "Email",
-		numberOrId: "rodricarvalhom@gmail.com",
-		href: "mailto:rodricarvalhom@gmail.com",
+		numberOrId: "rodrigocvmd@gmail.com",
+		href: "mailto:rodrigocvmd@gmail.com",
 	},
 	{
 		id: 1,
 		iconId: 1,
 		title: "Linkedin",
-		numberOrId: "/in/rodricarvalho/",
+		numberOrId: "/in/rodrigocvmd/",
 		href: "https://www.linkedin.com/in/rodricarvalho/",
 	},
 	{
@@ -24,8 +24,8 @@ const contactInfo = [
 		id: 3,
 		iconId: 3,
 		title: "GitHub",
-		numberOrId: "rodri-carvalho",
-		href: "https://github.com/rodri-carvalho",
+		numberOrId: "rodrigocvmd",
+		href: "https://github.com/rodrigocvmd",
 	},
 
 	{
@@ -39,7 +39,7 @@ const contactInfo = [
 		id: 5,
 		iconId: 5,
 		title: "Discord",
-		numberOrId: "@rodri_carvalho",
+		numberOrId: "@rodrigocvmd",
 		href: "https://discordapp.com/users/1067993447706931243",
 	},
 ];

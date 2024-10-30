@@ -21,7 +21,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 		if (modal) {
 			modal.showModal();
 
-			// Garantir que o modal abra no topo
+			// Abrir o modal abra no topo
 			requestAnimationFrame(() => {
 				const modalBox = modal.querySelector(".modal-box");
 				if (modalBox) {
@@ -32,7 +32,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 		}
 	};
 
-	// Função para fechar o modal ao clicar fora dele
+	// Fechar o modal ao clicar fora dele
 	const handleOutsideClick = (e) => {
 		const modal = document.getElementById(modalId);
 		if (e.target === modal) {
@@ -40,7 +40,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 		}
 	};
 
-	// Função para esconder a seta ao scrollar
+	// Esconder a seta ao scrollar
 	const handleScroll = (e) => {
 		const scrollTop = e.target.scrollTop;
 		if (scrollTop > 10 && arrowVisible) {
@@ -48,7 +48,7 @@ function KnowledgeCard({ iconId, techId, inProgress, techList }) {
 		}
 	};
 
-	// Limpa o evento scroll quando o modal é fechado
+	// Limpar o evento scroll quando o modal é fechado
 	useEffect(() => {
 		const modal = document.getElementById(modalId);
 		return () => {

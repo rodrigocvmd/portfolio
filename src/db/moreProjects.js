@@ -98,7 +98,7 @@ const moreProjects = [
 		title: "Contador de Status",
 		projectURL: "https://incrementing-counter-five.vercel.app/",
 		projectPic: "/assets/pics/projects/other-projects/counter.jpg",
-		description:
+		description:	
 			"Contador automático de status gerais de redes sociais (seguidores, inscritos, etc) que é iterado simultânea e proporcionalmente até que todos os contadores atinjam, juntos, o número atual a ser apresentado.",
 	},
 	{
