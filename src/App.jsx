@@ -22,10 +22,10 @@ function App() {
 
 	return (
 		<Router>
-			<div className="flex flex-col w-full min-h-screen overflow-x-hidden bg-primary">
+			<div className="flex flex-col w-full min-h-screen overflow-x-hidden bg-gradient-to-r from-primary to-zinc-500">
 				<Navbar />
 
-				<main className="w-full bg-primary h-full flex flex-grow justify-center">
+				<main className="w-full bg-gradient-to-r from-primary to-zinc-500 base-100 h-full flex flex-grow justify-center">
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
