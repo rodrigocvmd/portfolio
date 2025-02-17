@@ -159,7 +159,7 @@ const courses = [
 			"Boas práticas para desenvolvimento seguro e eficiente",
 			"Resolução de problemas com TypeScript em projetos reais",
 		],
-		pic: "/assets/pics/logos/ts2.png",
+		pic: "/assets/pics/logos/typescript2.png",
 		inProgress: true,
 		certificate: "",
 		uniqueCertificate: true,
@@ -223,7 +223,7 @@ const courses = [
 		],
 		pic: "/assets/pics/logos/typescript.jpg",
 		inProgress: false,
-		certificate: "/assets/pics/certificates/courses/c-ts",
+		certificate: "/assets/pics/certificates/courses/c-ts.jpg",
 		uniqueCertificate: true,
 	},
 	{
