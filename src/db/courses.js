@@ -131,7 +131,7 @@ const courses = [
 			"Boas práticas de programação em Java",
 			"Resolução de problemas com mais de 100 exercícios práticos",
 		],
-		pic: "/assets/pics/logos/java2.jpg",
+		pic: "/assets/pics/logos/java.jpg",
 		inProgress: true,
 		certificate: "",
 		uniqueCertificate: true,
