@@ -31,7 +31,7 @@ function Navbar({ title = "Portfólio" }) {
 	};
 
 	return (
-		<nav className="navbar text-neutral-content w-full bg-secondary 4xs:py-5 2xs:py-5 lg:py-7 xl:py-8 2xl:py-9 3xl:py-12 mb-3 !shadow-lg">
+		<nav className="navbar text-neutral-content w-full bg-secondary 4xs:py-5 2xs:py-5 lg:py-7 xl:py-8 2xl:py-9 3xl:py-12 !shadow-lg">
 			<div className="w-full">
 				<div className="flex-none px-1 2xs:ml-4 lg:ml-7">
 					<Link

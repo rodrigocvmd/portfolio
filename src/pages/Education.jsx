@@ -43,7 +43,7 @@ function Education() {
 
 	return (
 		<>
-			<div className="flex flex-col w-full justify-evenly items-center my-1 mx-3 2xs:mx-6 sm:mx-7 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-14 3xl:mx-24 2xs:my-2 sm:my-3 lg:my-4 xl:my-5 2xl:my-6 3xl:my-10 gap-1 5xs:gap-2 3xs:gap-3 2xs:gap-4 xs:gap-4 sm:gap-5 lg:gap-6 xl:gap-7 2xl:gap-10 3xl:gap-14">
+			<div className="flex flex-col w-full justify-evenly items-center mx-3 2xs:mx-6 sm:mx-7 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-14 3xl:mx-24 mb-1 mt-4 2xs:mb-2 2xs:mt-5 sm:mb-3 sm:mt-6 lg:mb-4 lg:mt-7 xl:mb-5 xl:mt-8 2xl:mb-6 2xl:mt-9 3xl:mb-10 3xl:mt-13 gap-1 5xs:gap-2 3xs:gap-3 2xs:gap-4 xs:gap-4 sm:gap-5 lg:gap-6 xl:gap-7 2xl:gap-10 3xl:gap-14">
 				<div
 					ref={formacaoAcademicaRef}
 					className={`collapse collapse-plus xl:py-4 3xl:py-8 bg-accent shadow-2xl ${

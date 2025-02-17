@@ -17,7 +17,7 @@ function About() {
 	};
 
 	return (
-		<div className="flex items-center justify-center py-6 px-3 2xs:px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 bg-accent w-11/12 lg:w-10/12 rounded-xl sm:mt-3 2xl:mt-8 3xl:mt-10 mb-5 sm:mb-7 !shadow-2xl">
+		<div className="flex items-center justify-center py-6 px-3 2xs:px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 bg-accent w-11/12 lg:w-10/12 rounded-xl sm:mt-6 2xl:mt-11 3xl:mt-13 mb-5 sm:mb-7 !shadow-2xl">
 			<div className="flex flex-col items-center w-full md:mt-4 lg:mt-6 xl:mt-8 2xl:mt-12 3xl:mt-16 text-base-100">
 				<div className="info flex items-center 2xs:gap-8 sm:gap-12 md:gap-20 xl:gap-24 2xl:gap-28 3xl:gap-40 mx-2">
 					<div className="titulo-nome text-center flex flex-col items-center mx-4 2xs:gap-2 sm:gap-3 md:gap-4 2xl:gap-6 3xl:gap-8">
