@@ -8,7 +8,7 @@ import {
 	SiTypescript,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGit, FaGithub } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGit, FaGithub, FaJava } from "react-icons/fa";
 
 const techItems = [
 	{
@@ -123,6 +123,14 @@ const techItems = [
 		techList:
 			"Seletores e Especificidade; Box Model (margem, borda, padding, conteúdo); Layouts com Flexbox e Grid; Propriedades de Layout (display, position, float); Estilização de Tipografia; Cores e Gradientes (rgba, hsla, gradientes lineares e radiais); Transições e Animações; Transformações 2D e 3D (rotate, scale, translate); Media Queries e Design Responsivo; Pseudo-classes (:nth-child, :first-child, :last:child, etc.); Pseudo-elementos (::before, ::after, etc.); Estilização de Formulários (input, select, textarea); Custom Properties (Variáveis CSS); Customização de Listas e Tabelas; Web Fonts (Google Fonts, @font-face, @font-awesome); Layouts Avançados com Grid e Flexbox; Manipulação de Opacidade e Visibilidade; Backgrounds (background-image, background-position);",
 	},
+	{
+		iconId: 15,
+		techId: 15,
+		title: "JAVA",
+		inProgress: true,
+		techList:
+			"Fundamentos da Linguagem (variáveis, loops, arrays); POO (classes, objetos, herança, polimorfismo); Enums e Interfaces; Coleções (List, Set, Map); Exceções (try, catch, throw); Lambda e Streams API; Threads e Concorrência; Manipulação de Arquivos (IO/NIO); JDBC e Banco de Dados; JPA e Hibernate; Desenvolvimento Web com Spring Boot; Android com Java; Testes e Automação (JUnit, Mockito, Selenium); Modularização (Maven, Gradle); Gestão de Memória e Garbage Collection; API de Datas (LocalDate, ZonedDateTime); JSON e XML (Jackson, Gson); Boas Práticas (SOLID, Clean Code, Design Patterns); Resolução de Problemas e Projetos Práticos.",
+	},
 ];
 
 const iconMap = {
@@ -140,6 +148,7 @@ const iconMap = {
 	12: FaGithub,
 	13: FaHtml5,
 	14: FaCss3Alt,
+	15: FaJava,
 };
 
 const techMap = {
@@ -157,6 +166,7 @@ const techMap = {
 	12: "GitHub",
 	13: "HTML5",
 	14: "CSS3",
+	15: "Java",
 };
 
 export default techItems;
