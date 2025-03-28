@@ -2,8 +2,8 @@ const projects = [
 	{
 		id: 0,
 		title: "Marketplace de Imóveis",
-		projectURL: "https://maketplace-de-imoveis.vercel.app/",
-		repoURL: "https://github.com/rodri-carvalho/maketplace-de-imoveis",
+		projectURL: "https://makertplace-de-imoveis.vercel.app/",
+		repoURL: "https://github.com/rodri-carvalho/marketplace-de-imoveis",
 		projectPic: "/assets/pics/projects/house-marketplace.jpg",
 		description: [
 			"Projeto React de um Marketplace de imóveis completo que permite a autenticação, criação, edição e visualização de anúncios. Foram combinadas diversas tecnologias e práticas modernas para criar uma aplicação web rica e funcional. Utilizando Tailwind CSS com DaisyUI para estilização, o projeto oferece uma interface limpa e responsiva, adaptável a diferentes dispositivos. A autenticação e o gerenciamento de usuários são realizados através do Firebase Authentication, integrando tanto o login tradicional por email e senha quanto o login via OAuth com Google, além de proteger rotas específicas com componentes customizados como o PrivateRoute. A exibição dinâmica de conteúdos, como o slider de itens recomendados, é implementada utilizando a biblioteca Swiper, criando uma experiência interativa para o usuário.",
