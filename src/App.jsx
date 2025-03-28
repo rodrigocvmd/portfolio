@@ -9,6 +9,7 @@ import Projects from "./pages/Projects";
 import Knowledge from "./pages/Knowledge";
 import Education from "./pages/Education";
 import FindMe from "./pages/FindMe";
+import Maintenance from "./pages/Maintenance";
 
 function App() {
 	useEffect(() => {
@@ -29,11 +30,12 @@ function App() {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/about" element={<About />} />
-						<Route path="/projects" element={<Projects />} />
+						<Route path="/projects" element={<Maintenance />} />
 						<Route path="/knowledge" element={<Knowledge />} />
 						<Route path="/education" element={<Education />} />
 						<Route path="/findme" element={<FindMe />} />
 						<Route path="/notfound" element={<NotFound />} />
+						<Route path="/maintenance" element={<Maintenance />} />
 						<Route path="/*" element={<NotFound />} />
 					</Routes>
 				</main>

@@ -1,14 +1,14 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-function NotFound() {
+function Maintenance() {
 	return (
 		<div className="flex flex-col justify-center items-center">
 			<h1 className="text-2xl 4xs:text-3xl 2xs:text-4xl sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl 3xl:text-7xl 6xs:mb-2 2xs:mb-3 lg:mb-5 2xl:mb-8  mt-3">
-				Página não encontrada
+				Seção em breve manutenção
 			</h1>
 			<p className="text-2xl 4xs:text-3xl 2xs:text-4xl sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl 3xl:text-7xl">
-				: /
+				= )
 			</p>
 
 			<Link
@@ -25,4 +25,4 @@ function NotFound() {
 	);
 }
 
-export default NotFound;
+export default Maintenance;

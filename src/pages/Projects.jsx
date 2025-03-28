@@ -55,7 +55,7 @@ function Projects() {
 				/>
 			))}
 
-			<div
+			{/* <div
 				ref={moreProjectsRef}
 				className={`collapse collapse-plus bg-accent mt-1 !shadow-2xl col-span-2 ${
 					isMoreProjects ? "collapse-open" : ""
@@ -98,7 +98,7 @@ function Projects() {
 						</div>
 					)}
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
