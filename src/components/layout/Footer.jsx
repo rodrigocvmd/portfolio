@@ -106,7 +106,7 @@ function Footer() {
 				<p>
 					Código do projeto deste Portfólio diponível no{" "}
 					<a
-						href="https://github.com/rodri-carvalho/portfolio"
+						href="https://github.com/rodrigocvmd/portfolio"
 						target="_blank"
 						className="text-base-100 botaoIcone">
 						GitHub

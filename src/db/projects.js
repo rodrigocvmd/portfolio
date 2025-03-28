@@ -2,8 +2,8 @@ const projects = [
 	{
 		id: 0,
 		title: "Marketplace de Imóveis",
-		projectURL: "https://makertplace-de-imoveis.vercel.app/",
-		repoURL: "https://github.com/rodri-carvalho/marketplace-de-imoveis",
+		projectURL: "https://marketplace-de-imoveis.vercel.app/",
+		repoURL: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
 		projectPic: "/assets/pics/projects/house-marketplace.jpg",
 		description: [
 			"Projeto React de um Marketplace de imóveis completo que permite a autenticação, criação, edição e visualização de anúncios. Foram combinadas diversas tecnologias e práticas modernas para criar uma aplicação web rica e funcional. Utilizando Tailwind CSS com DaisyUI para estilização, o projeto oferece uma interface limpa e responsiva, adaptável a diferentes dispositivos. A autenticação e o gerenciamento de usuários são realizados através do Firebase Authentication, integrando tanto o login tradicional por email e senha quanto o login via OAuth com Google, além de proteger rotas específicas com componentes customizados como o PrivateRoute. A exibição dinâmica de conteúdos, como o slider de itens recomendados, é implementada utilizando a biblioteca Swiper, criando uma experiência interativa para o usuário.",
@@ -15,7 +15,7 @@ const projects = [
 		id: 1,
 		title: "Suporte ao Usuário",
 		projectURL: "https://suporte-ao-usuario.onrender.com/",
-		repoURL: "https://github.com/rodri-carvalho/suporte-ao-usuario",
+		repoURL: "https://github.com/rodrigocvmd/suporte-ao-usuario",
 		projectPic: "/assets/pics/projects/suporte-ao-usuario.jpg",
 		description: [
 			"Este projeto destaca-se pelo desenvolvimento de um backend robusto e eficiente, responsável por gerenciar toda a lógica de suporte ao usuário, abertura e acompanhamento de tickets/ocorrências e seus respectivos estados de resolução. A criação e integração de uma API RESTful foram essenciais para garantir uma comunicação fluida entre o frontend e o backend, proporcionando operações seguras e em tempo real. O sistema de autenticação foi desenvolvido utilizando JWT (JSON Web Tokens), garantindo que cada solicitação enviada pelos usuários estivesse devidamente autenticada e autorizada. Além disso, as rotas protegidas, gerenciadas pelo backend, asseguram que apenas usuários autenticados possam acessar áreas sensíveis da aplicação, garantindo a segurança e integridade dos dados.",
@@ -27,7 +27,7 @@ const projects = [
 		id: 2,
 		title: "Buscador GitHub",
 		projectURL: "https://buscador-github-seven.vercel.app/",
-		repoURL: "https://github.com/rodri-carvalho/buscador-github",
+		repoURL: "https://github.com/rodrigocvmd/buscador-github",
 		projectPic: "/assets/pics/projects/buscador-github.jpg",
 		description: [
 			"Neste projeto, fiz uso do React Router para permitir uma navegação fluida entre as diferentes páginas, facilitando a busca e exibição de perfis e repositórios do GitHub através de integração com a API oficial. O backend desempenha um papel crucial ao lidar com requisições assíncronas, possibilitando a recuperação de dados de usuários e suas contribuições, enquanto permite o direcionamento para perfis e repositórios de maneira eficiente. A solução implementada não apenas oferece uma interface amigável, mas também é capaz de lidar com situações de erro, como perfis inexistentes ou páginas não encontradas, garantindo uma experiência completa ao usuário.",
@@ -39,7 +39,7 @@ const projects = [
 		id: 3,
 		title: "App de Feedback",
 		projectURL: "https://main--projeto-feedback.netlify.app/",
-		repoURL: "https://github.com/rodri-carvalho/feedback-app",
+		repoURL: "https://github.com/rodrigocvmd/feedback-app",
 		projectPic: "/assets/pics/projects/feedback.jpg",
 		description: [
 			"Projeto no qual desenvolvi um sistema de avaliação de serviços ou produtos, utilizando uma combinação de tecnologias atuais, das quais dentre as principais podemos citar React Router para navegação entre páginas, Context API para gerenciamento de estado, e Framer Motion para animações de elementos na interface. A integração dessas ferramentas permitiu criar uma aplicação dinâmica e responsiva, onde os usuários podem adicionar, editar e deletar feedbacks em tempo real, com uma experiência de usuário fluida e intuitiva.",
