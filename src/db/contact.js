@@ -11,7 +11,7 @@ const contactInfo = [
 		iconId: 1,
 		title: "Linkedin",
 		numberOrId: "/in/rodrigocvmd/",
-		href: "https://www.linkedin.com/in/rodricarvalho/",
+		href: "https://www.linkedin.com/in/rodrigocvmd/",
 	},
 	{
 		id: 2,
@@ -33,7 +33,7 @@ const contactInfo = [
 		iconId: 4,
 		title: "Instagram",
 		numberOrId: "@rodrigocvmd",
-		href: "https://www.instagram.com/rodrigomnd/",
+		href: "https://www.instagram.com/rodrigocvmd/",
 	},
 	{
 		id: 5,
