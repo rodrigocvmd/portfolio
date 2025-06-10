@@ -4,6 +4,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "next-themes";
 
 // ... (Configuração das fontes Inter e Poppins continua a mesma)
 const inter = Inter({
@@ -35,17 +36,20 @@ export default function RootLayout({
 			lang="pt-BR"
 			className={`${inter.variable} ${poppins.variable} scroll-smooth`}
 			suppressHydrationWarning>
-			<body className="flex min-h-screen flex-col bg-light-primary text-light-text dark:bg-dark-primary dark:text-dark-text">
-				<Navbar />
-				{/*
+			{/* ThemeProvider deve envolver o conteúdo que precisa da troca de tema */}
+			<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+				<body className="flex min-h-screen flex-col bg-light-primary text-light-text dark:bg-dark-primary dark:text-dark-text">
+					<Navbar />
+					{/*
           A MUDANÇA ESTÁ AQUI:
           Removemos as classes 'container mx-auto px-4 sm:px-6 lg:px-8' do <main>.
           Agora ele é apenas um container flexível que cresce para preencher o espaço.
           A responsabilidade pelo container de conteúdo passa para as páginas.
         */}
-				<main className="flex-grow">{children}</main>
-				<Footer />
-			</body>
+					<main className="flex-grow">{children}</main>
+					<Footer />
+				</body>
+			</ThemeProvider>
 		</html>
 	);
 }

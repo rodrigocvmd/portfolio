@@ -1,15 +1,27 @@
 // src/components/Navbar.tsx
+"use client";
+
 import Link from "next/link";
-// import ThemeSwitcher from './ThemeSwitcher'; // Descomente se/quando implementar
+import { useState, useEffect } from "react";
+import ThemeSwitcher from './ThemeSwitcher';
 
 const Navbar = () => {
-	// Links de navegação completos como definido na blueprint
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const navLinks = [
 		{ href: "/", label: "Início" },
 		{ href: "/sobre", label: "Sobre Mim" },
 		{ href: "/projetos", label: "Projetos" },
 		{ href: "/contato", label: "Contato" },
 	];
+
+	const toggleMobileMenu = () => {
+		setIsMobileMenuOpen(!isMobileMenuOpen);
+	};
+
+	// Fecha o menu mobile ao clicar em um link
+	const handleMobileLinkClick = () => {
+		setIsMobileMenuOpen(false);
+	};
 
 	return (
 		// O <header> é full-width, aplicando o fundo e sombra na tela inteira.
@@ -21,7 +33,7 @@ const Navbar = () => {
 				<Link
 					href="/"
 					className="text-2xl font-bold font-heading text-light-text dark:text-dark-text transition-colors hover:text-light-accent dark:hover:text-dark-accent">
-					Seu Nome
+					Portfólio App
 				</Link>
 
 				{/* Links de Navegação - Desktop */}
@@ -32,32 +44,62 @@ const Navbar = () => {
 							href={link.href}
 							className="font-medium text-light-text transition-colors hover:text-light-accent dark:text-dark-text dark:hover:text-dark-accent">
 							{link.label}
-						</Link>
+						</Link> // Adicionar key aqui
 					))}
-					{/* <ThemeSwitcher /> Opcional: Botão de trocar tema aqui */}
+					<ThemeSwitcher />
 				</div>
 
-				{/* Botão de Menu Mobile (Hambúrguer) - Placeholder */}
-				<div className="md:hidden">
-					{/* A lógica para abrir/fechar o menu mobile com React viria aqui */}
+				{/* Botão de Menu Mobile (Hambúrguer) e ThemeSwitcher para mobile */}
+				<div className="flex items-center md:hidden">
+					<ThemeSwitcher />
 					<button
-						aria-label="Abrir menu"
-						className="text-light-text focus:outline-none dark:text-dark-text">
-						<svg
-							className="h-6 w-6"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg">
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth="2"
-								d="M4 6h16M4 12h16m-7 6h7"></path>
-						</svg>
+						onClick={toggleMobileMenu}
+						aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+						aria-expanded={isMobileMenuOpen}
+						className="ml-4 rounded p-1 text-light-text focus:outline-none focus:ring-2 focus:ring-light-accent dark:text-dark-text dark:focus:ring-dark-accent">
+						{isMobileMenuOpen ? (
+							<svg
+								className="h-6 w-6"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
+						) : (
+							<svg
+								className="h-6 w-6"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M4 6h16M4 12h16m-7 6h7"></path>
+							</svg>
+						)}
 					</button>
 				</div>
 			</nav>
+
+			{/* Menu Mobile Dropdown */}
+			{isMobileMenuOpen && (
+				<div className="absolute w-full bg-light-primary dark:bg-dark-primary shadow-lg md:hidden">
+					<nav className="flex flex-col space-y-2 px-4 py-4">
+						{navLinks.map((link) => (
+							<Link key={`mobile-${link.href}`} href={link.href} onClick={handleMobileLinkClick} className="block rounded px-3 py-2 text-base font-medium text-light-text hover:bg-light-secondary hover:text-light-accent dark:text-dark-text dark:hover:bg-dark-secondary dark:hover:text-dark-accent">
+								{link.label}
+							</Link>
+						))}
+					</nav>
+				</div>
+			)}
 		</header>
 	);
 };

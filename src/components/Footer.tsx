@@ -29,13 +29,14 @@ const Footer = () => {
 					{/* Adicione mais links conforme necessário */}
 				</div>
 				<p className="text-sm">&copy; {currentYear} | Rodrigo Carvalho</p>
-				<p className="text-sm py-2">
+				<p className="text-sm">
+					Repositório deste projeto disponível no&nbsp;
 					<Link
-						href="https_placeholder_linkedin_url"
+						href="https://github.com/rodrigocvmd/portolio"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="mx-2 hover:text-light-accent dark:hover:text-dark-accent transition-colors">
-						Repositório deste projeto disponível no GitHub.
+						className="hover:text-light-accent dark:hover:text-dark-accent transition-colors text-decoration-line: underline">
+						GitHub.
 					</Link>
 				</p>
 
