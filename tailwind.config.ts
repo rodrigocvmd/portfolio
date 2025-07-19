@@ -16,6 +16,8 @@ module.exports = {
 				"dark-secondary": "#374151",
 				"dark-text": "#D1D5DB",
 				"dark-accent": "#FCD3A2",
+        "pastel-green": "#A7F3D0",
+        "pastel-orange": "#FED7AA",
 			},
 			fontFamily: {
 				// Suas fontes customizadas aqui

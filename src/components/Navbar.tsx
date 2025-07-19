@@ -1,12 +1,14 @@
-// src/components/Navbar.tsx
-"use client";
+'use client';
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { usePathname } from 'next/navigation'; // Importar usePathname
 import ThemeSwitcher from './ThemeSwitcher';
 
 const Navbar = () => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const pathname = usePathname(); // Obter o caminho atual
+
 	const navLinks = [
 		{ href: "/", label: "Início" },
 		{ href: "/sobre", label: "Sobre Mim" },
@@ -18,16 +20,14 @@ const Navbar = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
 	};
 
-	// Fecha o menu mobile ao clicar em um link
 	const handleMobileLinkClick = () => {
 		setIsMobileMenuOpen(false);
 	};
 
+	const isHomePage = pathname === '/';
+
 	return (
-		// O <header> é full-width, aplicando o fundo e sombra na tela inteira.
 		<header className="sticky top-0 z-50 w-full mb-8 bg-light-primary/80 dark:bg-dark-primary/80 backdrop-blur-md shadow-sm">
-			{/* O <nav> usa a classe 'container' para centralizar e limitar a largura do CONTEÚDO de navegação. */}
-			{/* Isso é intencional e bom para usabilidade em telas 3xl/4xl. */}
 			<nav className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
 				{/* Logo ou Nome */}
 				<Link
@@ -44,7 +44,7 @@ const Navbar = () => {
 							href={link.href}
 							className="font-medium text-light-text transition-colors hover:text-light-accent dark:text-dark-text dark:hover:text-dark-accent">
 							{link.label}
-						</Link> // Adicionar key aqui
+						</Link>
 					))}
 					<ThemeSwitcher />
 				</div>
