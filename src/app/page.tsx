@@ -28,65 +28,68 @@ export default function HomePage() {
   return (
     <div className="space-y-12 sm:space-y-16">
 
-      {/* Seção Hero */}
-      <section className="container mx-auto px-4 pt-10 pb-8 text-center sm:px-6 md:pt-12 md:pb-10 lg:px-8 2xl:pt-16">
-        <div className="mx-auto max-w-5xl">
-          <div className="relative mx-auto mb-5 h-32 w-32 overflow-hidden rounded-full shadow-lg bg-light-secondary dark:bg-dark-secondary sm:h-36 sm:w-36 2xl:h-40 2xl:w-40">
-            <Image
-              src="/images/fotoPerfil.png"
-              alt="Foto de Perfil de Rodrigo Carvalho"
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 640px) 8rem, 9rem, 10rem"
-            />
-          </div>
-
-          <h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl md:text-6xl 2xl:text-7xl">
-            Rodrigo Carvalho
-          </h1>
-          <p className="mt-3 font-medium text-xl text-light-accent dark:text-dark-accent sm:text-2xl 2xl:text-3xl">
-            Desenvolvedor Web Full-Stack
-          </p>
-          <p className="mt-1.5 font-medium text-lg text-light-accent/80 dark:text-dark-accent/80 sm:text-xl 2xl:text-2xl">
-            Graduando em Ciência da Computação
-          </p>
-          <div className="mx-auto mt-5 max-w-3xl space-y-1.5 text-base text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
-            <p>
-              Bem-vindo(a) ao meu portfólio.
+      {/* Seção Projetos */}
+      <section id="projetos" className="w-full bg-light-secondary py-12 shadow-md dark:bg-dark-secondary sm:py-16 2xl:py-20">
+        <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl 2xl:text-5xl">
+              Explore Meus Projetos
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
+              Veja todos os meus projetos, as tecnologias e os métodos que utilizei para construí-los.
             </p>
-            <p>
-              Explore meus projetos, conheça minha trajetória e sinta-se à vontade para entrar em contato!
-            </p>
-          </div>
-
-          <div className="mt-8 flex justify-center">
-            <Link
-              href="/projetos"
-              className="inline-block rounded-lg bg-light-accent px-7 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 text-base sm:text-lg 2xl:px-8 2xl:py-3 2xl:text-xl"
-            >
-              Veja Meus Projetos
-            </Link>
+            <div className="mt-6">
+              <Link
+                href="/projetos"
+                className="inline-block rounded-lg bg-light-accent px-7 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 text-base sm:text-lg 2xl:px-8 2xl:py-3 2xl:text-xl"
+              >
+                Veja Meus Projetos
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Seção Sobre Mim (Resumo) */}
-      <section id="sobre-resumo" className="w-full bg-light-secondary py-12 shadow-md dark:bg-dark-secondary sm:py-16 2xl:py-20">
+      {/* Seção Currículo */}
+      <section id="curriculo" className="w-full py-12 sm:py-16 2xl:py-20">
         <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl 2xl:text-5xl">
-              Um Pouco Sobre Mim
+              Consulte Meu Currículo
             </h2>
             <p className="mt-5 text-base leading-relaxed text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
-              Desenvolvedor Full Stack apaixonado por transformar ideias em soluções web intuitivas e eficientes. Com uma transição de carreira do Direito (UnB) para a Ciência da Computação, trago um olhar analítico e dedicação à construção de software de qualidade, utilizando tecnologias como JavaScript/TypeScript, React e Node.js. Busco ativamente minha primeira oportunidade para aplicar e expandir minhas habilidades em projetos desafiadores.
+              Acesse meu currículo completo para ver mais detalhes sobre minha formação, experiência e habilidades.
             </p>
             <div className="mt-6">
               <Link
-                href="/sobre"
-                className="font-medium text-light-accent hover:underline dark:text-dark-accent text-base sm:text-lg 2xl:text-xl"
+                href="/curriculo.pdf" // Assumindo que o currículo está em public/curriculo.pdf
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-lg border-2 border-light-accent px-7 py-2.5 font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-base sm:text-lg 2xl:px-8 2xl:py-3 2xl:text-xl"
               >
-                Conheça Minha História &rarr;
+                Veja Meu Currículo
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção Contato */}
+      <section id="contato" className="w-full bg-light-secondary py-12 shadow-md dark:bg-dark-secondary sm:py-16 2xl:py-20">
+        <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl 2xl:text-5xl">
+              Entre em Contato
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
+              Tem alguma pergunta ou proposta? Sinta-se à vontade para entrar em contato comigo.
+            </p>
+            <div className="mt-6">
+              <Link
+                href="/contato"
+                className="inline-block rounded-lg bg-light-accent px-7 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 text-base sm:text-lg 2xl:px-8 2xl:py-3 2xl:text-xl"
+              >
+                Fale Comigo
               </Link>
             </div>
           </div>
