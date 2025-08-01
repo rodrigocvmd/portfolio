@@ -112,16 +112,22 @@ export default function ContatoConteudo() {
 									<span className="flex items-center">
 										<MdOutlineEmail className="mr-2" /> Email:
 									</span>
-									<button
-										onClick={() => handleCopy("rodrigocvmd@gmail.com", "email")}
-										title="Copiar email"
-										className="ml-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-										{copiedStatus["email"] ? <CheckIcon /> : <CopyIcon />}
-									</button>
+									<div className="flex items-center">
+										<button
+											onClick={() => handleCopy("rodrigocvmd@gmail.com", "email")}
+											title="Copiar email"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["email"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a href="mailto:rodrigocvmd@gmail.com" target="_blank" rel="noopener noreferrer" title="Enviar email" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
+									</div>
 								</h3>
 								<div className="flex items-center">
 									<a
 										href="mailto:rodrigocvmd@gmail.com"
+										title="Enviar email"
 										className="text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										rodrigocvmd@gmail.com
 									</a>
@@ -134,20 +140,26 @@ export default function ContatoConteudo() {
 									<span className="flex items-center">
 										<FaLinkedin className="mr-2" /> LinkedIn:
 									</span>
-									<button
-										onClick={() =>
-											handleCopy("https://www.linkedin.com/in/rodrigocvmd/", "linkedin")
-										}
-										title="Copiar link do LinkedIn"
-										className="ml-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-										{copiedStatus["linkedin"] ? <CheckIcon /> : <CopyIcon />}
-									</button>
+									<div className="flex items-center">
+										<button
+											onClick={() =>
+												handleCopy("https://www.linkedin.com/in/rodrigocvmd/", "linkedin")
+											}
+											title="Copiar link do LinkedIn"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["linkedin"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a href="https://www.linkedin.com/in/rodrigocvmd/" target="_blank" rel="noopener noreferrer" title="Abrir LinkedIn" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
+									</div>
 								</h3>
 								<div className="flex items-center">
 									<a
 										href="https://www.linkedin.com/in/rodrigocvmd/"
 										target="_blank"
 										rel="noopener noreferrer"
+										title="Abrir LinkedIn"
 										className="text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										/in/rodrigocvmd
 									</a>
@@ -159,17 +171,23 @@ export default function ContatoConteudo() {
 									<span className="flex items-center">
 										<FaPhoneAlt className="mr-2" /> Telefone:
 									</span>
-									<button
-										onClick={() => handleCopy("+5561999662404", "telefone")}
-										title="Copiar telefone"
-										className="ml-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-										{copiedStatus["telefone"] ? <CheckIcon /> : <CopyIcon />}
-									</button>
+									<div className="flex items-center">
+										<button
+											onClick={() => handleCopy("+5561999662404", "telefone")}
+											title="Copiar telefone"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["telefone"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a href="tel:+5561999662404" title="Ligar" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
+									</div>
 								</h3>
 								<div className="telefone flex items-center">
 									<a
 										href="#!" // Previne navegação, comportamento de botão
 										onClick={handlePhoneCopyAndTextChange}
+										title="Copiar telefone"
 										className="text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all cursor-pointer"
 										role="button"
 										tabIndex={0}>
@@ -199,20 +217,29 @@ export default function ContatoConteudo() {
 									<span className="flex items-center">
 										<FaWhatsapp className="mr-2" /> WhatsApp:
 									</span>
-									<a
-										href="https://wa.me/5561999662404"
-										target="_blank"
-										rel="noopener noreferrer"
-										title="Abrir WhatsApp"
-										className="ml-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-										<FaArrowRight />
-									</a>
+									<div className="flex items-center">
+										<button
+											onClick={() => handleCopy("5561999662404", "whatsapp")}
+											title="Copiar número do WhatsApp"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["whatsapp"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a
+											href="https://wa.me/5561999662404"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir WhatsApp"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
+									</div>
 								</h3>
 								<div className="flex items-center">
 									<a
 										href="https://wa.me/5561999662404"
 										target="_blank"
 										rel="noopener noreferrer"
+										title="Abrir WhatsApp"
 										className="text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										Abrir uma conversa
 									</a>
@@ -225,18 +252,24 @@ export default function ContatoConteudo() {
 									<span className="flex items-center">
 										<FaGithub className="mr-2" /> GitHub:
 									</span>
-									<button
-										onClick={() => handleCopy("https://github.com/rodrigocvmd", "github")}
-										title="Copiar link GitHub"
-										className="ml-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-										{copiedStatus["github"] ? <CheckIcon /> : <CopyIcon />}
-									</button>
+									<div className="flex items-center">
+										<button
+											onClick={() => handleCopy("https://github.com/rodrigocvmd", "github")}
+											title="Copiar link GitHub"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["github"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a href="https://github.com/rodrigocvmd" target="_blank" rel="noopener noreferrer" title="Abrir GitHub" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
+									</div>
 								</h3>
 								<div className="flex items-center">
 									<a
 										href="https://github.com/rodrigocvmd"
 										target="_blank"
 										rel="noopener noreferrer"
+										title="Abrir GitHub"
 										className="text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										/rodrigocvmd
 									</a>
@@ -249,18 +282,24 @@ export default function ContatoConteudo() {
 									<span className="flex items-center">
 										<FaDiscord className="mr-2" /> Discord:
 									</span>
-									<button
-										onClick={() => handleCopy("1067993447706931243", "discord")}
-										title="Copiar Discord ID"
-										className="ml-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-										{copiedStatus["discord"] ? <CheckIcon /> : <CopyIcon />}
-									</button>
+									<div className="flex items-center">
+										<button
+											onClick={() => handleCopy("1067993447706931243", "discord")}
+											title="Copiar Discord ID"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["discord"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a href="https://discordapp.com/users/1067993447706931243" target="_blank" rel="noopener noreferrer" title="Abrir Discord" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
+									</div>
 								</h3>
 								<div className="flex items-center">
 									<a
 										href="https://discordapp.com/users/1067993447706931243"
 										target="_blank"
 										rel="noopener noreferrer"
+										title="Abrir Discord"
 										className="text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										&lt;@rodrigocvmd&gt;
 									</a>

@@ -225,7 +225,7 @@ export default function SobreConteudo() {
 								</div>
 								<div className="mt-4 text-center sm:mt-0 sm:absolute sm:top-4 sm:right-4">
 									<button
-										onClick={() => !edu.isCursando && handleOpenModal("/images/placeholder.png")}
+										onClick={() => !edu.isCursando && handleOpenModal("/images/diploma.jpg")}
 										disabled={edu.isCursando}
 										className="group relative rounded-md bg-light-accent px-3 py-1.5 text-sm font-semibold text-dark-primary shadow-sm transition-opacity hover:bg-opacity-80 disabled:cursor-not-allowed disabled:opacity-50">
 										Diploma
@@ -281,7 +281,7 @@ export default function SobreConteudo() {
 										<div className="mt-4 text-center sm:mt-0 sm:absolute sm:top-4 sm:right-4">
 											<button
 												onClick={() =>
-													!cert.isCursando && handleOpenModal("/images/placeholder.png")
+													!cert.isCursando && handleOpenModal("/images/diploma.jpg")
 												}
 												disabled={cert.isCursando}
 												className="group relative rounded-md bg-light-accent px-3 py-1.5 text-sm font-semibold text-dark-primary shadow-sm transition-opacity hover:bg-opacity-80 disabled:cursor-not-allowed disabled:opacity-50">

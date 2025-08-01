@@ -43,8 +43,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 				<h3 className="text-2xl sm:text-3xl font-semibold font-heading text-light-text dark:text-dark-text mb-3 min-h-[4.5rem]">
 					{title}
 				</h3>
-				<div className="relative h-36 mb-4">
-					<p className="text-lg text-light-text dark:text-dark-text">
+				<div className="mb-4">
+					<p className="text-lg text-light-text dark:text-dark-text text-left line-clamp-5">
 						{description}
 					</p>
 				</div>

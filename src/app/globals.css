@@ -13,6 +13,13 @@
   }
 
   .animate-scroll {
-    animation: scroll 65s linear infinite;
+    animation: scroll 40s linear infinite;
+  }
+
+  .line-clamp-5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
   }
 }
