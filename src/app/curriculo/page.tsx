@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Currículo | Meu Portfólio",
+  title: "Currículo | Portfólio de Rodrigo",
   description: "Consulte meu currículo completo.",
 };
 

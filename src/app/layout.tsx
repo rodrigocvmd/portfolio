@@ -22,10 +22,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-	title: "Meu Portfólio Incrível",
+	title: "Portfólio de Rodrigo",
 	description: "Um portfólio moderno construído com Next.js, TypeScript e Tailwind CSS.",
 	icons: {
-		icon: "/favicon.svg",
+		icon: "/images/favicon.png",
 	},
 };
 

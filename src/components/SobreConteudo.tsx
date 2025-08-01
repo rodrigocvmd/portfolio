@@ -140,14 +140,18 @@ export default function SobreConteudo() {
 									equipe de visão.
 								</p>
 							</div>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Link href="/curriculo" className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform hover:scale-105 text-lg">
-                  Veja meu Currículo
-                </Link>
-                <Link href="/contato" className="inline-block rounded-lg border-2 border-light-accent px-8 py-3 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-lg">
-                  Entre em Contato
-                </Link>
-              </div>
+							<div className="mt-8 flex flex-wrap justify-center gap-4">
+								<Link
+									href="/curriculo"
+									className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform hover:scale-105 text-lg">
+									Veja meu Currículo
+								</Link>
+								<Link
+									href="/contato"
+									className="inline-block rounded-lg border-2 border-light-accent px-8 py-3 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-lg">
+									Entre em Contato
+								</Link>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -225,7 +229,7 @@ export default function SobreConteudo() {
 								</div>
 								<div className="mt-4 text-center sm:mt-0 sm:absolute sm:top-4 sm:right-4">
 									<button
-										onClick={() => !edu.isCursando && handleOpenModal("/images/diploma.jpg")}
+										onClick={() => !edu.isCursando && handleOpenModal("/images/unb.png")}
 										disabled={edu.isCursando}
 										className="group relative rounded-md bg-light-accent px-3 py-1.5 text-sm font-semibold text-dark-primary shadow-sm transition-opacity hover:bg-opacity-80 disabled:cursor-not-allowed disabled:opacity-50">
 										Diploma
@@ -280,9 +284,7 @@ export default function SobreConteudo() {
 										</div>
 										<div className="mt-4 text-center sm:mt-0 sm:absolute sm:top-4 sm:right-4">
 											<button
-												onClick={() =>
-													!cert.isCursando && handleOpenModal("/images/diploma.jpg")
-												}
+												onClick={() => !cert.isCursando && handleOpenModal("/images/diploma.jpg")}
 												disabled={cert.isCursando}
 												className="group relative rounded-md bg-light-accent px-3 py-1.5 text-sm font-semibold text-dark-primary shadow-sm transition-opacity hover:bg-opacity-80 disabled:cursor-not-allowed disabled:opacity-50">
 												Certificado

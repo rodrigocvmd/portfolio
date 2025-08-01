@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import ContatoConteudo from "@/components/ContatoConteudo"; // Ajuste o caminho se necessário
 
 export const metadata: Metadata = {
-	title: "Contato | Meu Portfólio",
+	title: "Contato | Portfólio de Rodrigo",
 	description: "Entre em contato para discutir projetos, oportunidades ou apenas para dizer olá.",
 };
 

@@ -3,7 +3,7 @@ import ProjectCard from '@/components/ProjectCard';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Meus Projetos | Meu Portfólio',
+  title: 'Meus Projetos | Portfólio de Rodrigo',
   description: 'Explore uma coleção dos projetos que desenvolvi.',
 };
 

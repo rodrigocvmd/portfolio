@@ -102,7 +102,7 @@ export default function ContatoConteudo() {
 							Contato Direto
 						</h2>
 						<p className="text-base text-center text-light-text dark:text-dark-text sm:text-lg 3xl:text-xl">
-							Melhores formas para me encontrar
+							Melhores formas para me encontrar:
 						</p>
 
 						<div className="space-y-6">
@@ -220,7 +220,7 @@ export default function ContatoConteudo() {
 							Outras Redes
 						</h2>
 						<p className="text-base text-center text-light-text dark:text-dark-text sm:text-lg 3xl:text-xl">
-							Aproveite para me visitar em outras redes
+							Aproveite para me visitar em outras redes:
 						</p>
 
 						<div className="space-y-6">
