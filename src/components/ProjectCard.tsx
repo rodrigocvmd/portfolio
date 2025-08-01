@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	const visibleTechnologies = showAllTech ? technologies : technologies.slice(0, 4);
 
 	return (
-		<div className="bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col">
+		<div className="bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col h-full">
 			<div className="relative w-full h-48 sm:h-56 overflow-hidden">
 				<Image
 					src={imageUrl}
@@ -40,21 +40,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 				/>
 			</div>
 			<div className="p-5 sm:p-6 flex flex-col flex-grow">
-				<h3 className="text-xl sm:text-2xl font-semibold font-heading text-light-text dark:text-dark-text mb-2">
+				<h3 className="text-xl sm:text-2xl font-semibold font-heading text-light-text dark:text-dark-text mb-2 min-h-[3.5rem] sm:min-h-[4rem]">
 					{title}
 				</h3>
-				<p className="text-sm sm:text-base text-light-text dark:text-dark-text mb-4 flex-grow">
-					{description.substring(0, 100)}...
-				</p>
+				<div className="relative h-28 sm:h-32 mb-4">
+					<p className="text-sm sm:text-base text-light-text dark:text-dark-text">
+						{description}
+					</p>
+				</div>
 
-				<div className="mb-4">
+				<div className="mb-4 flex flex-wrap justify-center gap-2">
 					{visibleTechnologies.map((tech) => (
 						<TechTag key={tech} name={tech} />
 					))}
 					{!showAllTech && technologies.length > 4 && (
-						<button onClick={() => setShowAllTech(true)} className="text-xs font-medium text-light-accent dark:text-dark-accent hover:underline">
-							ver +{technologies.length - 4}
-						</button>
+						<span className="ml-2 text-xs font-medium text-light-accent dark:text-dark-accent">
+							+{technologies.length - 4}
+						</span>
 					)}
 				</div>
 

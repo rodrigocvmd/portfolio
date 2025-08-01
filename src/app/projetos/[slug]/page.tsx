@@ -1,21 +1,38 @@
 // src/app/projetos/[slug]/page.tsx
 import Image from 'next/image';
 import Link from 'next/link';
+import TechTag from '@/components/TechTag';
 
-// Por enquanto, estamos usando dados placeholder.
-// No futuro, isso viria de um CMS ou de um arquivo de dados com base no `slug`.
+const allProjects = [
+  {
+    title: "Marketplace de Imóveis (Full Stack)",
+    description: "Plataforma completa para listagem de imóveis com CRUD, autenticação de usuários (Email/Senha, Google OAuth) e interface responsiva. O projeto foi desenvolvido com foco na experiência do usuário, oferecendo uma navegação intuitiva e um design limpo. O backend robusto garante a segurança e a integridade dos dados, enquanto o frontend reativo proporciona uma interação fluida.",
+    imageUrl: "/images/imgMarketPlaceImoveis.png",
+    technologies: ["React", "Node.js", "TailwindCSS", "Git", "DaisyUI", "JavaScript"],
+    projectSlug: "projeto-marketplace-imoveis",
+    liveUrl: "https://marketplace-de-imoveis.vercel.app/",
+    repoUrl: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
+  },
+  {
+    title: "Sistema de Suporte ao Usuário (Full Stack)",
+    description: "Aplicação de tickets de suporte com backend robusto (API RESTful) e frontend interativo para gerenciamento de solicitações. A plataforma permite que os usuários criem e acompanhem o status de seus tickets, enquanto os administradores podem gerenciar as solicitações, atribuir responsáveis e se comunicar com os usuários. A autenticação é baseada em JWT, garantindo a segurança das rotas e dos dados.",
+    imageUrl: "/images/imgSuporteUsuario.png",
+    technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+    projectSlug: "projeto-suporte-usuario",
+    liveUrl: "https://suporte-ao-usuario.onrender.com/",
+    repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
+  },
+];
+
 const getProjectDetails = (slug: string) => {
-  // Lógica para encontrar os detalhes do projeto com base no slug
-  // Retornando um placeholder por enquanto
-  return {
-    title: `Detalhes do Projeto ${slug}`,
-    description: 'Esta é uma descrição detalhada do projeto. Fale sobre os desafios, as soluções implementadas, e o que você aprendeu. (Placeholder)',
-    imageUrl: 'https://dummyimage.com/1200x600/cccccc/374151.png&text=Imagem+do+Projeto',
-    technologies: ['React', 'TypeScript', 'Node.js', 'CSS Modules'],
-    liveUrl: '#',
-    repoUrl: '#',
-  };
+  return allProjects.find(p => p.projectSlug === slug);
 };
+
+const BackButton = () => (
+  <Link href="/projetos" className="inline-block text-sm text-light-accent dark:text-dark-accent hover:underline mb-6">
+    &larr; Voltar aos Projetos
+  </Link>
+);
 
 interface ProjectPageProps {
   params: {
@@ -28,56 +45,59 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const project = getProjectDetails(slug);
 
   if (!project) {
-    // Idealmente, você teria uma página 404 mais robusta
-    return <div>Projeto não encontrado.</div>;
+    return <div className="text-center py-10">Projeto não encontrado.</div>;
   }
 
   return (
     <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      <BackButton />
+      
       <header className="mb-8">
         <h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl">
           {project.title}
         </h1>
       </header>
 
-      <div className="relative w-full h-96 rounded-lg overflow-hidden mb-8">
+      <div className="relative w-full h-72 sm:h-96 md:h-[500px] rounded-lg overflow-hidden mb-8 shadow-lg">
         <Image
           src={project.imageUrl}
           alt={`Imagem do projeto ${project.title}`}
           fill
           className="object-cover"
+          priority
         />
       </div>
 
-      <div className="prose prose-lg max-w-none dark:prose-invert">
-        <p>{project.description}</p>
-
-        <h2>Tecnologias Utilizadas</h2>
-        <ul>
-          {project.technologies.map((tech) => (
-            <li key={tech}>{tech}</li>
-          ))}
-        </ul>
-
-        {/* Adicione mais seções conforme necessário: screenshots, vídeos, etc. */}
+      <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+        {project.liveUrl && (
+            <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform hover:scale-105 text-lg">
+                Ver Online
+            </Link>
+        )}
+        {project.repoUrl && (
+            <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="inline-block rounded-lg border-2 border-light-accent px-8 py-3 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-lg">
+                Repositório
+            </Link>
+        )}
       </div>
 
-      <div className="mt-12 flex flex-wrap items-center gap-4">
-        <Link href="/projetos" className="inline-block rounded-md bg-light-accent px-6 py-3 text-center font-semibold text-dark-primary shadow-sm transition-colors hover:bg-opacity-90">
-          &larr; Voltar aos Projetos
-        </Link>
-        <div className="flex items-center space-x-4">
-            {project.liveUrl && (
-                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-light-accent dark:text-dark-accent hover:underline">
-                    Ver Online
-                </Link>
-            )}
-            {project.repoUrl && (
-                <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="text-light-accent dark:text-dark-accent hover:underline">
-                    Repositório
-                </Link>
-            )}
+      <section className="mb-12">
+        <h2 className="font-heading text-2xl font-bold text-light-text dark:text-dark-text mb-4 text-center">
+            Tecnologias Utilizadas
+        </h2>
+        <div className="flex flex-wrap justify-center gap-3">
+            {project.technologies.map((tech) => (
+                <TechTag key={tech} name={tech} />
+            ))}
         </div>
+      </section>
+
+      <div className="prose prose-lg max-w-4xl mx-auto dark:prose-invert text-justify">
+        <p>{project.description}</p>
+      </div>
+
+      <div className="mt-12 pt-8 border-t border-light-secondary dark:border-dark-secondary">
+        <BackButton />
       </div>
     </div>
   );

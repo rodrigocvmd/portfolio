@@ -104,11 +104,11 @@ export default function SobreConteudo() {
 
 				<section className="w-full bg-light-secondary py-12 shadow-md dark:bg-dark-secondary sm:py-16 2xl:py-20">
 					<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-						<div className="mx-auto max-w-5xl">
+						<div className="mx-auto max-w-4xl">
 							<h2 className="text-center font-heading text-3xl font-semibold text-light-text dark:text-dark-text sm:text-4xl 2xl:text-5xl">
 								Minha Jornada
 							</h2>
-							<div className="prose prose-lg mx-auto mt-6 max-w-none text-light-text dark:prose-invert dark:text-dark-text sm:prose-xl 2xl:prose-2xl">
+							<div className="prose prose-lg mx-auto mt-6 max-w-none text-justify text-light-text dark:prose-invert dark:text-dark-text sm:prose-xl 2xl:prose-2xl">
 								<p>
 									Desenvolvedor Full Stack em transição de carreira, apaixonado por transformar
 									ideias em soluções web eficientes e intuitivas. Com uma sólida formação em Direito

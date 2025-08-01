@@ -7,41 +7,25 @@ export const metadata: Metadata = {
   description: 'Explore uma coleção dos projetos que desenvolvi.',
 };
 
-// Dados mockados para todos os projetos
+// Dados para todos os projetos
 const allProjects = [
-  // Seus projetos virão aqui. Usando placeholders por enquanto.
   {
-    title: 'Nome do Projeto Incrível 1',
-    description: 'Uma breve descrição do projeto, destacando seus principais objetivos e tecnologias. Este é um placeholder para a listagem completa.',
-    imageUrl: 'https://dummyimage.com/600x400/FDBA74/374151.png&text=Projeto+1',
-    technologies: ['React', 'Next.js', 'TailwindCSS', 'TypeScript', 'Firebase'],
-    projectSlug: 'projeto-incrivel-1',
-    liveUrl: '#',
-    repoUrl: '#',
+    title: "Marketplace de Imóveis (Full Stack)",
+    description: "Plataforma completa para listagem de imóveis com CRUD, autenticação de usuários (Email/Senha, Google OAuth) e interface responsiva.",
+    imageUrl: "/images/imgMarketPlaceImoveis.png",
+    technologies: ["React", "Node.js", "TailwindCSS", "Git", "DaisyUI", "JavaScript"],
+    projectSlug: "projeto-marketplace-imoveis",
+    liveUrl: "https://marketplace-de-imoveis.vercel.app/",
+    repoUrl: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
   },
   {
-    title: 'Outro Projeto Fantástico 2',
-    description: 'Descrição concisa deste outro projeto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder para a listagem.',
-    imageUrl: 'https://dummyimage.com/600x400/FCD3A2/1F2937.png&text=Projeto+2',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'JWT', 'Docker'],
-    projectSlug: 'projeto-fantastico-2',
-    repoUrl: '#',
-  },
-  {
-    title: 'Aplicativo Web Inovador 3',
-    description: 'Este projeto resolve um problema X utilizando Y. Foi um grande aprendizado em Z. Placeholder.',
-    imageUrl: 'https://dummyimage.com/600x400/a3e635/1e293b.png&text=Projeto+3',
-    technologies: ['Vue.js', 'Nuxt.js', 'Supabase', 'SCSS'],
-    projectSlug: 'app-inovador-3',
-    liveUrl: '#',
-  },
-  {
-    title: 'Ferramenta de Produtividade 4',
-    description: 'Uma ferramenta para ajudar usuários a [benefício]. Desenvolvido com foco em performance e usabilidade. Placeholder.',
-    imageUrl: 'https://dummyimage.com/600x400/60a5fa/f1f5f9.png&text=Projeto+4',
-    technologies: ['SvelteKit', 'PocketBase', 'TypeScript'],
-    projectSlug: 'ferramenta-produtividade-4',
-    repoUrl: '#',
+    title: "Sistema de Suporte ao Usuário (Full Stack)",
+    description: "Aplicação de tickets de suporte com backend robusto (API RESTful) e frontend interativo para gerenciamento de solicitações.",
+    imageUrl: "/images/imgSuporteUsuario.png",
+    technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+    projectSlug: "projeto-suporte-usuario",
+    liveUrl: "https://suporte-ao-usuario.onrender.com/",
+    repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
   },
 ];
 
@@ -62,7 +46,7 @@ export default function ProjetosPage() {
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         {allProjects.length > 0 ? (
           // Grid adaptável que pode crescer para mais colunas em telas muito grandes
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 lg:gap-10">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
             {allProjects.map((project) => (
               <ProjectCard
                 key={project.projectSlug}
