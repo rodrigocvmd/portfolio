@@ -58,12 +58,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </h1>
       </header>
 
-      <div className="relative w-full h-64 sm:h-80 md:h-[450px] rounded-lg overflow-hidden mb-8 shadow-lg mx-auto max-w-4xl">
+      <div className="relative w-full h-64 sm:h-80 md:h-[450px] rounded-lg overflow-hidden mb-8 shadow-lg mx-auto max-w-4xl group">
         <Image
           src={project.imageUrl}
           alt={`Imagem do projeto ${project.title}`}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
           priority
         />
       </div>
@@ -97,6 +97,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             Descrição do Projeto
         </h2>
         <p>{project.description}</p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
+        </p>
       </div>
 
       <div className="mt-12 pt-8 border-t border-light-secondary dark:border-dark-secondary">

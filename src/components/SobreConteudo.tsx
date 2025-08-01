@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Modal from "./Modal"; // Importar o Modal
+import Link from "next/link";
 
 // --- DADOS (mantidos como no original) ---
 const skills = [
@@ -139,6 +140,14 @@ export default function SobreConteudo() {
 									equipe de visão.
 								</p>
 							</div>
+              <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <Link href="/curriculo" className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform hover:scale-105 text-lg">
+                  Veja meu Currículo
+                </Link>
+                <Link href="/contato" className="inline-block rounded-lg border-2 border-light-accent px-8 py-3 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-lg">
+                  Entre em Contato
+                </Link>
+              </div>
 						</div>
 					</div>
 				</section>

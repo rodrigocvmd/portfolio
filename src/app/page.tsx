@@ -113,13 +113,17 @@ export default function HomePage() {
         </div>
         <div 
           className="relative flex items-center overflow-x-hidden"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+          }}
         >
           <div
             ref={scrollContainerRef}
             className="flex w-max gap-4 animate-scroll"
           >
             {[...allSkills, ...allSkills].map((skill, index) => (
-              <div key={`${skill}-${index}`} className="flex-shrink-0 scale-110">
+              <div key={`${skill}-${index}`} className="flex-shrink-0 text-lg">
                 <TechTag name={skill} />
               </div>
             ))}
@@ -140,9 +144,7 @@ export default function HomePage() {
             </p>
             <div className="mt-6">
               <Link
-                href="/curriculo.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/curriculo"
                 className="inline-block rounded-lg border-2 border-light-accent px-7 py-2.5 font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-base sm:text-lg"
               >
                 Veja Meu Currículo

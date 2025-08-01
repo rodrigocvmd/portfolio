@@ -178,7 +178,7 @@ export default function ContatoConteudo() {
 								</div>
 							</div>
 						</div>
-						<p className="border-t border-light-primary pt-4 text-sm text-light-text/70 dark:border-dark-primary dark:text-dark-text/70">
+						<p className="border-t text-center border-light-primary pt-4 text-sm text-light-text/70 dark:border-dark-primary dark:text-dark-text/70">
 							Responderei ao contato assim que possível.
 						</p>
 					</div>
@@ -267,7 +267,7 @@ export default function ContatoConteudo() {
 								</div>
 							</div>
 						</div>
-						<p className="border-t border-light-primary pt-4 text-sm text-light-text/70 dark:border-dark-primary dark:text-dark-text/70">
+						<p className="border-t text-center border-light-primary pt-4 text-sm text-light-text/70 dark:border-dark-primary dark:text-dark-text/70">
 							Sinta-se à vontade para se conectar!
 						</p>
 					</div>
@@ -328,7 +328,7 @@ export default function ContatoConteudo() {
 								className="w-full rounded-md border border-light-primary bg-light-primary px-3 py-2 text-light-text shadow-sm focus:border-light-accent focus:ring-light-accent dark:border-dark-primary dark:bg-dark-primary dark:text-dark-text dark:focus:border-dark-accent dark:focus:ring-dark-accent sm:text-sm placeholder:text-light-text/50 dark:placeholder:text-dark-text/50 focus:placeholder:text-transparent"
 								placeholder="Olá, gostaria de falar sobre..."></textarea>
 						</div>
-						<div>
+						<div className="text-center">
 							<button
 								type="submit"
 								className="w-full rounded-lg bg-light-accent px-6 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 sm:w-auto">
