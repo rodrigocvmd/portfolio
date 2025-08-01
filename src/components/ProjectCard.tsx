@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						<TechTag key={tech} name={tech} />
 					))}
 					{!showAllTech && technologies.length > 4 && (
-						<span className="ml-1 text-sm font-medium text-light-text dark:text-dark-text">
+						<span className="ml-1 text-sm font-medium text-light-text dark:text-dark-text cursor-default">
 							+{technologies.length - 4}
 						</span>
 					)}

@@ -85,8 +85,8 @@ export default function ContatoConteudo() {
 					Entre em Contato
 				</h1>
 				<p className="mx-auto mt-4 max-w-3xl text-lg text-light-text/80 dark:text-dark-text/80 sm:text-xl 3xl:text-2xl">
-					Seja para uma oportunidade de colaboração, discutir sobre um projeto ou apenas para
-					trocar uma ideia.
+					Seja para uma oportunidade de colaboração, discutir sobre um projeto ou apenas para trocar
+					uma ideia.
 				</p>
 				<p className="mx-auto mt-4 max-w-3xl text-lg text-light-text/80 dark:text-dark-text/80 sm:text-xl 3xl:text-2xl">
 					Estou sempre disponível para conversarmos!
@@ -119,7 +119,12 @@ export default function ContatoConteudo() {
 											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											{copiedStatus["email"] ? <CheckIcon /> : <CopyIcon />}
 										</button>
-										<a href="mailto:rodrigocvmd@gmail.com" target="_blank" rel="noopener noreferrer" title="Enviar email" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+										<a
+											href="mailto:rodrigocvmd@gmail.com"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Enviar email"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											<FaArrowRight />
 										</a>
 									</div>
@@ -149,7 +154,12 @@ export default function ContatoConteudo() {
 											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											{copiedStatus["linkedin"] ? <CheckIcon /> : <CopyIcon />}
 										</button>
-										<a href="https://www.linkedin.com/in/rodrigocvmd/" target="_blank" rel="noopener noreferrer" title="Abrir LinkedIn" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+										<a
+											href="https://www.linkedin.com/in/rodrigocvmd/"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir LinkedIn"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											<FaArrowRight />
 										</a>
 									</div>
@@ -178,7 +188,10 @@ export default function ContatoConteudo() {
 											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											{copiedStatus["telefone"] ? <CheckIcon /> : <CopyIcon />}
 										</button>
-										<a href="tel:+5561999662404" title="Ligar" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+										<a
+											href="tel:+5561999662404"
+											title="Ligar"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											<FaArrowRight />
 										</a>
 									</div>
@@ -259,7 +272,12 @@ export default function ContatoConteudo() {
 											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											{copiedStatus["github"] ? <CheckIcon /> : <CopyIcon />}
 										</button>
-										<a href="https://github.com/rodrigocvmd" target="_blank" rel="noopener noreferrer" title="Abrir GitHub" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+										<a
+											href="https://github.com/rodrigocvmd"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir GitHub"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											<FaArrowRight />
 										</a>
 									</div>
@@ -289,7 +307,12 @@ export default function ContatoConteudo() {
 											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											{copiedStatus["discord"] ? <CheckIcon /> : <CopyIcon />}
 										</button>
-										<a href="https://discordapp.com/users/1067993447706931243" target="_blank" rel="noopener noreferrer" title="Abrir Discord" className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+										<a
+											href="https://discordapp.com/users/1067993447706931243"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir Discord"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
 											<FaArrowRight />
 										</a>
 									</div>
@@ -336,6 +359,8 @@ export default function ContatoConteudo() {
 								required
 								className="w-full rounded-md border border-light-primary bg-light-primary px-3 py-2 text-light-text shadow-sm focus:border-light-accent focus:ring-light-accent dark:border-dark-primary dark:bg-dark-primary dark:text-dark-text dark:focus:border-dark-accent dark:focus:ring-dark-accent sm:text-sm placeholder:text-light-text/50 dark:placeholder:text-dark-text/50 focus:placeholder:text-transparent"
 								placeholder="Nome Completo"
+								oninvalid="this.setCustomValidity('Por favor, preencha seu nome.')"
+								oninput="this.setCustomValidity('')"
 							/>
 						</div>
 						<div>
@@ -351,6 +376,22 @@ export default function ContatoConteudo() {
 								required
 								className="w-full rounded-md border border-light-primary bg-light-primary px-3 py-2 text-light-text shadow-sm focus:border-light-accent focus:ring-light-accent dark:border-dark-primary dark:bg-dark-primary dark:text-dark-text dark:focus:border-dark-accent dark:focus:ring-dark-accent sm:text-sm placeholder:text-light-text/50 dark:placeholder:text-dark-text/50 focus:placeholder:text-transparent"
 								placeholder="seuemail@gmail.com"
+								oninvalid="this.setCustomValidity('Por favor, insira um email válido.')"
+								oninput="this.setCustomValidity('')"
+							/>
+						</div>
+						<div>
+							<label
+								htmlFor="phone"
+								className="mb-1 block text-sm font-medium text-light-text dark:text-dark-text">
+								Seu Telefone (Opcional)
+							</label>
+							<input
+								type="tel"
+								name="phone"
+								id="phone"
+								className="w-full rounded-md border border-light-primary bg-light-primary px-3 py-2 text-light-text shadow-sm focus:border-light-accent focus:ring-light-accent dark:border-dark-primary dark:bg-dark-primary dark:text-dark-text dark:focus:border-dark-accent dark:focus:ring-dark-accent sm:text-sm placeholder:text-light-text/50 dark:placeholder:text-dark-text/50 focus:placeholder:text-transparent"
+								placeholder="(XX) XXXXX-XXXX"
 							/>
 						</div>
 						<div>
@@ -365,7 +406,9 @@ export default function ContatoConteudo() {
 								required
 								rows={4}
 								className="w-full rounded-md border border-light-primary bg-light-primary px-3 py-2 text-light-text shadow-sm focus:border-light-accent focus:ring-light-accent dark:border-dark-primary dark:bg-dark-primary dark:text-dark-text dark:focus:border-dark-accent dark:focus:ring-dark-accent sm:text-sm placeholder:text-light-text/50 dark:placeholder:text-dark-text/50 focus:placeholder:text-transparent"
-								placeholder="Olá, gostaria de falar sobre..."></textarea>
+								placeholder="Olá, gostaria de falar sobre..."
+								oninvalid="this.setCustomValidity('Por favor, escreva sua mensagem.')"
+								oninput="this.setCustomValidity('')"></textarea>
 						</div>
 						<div className="text-center">
 							<button
