@@ -1,11 +1,10 @@
 // src/app/page.tsx
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard';
 import TechTag from '@/components/TechTag';
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 
 const featuredProjects = [
   {
@@ -28,24 +27,24 @@ const featuredProjects = [
   },
 ];
 
-const mainSkills = ["TypeScript", "React", "Next.js", "Node.js", "Tailwind CSS", "MongoDB", "PostgreSQL", "Git", "JavaScript", "HTML5", "CSS3", "Express.js"];
+const allSkills = [
+	"TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3",
+	"React", "Next.js", "Tailwind CSS", "Redux (Toolkit)", "Context",
+	"Node.js", "Express.js", "REST APIs",
+	"MongoDB", "PostgreSQL", "Firebase",
+	"Git & GitHub", "Vercel", "Netlify", "CI/CD (GitHub Actions)",
+	"Metodologias Ágeis (Scrum, Kanban)", "UI/UX (Princípios)", "Resolução Lógica de Problemas",
+];
+
 
 export default function HomePage() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleScroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = direction === 'left' ? -200 : 200;
-      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
 
   return (
-    <div className="space-y-12 sm:space-y-16">
+    <div className="space-y-8 sm:space-y-12">
 
       {/* Hero Section */}
-      <section className="w-full py-16 sm:py-20 2xl:py-24">
+      <section className="w-full py-12 sm:py-16 2xl:py-20">
         <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl md:text-6xl 2xl:text-7xl">
@@ -106,49 +105,25 @@ export default function HomePage() {
       </section>
 
       {/* Seção Habilidades */}
-      <section id="habilidades" className="container mx-auto w-full rounded-lg bg-light-secondary p-8 shadow-md dark:bg-dark-secondary sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
+      <section id="habilidades" className="container mx-auto w-full rounded-lg bg-light-secondary py-8 shadow-md dark:bg-dark-secondary">
+        <div className="mx-auto max-w-4xl text-center mb-6">
           <h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl">
             Principais Habilidades
           </h2>
         </div>
         <div 
-          className="relative mt-6 flex items-center justify-center"
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
+          className="relative flex items-center overflow-x-hidden"
         >
-          <button
-            onClick={() => handleScroll('left')}
-            onMouseEnter={() => handleScroll('left')}
-            className="absolute -left-4 z-10 rounded-full bg-white/80 p-2 shadow-md transition-opacity hover:bg-white dark:bg-dark-primary/80 dark:hover:bg-dark-primary"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-light-text dark:text-dark-text" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-          </button>
           <div
             ref={scrollContainerRef}
-            className="flex w-full items-center gap-4 overflow-x-hidden"
+            className="flex w-max gap-4 animate-scroll"
           >
-            <div className={`flex gap-4 ${isHovering ? '' : 'animate-scroll'}`}>
-              {mainSkills.map(skill => (
-                <div key={skill} className="flex-shrink-0 scale-110">
-                  <TechTag name={skill} />
-                </div>
-              ))}
-              {/* Duplicate for seamless scroll */}
-              {mainSkills.map(skill => (
-                <div key={`${skill}-2`} className="flex-shrink-0 scale-110">
-                  <TechTag name={skill} />
-                </div>
-              ))}
-            </div>
+            {[...allSkills, ...allSkills].map((skill, index) => (
+              <div key={`${skill}-${index}`} className="flex-shrink-0 scale-110">
+                <TechTag name={skill} />
+              </div>
+            ))}
           </div>
-          <button
-            onClick={() => handleScroll('right')}
-            onMouseEnter={() => handleScroll('right')}
-            className="absolute -right-4 z-10 rounded-full bg-white/80 p-2 shadow-md transition-opacity hover:bg-white dark:bg-dark-primary/80 dark:hover:bg-dark-primary"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-light-text dark:text-dark-text" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-          </button>
         </div>
       </section>
 

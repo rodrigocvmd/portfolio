@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 	return (
 		<div className="bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col h-full">
-			<div className="relative w-full h-48 sm:h-56 overflow-hidden">
+			<div className="relative w-full h-48 sm:h-52 overflow-hidden">
 				<Image
 					src={imageUrl}
 					alt={`Thumbnail do projeto ${title}`}
@@ -39,12 +39,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					className="object-cover transition-transform duration-300 group-hover:scale-105"
 				/>
 			</div>
-			<div className="p-5 sm:p-6 flex flex-col flex-grow">
-				<h3 className="text-xl sm:text-2xl font-semibold font-heading text-light-text dark:text-dark-text mb-2 min-h-[3.5rem] sm:min-h-[4rem]">
+			<div className="p-5 sm:p-6 flex flex-col flex-grow text-center">
+				<h3 className="text-2xl font-semibold font-heading text-light-text dark:text-dark-text mb-2 min-h-[4rem]">
 					{title}
 				</h3>
-				<div className="relative h-28 sm:h-32 mb-4">
-					<p className="text-sm sm:text-base text-light-text dark:text-dark-text">
+				<div className="relative h-32 mb-4">
+					<p className="text-base text-light-text dark:text-dark-text">
 						{description}
 					</p>
 				</div>
@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						<TechTag key={tech} name={tech} />
 					))}
 					{!showAllTech && technologies.length > 4 && (
-						<span className="ml-2 text-xs font-medium text-light-accent dark:text-dark-accent">
+						<span className="ml-2 text-xs font-medium text-light-accent dark:text-dark-accent self-center">
 							+{technologies.length - 4}
 						</span>
 					)}

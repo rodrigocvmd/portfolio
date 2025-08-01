@@ -53,12 +53,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       <BackButton />
       
       <header className="mb-8">
-        <h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl">
+        <h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl text-center">
           {project.title}
         </h1>
       </header>
 
-      <div className="relative w-full h-72 sm:h-96 md:h-[500px] rounded-lg overflow-hidden mb-8 shadow-lg">
+      <div className="relative w-full h-64 sm:h-80 md:h-[450px] rounded-lg overflow-hidden mb-8 shadow-lg mx-auto max-w-4xl">
         <Image
           src={project.imageUrl}
           alt={`Imagem do projeto ${project.title}`}
@@ -93,6 +93,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       </section>
 
       <div className="prose prose-lg max-w-4xl mx-auto dark:prose-invert text-justify">
+        <h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text mb-4 text-center">
+            Descrição do Projeto
+        </h2>
         <p>{project.description}</p>
       </div>
 
