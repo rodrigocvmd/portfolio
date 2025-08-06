@@ -15,7 +15,7 @@ const allProjects = [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		imageUrl: "/images/imgSuporteUsuario.png",
 		technologies: ["Node.js", "Express", "MongoDB", "JWT"],
-		projectSlug: "projeto-suporte-usuario",
+		projectSlug: "projeto-reserva-de-recursos",
 		liveUrl: "https://suporte-ao-usuario.onrender.com/",
 		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
 		inDevelopment: true,

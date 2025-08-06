@@ -1,9 +1,25 @@
-// src/app/projetos/[slug]/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 import TechTag from "@/components/TechTag";
 
 const allProjects = [
+	{
+		title: "Em desenvolvimento",
+		description: [
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		],
+		imageUrl: "/images/imgMarketPlaceImoveis.png",
+		technologies: ["React", "Node.js", "TailwindCSS", "Git", "DaisyUI", "JavaScript"],
+		projectSlug: "projeto-reserva-de-recursos",
+		liveUrl: "",
+		repoUrl: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
+		inDevelopment: true,
+		progress: 50,
+	},
 	{
 		title: "Marketplace de Imóveis (Full Stack)",
 		description: [
@@ -104,20 +120,36 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 			<div className="relative w-full h-64 sm:h-80 md:h-[450px] rounded-lg overflow-hidden mb-8 shadow-lg mx-auto max-w-4xl group">
 				{project.inDevelopment && (
 					<div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
-						<span className="text-white text-lg font-bold px-4 py-2 bg-yellow-500 rounded-md">Em Desenvolvimento</span>
+						<span className="text-white text-lg font-bold px-4 py-2 bg-yellow-500 rounded-md">
+							Em Desenvolvimento
+						</span>
 					</div>
 				)}
 				<Image
 					src={project.imageUrl}
 					alt={`Imagem do projeto ${project.title}`}
 					fill
-					className={`object-cover transition-transform duration-300 group-hover:scale-105 ${project.inDevelopment ? 'opacity-30' : ''}`}
+					className={`object-cover transition-transform duration-300 group-hover:scale-105 ${
+						project.inDevelopment ? "opacity-30" : ""
+					}`}
 					priority
 				/>
 			</div>
 
+			{project.inDevelopment && project.progress !== undefined && (
+				<div className="mb-8 max-w-4xl mx-auto">
+					<h3 className="text-center text-xl font-semibold mb-2">Progresso do Projeto</h3>
+					<div className="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+						<div
+							className="bg-blue-600 h-4 rounded-full"
+							style={{ width: `${project.progress}%` }}></div>
+					</div>
+					<p className="text-center mt-2">{project.progress}% concluído</p>
+				</div>
+			)}
+
 			<div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-				{project.liveUrl && (
+				{project.liveUrl && !project.inDevelopment && (
 					<Link
 						href={project.liveUrl}
 						target="_blank"
@@ -163,4 +195,3 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 		</div>
 	);
 }
-

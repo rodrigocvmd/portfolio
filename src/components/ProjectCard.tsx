@@ -1,5 +1,5 @@
 // src/components/ProjectCard.tsx
-'use client';
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -31,21 +31,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 	const visibleTechnologies = showAllTech ? technologies : technologies.slice(0, 4);
 
-	const LiveLink = inDevelopment ? 'div' : Link;
+	const LiveLink = inDevelopment ? "div" : Link;
 
 	return (
 		<div className="group bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col h-full">
-			<Link href={`/projetos/${projectSlug}`} className="relative w-full h-48 sm:h-52 overflow-hidden">
+			<Link
+				href={`/projetos/${projectSlug}`}
+				className="relative w-full h-48 sm:h-52 overflow-hidden">
 				{inDevelopment && (
 					<div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
-						<span className="text-white text-lg font-bold px-4 py-2 bg-yellow-500 rounded-md">Em Desenvolvimento</span>
+						<span className="text-white text-lg font-bold px-4 py-2 bg-yellow-500 rounded-md">
+							Em Desenvolvimento
+						</span>
 					</div>
 				)}
 				<Image
 					src={imageUrl}
 					alt={`Thumbnail do projeto ${title}`}
 					fill
-					className={`object-cover transition-transform duration-300 group-hover:scale-105 ${inDevelopment ? 'opacity-30' : ''}`}
+					className={`object-cover transition-transform duration-300 group-hover:scale-105 ${
+						inDevelopment ? "opacity-30" : ""
+					}`}
 				/>
 			</Link>
 			<div className="p-5 sm:p-6 flex flex-col flex-grow text-center">
@@ -82,19 +88,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 							{liveUrl && (
 								<div className="relative group">
 									<LiveLink
-										href={inDevelopment ? '' : liveUrl}
+										href={inDevelopment ? "" : liveUrl}
 										target="_blank"
 										rel="noopener noreferrer"
-										className={`text-base text-light-text dark:text-dark-text transition-colors ${inDevelopment ? 'cursor-default text-gray-500' : 'hover:text-light-accent dark:hover:text-dark-accent'}`}>
+										className={`text-base text-light-text dark:text-dark-text transition-colors ${
+											inDevelopment
+												? "cursor-not-allowed text-gray-500"
+												: "hover:text-light-accent dark:hover:text-dark-accent"
+										}`}>
 										Ver Online
 									</LiveLink>
-									{inDevelopment && (
-										<div className="absolute bottom-full mb-2 hidden group-hover:block">
-											<span className="bg-gray-700 text-white text-xs rounded py-1 px-2">
-												Disponível em breve
-											</span>
-										</div>
-									)}
 								</div>
 							)}
 
