@@ -1,7 +1,7 @@
 // src/components/ContatoConteudo.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import {
 	FaWhatsapp,
 	FaLinkedin,
@@ -45,20 +45,32 @@ const CheckIcon = () => (
 	</svg>
 );
 
+interface FormData {
+	name: string;
+	email: string;
+	phone: string;
+	message: string;
+}
+
 export default function ContatoConteudo() {
 	const [copiedStatus, setCopiedStatus] = useState<{ [key: string]: boolean }>({});
 	const [phoneLinkText, setPhoneLinkText] = useState("(61) 9 9966-2404");
+	const [formData, setFormData] = useState<FormData>({
+		name: "",
+		email: "",
+		phone: "",
+		message: "",
+	});
+	const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+	const [responseMessage, setResponseMessage] = useState("");
 
-	const handleCopy = async (textToCopy: string, key: string, successMessage?: string) => {
+	const handleCopy = async (textToCopy: string, key: string) => {
 		try {
 			await navigator.clipboard.writeText(textToCopy);
 			setCopiedStatus((prev) => ({ ...prev, [key]: true }));
-			if (successMessage) {
-				alert(successMessage);
-			}
 			setTimeout(() => {
-				setCopiedStatus((prev) => ({ ...prev, [key]: false })); // Reseta o ícone
-			}, 2000); // Reset status after 2 seconds
+				setCopiedStatus((prev) => ({ ...prev, [key]: false }));
+			}, 2000);
 		} catch (err) {
 			console.error("Falha ao copiar: ", err);
 			alert("Falha ao copiar texto.");
@@ -78,6 +90,42 @@ export default function ContatoConteudo() {
 		}
 	};
 
+	const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		const { name, value } = e.target;
+		setFormData((prev) => ({ ...prev, [name]: value }));
+	};
+
+	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setStatus("loading");
+		setResponseMessage("");
+
+		try {
+			const response = await fetch("/api/contato", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
+
+			const data = await response.json();
+
+			if (response.ok) {
+				setStatus("success");
+				setResponseMessage(data.message || "Mensagem enviada com sucesso!");
+				setFormData({ name: "", email: "", phone: "", message: "" }); // Limpa o formulário
+			} else {
+				setStatus("error");
+				setResponseMessage(data.message || "Ocorreu um erro ao enviar a mensagem.");
+			}
+		} catch (error) {
+			setStatus("error");
+			setResponseMessage("Não foi possível conectar ao servidor. Tente novamente mais tarde.");
+			console.error("Erro de rede ou servidor:", error);
+		}
+	};
+
 	return (
 		<div className="space-y-12 sm:space-y-16">
 			<header className="container mx-auto px-4 pt-8 text-center sm:px-6 lg:px-8">
@@ -94,7 +142,7 @@ export default function ContatoConteudo() {
 			</header>
 
 			<section className="secaoContato container mx-auto px-4 sm:px-6 lg:px-8">
-				{/* Grid para Contato Direto e Outras Formas de Contato (lado a lado em telas maiores) */}
+				{/* Grid para Contato Direto e Outras Formas de Contato */}
 				<div className="contatoDiretoGrid mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-10 md:grid-cols-2 md:gap-x-10 lg:gap-x-12">
 					{/* Bloco de Informações Diretas */}
 					<div className="contatoDiretoItem h-full space-y-8 rounded-lg bg-light-secondary p-6 shadow-md dark:bg-dark-secondary sm:p-8">
@@ -198,7 +246,7 @@ export default function ContatoConteudo() {
 								</h3>
 								<div className="telefone flex items-center">
 									<a
-										href="#!" // Previne navegação, comportamento de botão
+										href="#!"
 										onClick={handlePhoneCopyAndTextChange}
 										title="Copiar telefone"
 										className="text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all cursor-pointer"
@@ -339,10 +387,7 @@ export default function ContatoConteudo() {
 				<div className="mx-auto mt-10 max-w-4xl md:mt-12">
 					<form
 						className="formulario space-y-6 rounded-lg bg-light-secondary p-6 shadow-md dark:bg-dark-secondary sm:p-8"
-						onSubmit={(e) => {
-							e.preventDefault();
-							alert("Simulação de envio!");
-						}}>
+						onSubmit={handleSubmit}>
 						<div>
 							<h2 className="text-center mb-6 font-heading text-2xl font-semibold text-light-text dark:text-dark-text sm:text-3xl 3xl:text-4xl">
 								Via Formulário
@@ -357,10 +402,16 @@ export default function ContatoConteudo() {
 								name="name"
 								id="name"
 								required
+								value={formData.name}
+								onChange={handleChange}
 								className="w-full rounded-md border border-light-primary bg-light-primary px-3 py-2 text-light-text shadow-sm focus:border-light-accent focus:ring-light-accent dark:border-dark-primary dark:bg-dark-primary dark:text-dark-text dark:focus:border-dark-accent dark:focus:ring-dark-accent sm:text-sm placeholder:text-light-text/50 dark:placeholder:text-dark-text/50 focus:placeholder:text-transparent"
 								placeholder="Nome Completo"
-								oninvalid="this.setCustomValidity('Por favor, preencha seu nome.')"
-								oninput="this.setCustomValidity('')"
+								onInvalid={(e) =>
+									(e.target as HTMLInputElement).setCustomValidity(
+										"Por favor, preencha seu nome."
+									)
+								}
+								onInput={(e) => (e.target as HTMLInputElement).setCustomValidity("")}
 							/>
 						</div>
 						<div>
@@ -374,10 +425,16 @@ export default function ContatoConteudo() {
 								name="email"
 								id="email"
 								required
+								value={formData.email}
+								onChange={handleChange}
 								className="w-full rounded-md border border-light-primary bg-light-primary px-3 py-2 text-light-text shadow-sm focus:border-light-accent focus:ring-light-accent dark:border-dark-primary dark:bg-dark-primary dark:text-dark-text dark:focus:border-dark-accent dark:focus:ring-dark-accent sm:text-sm placeholder:text-light-text/50 dark:placeholder:text-dark-text/50 focus:placeholder:text-transparent"
 								placeholder="seuemail@gmail.com"
-								oninvalid="this.setCustomValidity('Por favor, insira um email válido.')"
-								oninput="this.setCustomValidity('')"
+								onInvalid={(e) =>
+									(e.target as HTMLInputElement).setCustomValidity(
+										"Por favor, insira um email válido."
+									)
+								}
+								onInput={(e) => (e.target as HTMLInputElement).setCustomValidity("")}
 							/>
 						</div>
 						<div>
@@ -390,6 +447,8 @@ export default function ContatoConteudo() {
 								type="tel"
 								name="phone"
 								id="phone"
+								value={formData.phone}
+								onChange={handleChange}
 								className="w-full rounded-md border border-light-primary bg-light-primary px-3 py-2 text-light-text shadow-sm focus:border-light-accent focus:ring-light-accent dark:border-dark-primary dark:bg-dark-primary dark:text-dark-text dark:focus:border-dark-accent dark:focus:ring-dark-accent sm:text-sm placeholder:text-light-text/50 dark:placeholder:text-dark-text/50 focus:placeholder:text-transparent"
 								placeholder="(XX) XXXXX-XXXX"
 							/>
@@ -405,18 +464,33 @@ export default function ContatoConteudo() {
 								id="message"
 								required
 								rows={4}
+								value={formData.message}
+								onChange={handleChange}
 								className="w-full rounded-md border border-light-primary bg-light-primary px-3 py-2 text-light-text shadow-sm focus:border-light-accent focus:ring-light-accent dark:border-dark-primary dark:bg-dark-primary dark:text-dark-text dark:focus:border-dark-accent dark:focus:ring-dark-accent sm:text-sm placeholder:text-light-text/50 dark:placeholder:text-dark-text/50 focus:placeholder:text-transparent"
 								placeholder="Olá, gostaria de falar sobre..."
-								oninvalid="this.setCustomValidity('Por favor, escreva sua mensagem.')"
-								oninput="this.setCustomValidity('')"></textarea>
+								onInvalid={(e) =>
+									(e.target as HTMLTextAreaElement).setCustomValidity(
+										"Por favor, escreva sua mensagem."
+									)
+								}
+								onInput={(e) => (e.target as HTMLTextAreaElement).setCustomValidity("")}></textarea>
 						</div>
 						<div className="text-center">
 							<button
 								type="submit"
-								className="w-full rounded-lg bg-light-accent px-6 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 sm:w-auto">
-								Enviar Mensagem
+								disabled={status === "loading"}
+								className="w-full rounded-lg bg-light-accent px-6 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto">
+								{status === "loading" ? "Enviando..." : "Enviar Mensagem"}
 							</button>
 						</div>
+						{status !== "idle" && (
+							<p
+								className={`mt-4 text-center text-sm ${
+									status === "success" ? "text-green-500" : "text-red-500"
+								}`}>
+								{responseMessage}
+							</p>
+						)}
 					</form>
 				</div>
 			</section>
