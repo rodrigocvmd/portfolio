@@ -63,9 +63,15 @@ export default function HomePage() {
 			<section className="w-full py-12 sm:py-16 2xl:py-20">
 				<div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
 					<div className="mx-auto max-w-4xl">
-						<h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl md:text-6xl 2xl:text-7xl py-4">
-							Bem-vindo(a) ao Meu Portfólio &lt; :) &gt;
+						<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl md:text-5xl 2xl:text-6xl py-4">
+							Olá!
+						</h2>
+						<h1 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl md:text-5xl 2xl:text-6xl py-4">
+							Bem-vindo(a) ao Meu Portfólio
 						</h1>
+						{/* <h2 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl md:text-6xl 2xl:text-7xl py-4">
+							&lt;&gt; :) &lt;/&gt;
+						</h2> */}
 						<p className="mt-5 text-base leading-relaxed text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
 							Explore meus projetos, conheça minha trajetória e habilidades.
 						</p>
@@ -131,7 +137,7 @@ export default function HomePage() {
 					</div>
 					<div className="mt-10">
 						<Link
-							href="/sobre"
+							href="/projetos"
 							className="inline-block rounded-lg bg-light-accent px-7 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 text-base sm:text-lg">
 							Ver Todos os Projetos
 						</Link>

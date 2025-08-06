@@ -36,6 +36,7 @@ const education = [
 		description:
 			"Estudo aprofundado dos fundamentos da computação, algoritmos, estruturas de dados e desenvolvimento de software.",
 		isCursando: true,
+		imageUrl: "",
 	},
 	{
 		degree: "Bacharel em Direito",
@@ -44,6 +45,7 @@ const education = [
 		description:
 			"Formação que desenvolveu alta capacidade analítica, argumentativa e de resolução de problemas complexos.",
 		isCursando: false,
+		imageUrl: "/images/unb.png",
 	},
 	{
 		degree: "Pós-Graduação em Direito Empresarial",
@@ -52,15 +54,84 @@ const education = [
 		description:
 			"Especialização focada em regulação de mercados, contratos e estruturas societárias.",
 		isCursando: false,
+		imageUrl: "/images/pos.png",
+	},
+	{
+		degree: "Inglês Avançado",
+		institution: "Casa Thomas Jefferson",
+		period: "2007 - 2011",
+		description:
+			"Inglês avançado com ênfase em comunicação oral e escrita, leitura crítica e compreensão auditiva.",
+		isCursando: false,
+		imageUrl: "/images/thomas.png",
 	},
 ];
 
 const certifications = [
-	{ title: "Curso de React Avançado", institution: "Udemy", isCursando: true },
-	{ title: "Imersão Full Stack", institution: "Alura", isCursando: false },
+	{
+		title: "Node.js Developer Course",
+		institution: "Andrew Mead, Rob Percival",
+		isCursando: false,
+		imageUrl: "/images/dev/completenode.png",
+	},
+	{
+		title: "Mastering TypeScript",
+		institution: "Colt Steele",
+		isCursando: false,
+		imageUrl: "/images/dev/ts.png",
+	},
+	{
+		title: "React Front To Back",
+		institution: "Brad Traversy",
+		isCursando: false,
+		imageUrl: "/images/dev/react.png",
+	},
+	{
+		title: "Dev Quest Backend",
+		institution: "Ricardo Dias, Roberto Dias",
+		isCursando: false,
+		imageUrl: "/images/dev/devquestb.png",
+	},
+	{
+		title: "Modern Javascript",
+		institution: "Brad Traversy",
+		isCursando: false,
+		imageUrl: "/images/dev/modernjs.png",
+	},
+	{
+		title: "NodeJS: The Complete Guide",
+		institution: "Maximilian Schwarzmüller",
+		isCursando: false,
+		imageUrl: "/images/dev/node.png",
+	},
+	{
+		title: "Dev Quest Frontend",
+		institution: "Ricardo Dias, Roberto Dias",
+		isCursando: false,
+		imageUrl: "/images/dev/devquestf.png",
+	},
+	{
+		title: "Complete Web Dev Bootcamp",
+		institution: "Dr. Angela Yu",
+		isCursando: false,
+		imageUrl: "/images/dev/webdevbootcamp.png",
+	},
+	{
+		title: "Understanding TypeScript",
+		institution: "Maximilian Schwarzmüller",
+		isCursando: false,
+		imageUrl: "/images/dev/understandingts.png",
+	},
+	{
+		title: "Tailwind CSS From Scratch",
+		institution: "Brad Traversy",
+		isCursando: false,
+		imageUrl: "/images/dev/tailwind.png",
+	},
 ];
 
 const developingSkills = ["Redux (Toolkit)", "Context", "MongoDB", "CI/CD (GitHub Actions)"];
+const complementarySkills = ["Netlify"]; // Nova categoria
 
 // --- COMPONENTE PRINCIPAL ---
 export default function SobreConteudo() {
@@ -72,6 +143,12 @@ export default function SobreConteudo() {
 	const handleOpenModal = (imageUrl: string) => {
 		setModalImage(imageUrl);
 		setModalOpen(true);
+	};
+
+	const getSkillType = (skill: string) => {
+		if (developingSkills.includes(skill)) return "developing";
+		if (complementarySkills.includes(skill)) return "complementary";
+		return "domain";
 	};
 
 	return (
@@ -171,8 +248,9 @@ export default function SobreConteudo() {
 								</h3>
 								<ul className="space-y-2">
 									{skillCategory.items.map((item) => {
-										const isDeveloping = developingSkills.includes(item);
+										const skillType = getSkillType(item);
 										const isHovered = hoveredSkill === item;
+
 										return (
 											<li
 												key={item}
@@ -180,9 +258,11 @@ export default function SobreConteudo() {
 												onMouseLeave={() => setHoveredSkill(null)}
 												className={`group relative cursor-default transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg rounded-md p-2 ${
 													isHovered
-														? isDeveloping
-															? "bg-orange-200 dark:bg-orange-800"
-															: "bg-green-200 dark:bg-green-800"
+														? {
+																domain: "bg-green-200 dark:bg-green-800",
+																developing: "bg-orange-200 dark:bg-orange-800",
+																complementary: "bg-blue-200 dark:bg-blue-800",
+														  }[skillType]
 														: ""
 												}`}>
 												<span className="text-base text-light-text dark:text-dark-text 2xl:text-lg">
@@ -190,9 +270,19 @@ export default function SobreConteudo() {
 												</span>
 												<div
 													className={`absolute inset-0 flex items-center justify-center rounded-md text-xs font-bold text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100 ${
-														isDeveloping ? "bg-orange-500" : "bg-green-500"
+														{
+															domain: "bg-green-500",
+															developing: "bg-orange-500",
+															complementary: "bg-blue-500",
+														}[skillType]
 													}`}>
-													{isDeveloping ? "Em desenvolvimento" : "Domínio"}
+													{
+														{
+															domain: "Domínio",
+															developing: "Em desenvolvimento",
+															complementary: "Complementar",
+														}[skillType]
+													}
 												</div>
 											</li>
 										);
@@ -229,7 +319,7 @@ export default function SobreConteudo() {
 								</div>
 								<div className="mt-4 text-center sm:mt-0 sm:absolute sm:top-4 sm:right-4">
 									<button
-										onClick={() => !edu.isCursando && handleOpenModal("/images/unb.png")}
+										onClick={() => !edu.isCursando && handleOpenModal(edu.imageUrl)}
 										disabled={edu.isCursando}
 										className="group relative rounded-md bg-light-accent px-3 py-1.5 text-sm font-semibold text-dark-primary shadow-sm transition-opacity hover:bg-opacity-80 disabled:cursor-not-allowed disabled:opacity-50">
 										Diploma
@@ -284,7 +374,7 @@ export default function SobreConteudo() {
 										</div>
 										<div className="mt-4 text-center sm:mt-0 sm:absolute sm:top-4 sm:right-4">
 											<button
-												onClick={() => !cert.isCursando && handleOpenModal("/images/diploma.jpg")}
+												onClick={() => !cert.isCursando && handleOpenModal(cert.imageUrl)}
 												disabled={cert.isCursando}
 												className="group relative rounded-md bg-light-accent px-3 py-1.5 text-sm font-semibold text-dark-primary shadow-sm transition-opacity hover:bg-opacity-80 disabled:cursor-not-allowed disabled:opacity-50">
 												Certificado

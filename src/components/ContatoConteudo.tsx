@@ -47,7 +47,7 @@ const CheckIcon = () => (
 
 export default function ContatoConteudo() {
 	const [copiedStatus, setCopiedStatus] = useState<{ [key: string]: boolean }>({});
-	const [phoneLinkText, setPhoneLinkText] = useState("(61) 9 99966-2404");
+	const [phoneLinkText, setPhoneLinkText] = useState("(61) 9 9966-2404");
 
 	const handleCopy = async (textToCopy: string, key: string, successMessage?: string) => {
 		try {
@@ -70,7 +70,7 @@ export default function ContatoConteudo() {
 			await navigator.clipboard.writeText("61999662404");
 			setPhoneLinkText("Telefone copiado!");
 			setTimeout(() => {
-				setPhoneLinkText("(61) 9 99966-2404");
+				setPhoneLinkText("(61) 9 9966-2404");
 			}, 2500);
 		} catch (err) {
 			console.error("Falha ao copiar telefone: ", err);

@@ -14,6 +14,7 @@ interface ProjectCardProps {
 	projectSlug: string;
 	liveUrl?: string;
 	repoUrl?: string;
+	inDevelopment?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -24,19 +25,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	projectSlug,
 	liveUrl,
 	repoUrl,
+	inDevelopment,
 }) => {
 	const [showAllTech, setShowAllTech] = useState(false);
 
 	const visibleTechnologies = showAllTech ? technologies : technologies.slice(0, 4);
 
+	const LiveLink = inDevelopment ? 'div' : Link;
+
 	return (
 		<div className="group bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col h-full">
 			<div className="relative w-full h-48 sm:h-52 overflow-hidden">
+				{inDevelopment && (
+					<div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+						<span className="text-white text-lg font-bold px-4 py-2 bg-yellow-500 rounded-md">Em Desenvolvimento</span>
+					</div>
+				)}
 				<Image
 					src={imageUrl}
 					alt={`Thumbnail do projeto ${title}`}
 					fill
-					className="object-cover transition-transform duration-300 group-hover:scale-105"
+					className={`object-cover transition-transform duration-300 group-hover:scale-105 ${inDevelopment ? 'opacity-30' : ''}`}
 				/>
 			</div>
 			<div className="p-5 sm:p-6 flex flex-col flex-grow text-center">
@@ -69,13 +78,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						</Link>
 						<div className="flex space-x-4">
 							{liveUrl && (
-								<Link
-									href={liveUrl}
+								<LiveLink
+									href={inDevelopment ? '' : liveUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="text-base text-light-text dark:text-dark-text hover:text-light-accent dark:hover:text-dark-accent transition-colors">
+									className={`text-base text-light-text dark:text-dark-text transition-colors ${inDevelopment ? 'cursor-not-allowed text-gray-500' : 'hover:text-light-accent dark:hover:text-dark-accent'}`}>
 									Ver Online
-								</Link>
+								</LiveLink>
 							)}
 
 							{repoUrl && (

@@ -25,7 +25,7 @@ const Footer = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="LinkedIn de Rodrigo Carvalho"
-						className="text-4xl hover:text-light-accent dark:hover:text-dark-accent transition-transform duration-300 hover:scale-110">
+						className="text-5xl hover:text-light-accent dark:hover:text-dark-accent transition-transform duration-300 hover:scale-110">
 						<FaLinkedin />
 					</a>
 					<a
@@ -33,13 +33,13 @@ const Footer = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="GitHub de Rodrigo Carvalho"
-						className="text-4xl hover:text-light-accent dark:hover:text-dark-accent transition-transform duration-300 hover:scale-110">
+						className="text-5xl hover:text-light-accent dark:hover:text-dark-accent transition-transform duration-300 hover:scale-110">
 						<FaGithub />
 					</a>
 					<a
 						href={contacts.email}
 						aria-label="Enviar um email para Rodrigo Carvalho"
-						className="text-4xl hover:text-light-accent dark:hover:text-dark-accent transition-transform duration-300 hover:scale-110">
+						className="text-5xl hover:text-light-accent dark:hover:text-dark-accent transition-transform duration-300 hover:scale-110">
 						<MdOutlineEmail />
 					</a>
 					<a
@@ -47,14 +47,14 @@ const Footer = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Entrar em contato com Rodrigo Carvalho via WhatsApp"
-						className="text-4xl hover:text-light-accent dark:hover:text-dark-accent transition-transform duration-300 hover:scale-110">
+						className="text-5xl hover:text-light-accent dark:hover:text-dark-accent transition-transform duration-300 hover:scale-110">
 						<FaWhatsapp />
 					</a>
 				</div>
 
 				{/* Informações de Copyright e Repositório */}
-				<p className="text-sm">&copy; {currentYear} | Rodrigo Carvalho</p>
-				<p className="text-sm">
+				<p className="text-base">&copy; {currentYear} | Rodrigo Carvalho</p>
+				<p className="text-base">
 					Repositório deste projeto disponível no&nbsp;
 					<Link
 						href={contacts.repo}
@@ -67,9 +67,7 @@ const Footer = () => {
 				</p>
 
 				{/* Tecnologias Utilizadas */}
-				<p className="text-xs mt-4">
-					Desenvolvido com Next.js, React, TypeScript e Tailwind CSS.
-				</p>
+				<p className="text-sm mt-4">Desenvolvido com Next.js, React, TypeScript e Tailwind CSS.</p>
 			</div>
 		</footer>
 	);

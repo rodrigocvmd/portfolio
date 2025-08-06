@@ -32,17 +32,17 @@ const Navbar = () => {
 				{/* Logo ou Nome */}
 				<Link
 					href="/"
-					className="text-2xl font-bold font-heading text-light-text dark:text-dark-text transition-colors hover:text-light-accent dark:hover:text-dark-accent">
+					className="text-2xl md:text-3xl font-bold font-heading text-light-text dark:text-dark-text transition-colors hover:text-light-accent dark:hover:text-dark-accent">
 					Web Portfólio
 				</Link>
 
 				{/* Links de Navegação - Desktop */}
-				<div className="hidden items-center space-x-6 md:flex">
+				<div className="hidden items-center space-x-8 md:flex">
 					{navLinks.map((link) => (
 						<Link
 							key={link.href}
 							href={link.href}
-							className="font-medium text-light-text transition-colors hover:text-light-accent dark:text-dark-text dark:hover:text-dark-accent">
+							className="font-medium text-lg text-light-text transition-colors hover:text-light-accent dark:text-dark-text dark:hover:text-dark-accent">
 							{link.label}
 						</Link>
 					))}
@@ -59,7 +59,7 @@ const Navbar = () => {
 						className="ml-4 rounded p-1 text-light-text focus:outline-none focus:ring-2 focus:ring-light-accent dark:text-dark-text dark:focus:ring-dark-accent">
 						{isMobileMenuOpen ? (
 							<svg
-								className="h-6 w-6"
+								className="h-7 w-7"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
@@ -72,7 +72,7 @@ const Navbar = () => {
 							</svg>
 						) : (
 							<svg
-								className="h-6 w-6"
+								className="h-7 w-7"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"

@@ -7,15 +7,18 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// Suas cores customizadas aqui
-				"light-primary": "#F0F9FF",
-				"light-secondary": "#E0F2FE",
-				"light-text": "#374151",
-				"light-accent": "#FDBA74",
-				"dark-primary": "#1F2937",
-				"dark-secondary": "#374151",
-				"dark-text": "#D1D5DB",
-				"dark-accent": "#FCD3A2",
+        light: {
+          primary: "#F0F9FF",
+          secondary: "#E0F2FE",
+          text: "#374151",
+          accent: "#FDBA74",
+        },
+        dark: {
+          primary: "#1F2937",
+          secondary: "#374151",
+          text: "#D1D5DB",
+          accent: "#FCD3A2",
+        },
         "pastel-green": "#A7F3D0",
         "pastel-orange": "#FED7AA",
 			},
