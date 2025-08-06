@@ -35,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 	return (
 		<div className="group bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col h-full">
-			<div className="relative w-full h-48 sm:h-52 overflow-hidden">
+			<Link href={`/projetos/${projectSlug}`} className="relative w-full h-48 sm:h-52 overflow-hidden">
 				{inDevelopment && (
 					<div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
 						<span className="text-white text-lg font-bold px-4 py-2 bg-yellow-500 rounded-md">Em Desenvolvimento</span>
@@ -47,11 +47,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					fill
 					className={`object-cover transition-transform duration-300 group-hover:scale-105 ${inDevelopment ? 'opacity-30' : ''}`}
 				/>
-			</div>
+			</Link>
 			<div className="p-5 sm:p-6 flex flex-col flex-grow text-center">
-				<h3 className="text-2xl sm:text-3xl font-semibold font-heading text-light-text dark:text-dark-text mb-3 min-h-[4.5rem]">
-					{title}
-				</h3>
+				<Link href={`/projetos/${projectSlug}`}>
+					<h3 className="text-2xl sm:text-3xl font-semibold font-heading text-light-text dark:text-dark-text mb-3 min-h-[4.5rem]">
+						{title}
+					</h3>
+				</Link>
 				<div className="mb-4">
 					<p className="text-lg text-light-text dark:text-dark-text text-left line-clamp-5">
 						{description}
@@ -73,18 +75,27 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					<div className="flex justify-around items-center space-x-3">
 						<Link
 							href={`/projetos/${projectSlug}`}
-							className="text-base font-medium text-light-accent dark:text-dark-accent hover:underline">
+							className="text-base font-medium text-light-accent dark:text-dark-accent transition-transform duration-300 hover:scale-110">
 							Ver Detalhes &rarr;
 						</Link>
 						<div className="flex space-x-4">
 							{liveUrl && (
-								<LiveLink
-									href={inDevelopment ? '' : liveUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-									className={`text-base text-light-text dark:text-dark-text transition-colors ${inDevelopment ? 'cursor-not-allowed text-gray-500' : 'hover:text-light-accent dark:hover:text-dark-accent'}`}>
-									Ver Online
-								</LiveLink>
+								<div className="relative">
+									<LiveLink
+										href={inDevelopment ? '' : liveUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+										className={`text-base text-light-text dark:text-dark-text transition-colors ${inDevelopment ? 'cursor-not-allowed text-gray-500' : 'hover:text-light-accent dark:hover:text-dark-accent'}`}>
+										Ver Online
+									</LiveLink>
+									{inDevelopment && (
+										<div className="absolute bottom-full mb-2 hidden group-hover:block">
+											<span className="bg-gray-700 text-white text-xs rounded py-1 px-2">
+												Disponível em breve
+											</span>
+										</div>
+									)}
+								</div>
 							)}
 
 							{repoUrl && (

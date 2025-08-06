@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import { useState } from "react";
@@ -131,7 +133,6 @@ const certifications = [
 ];
 
 const developingSkills = ["Redux (Toolkit)", "Context", "MongoDB", "CI/CD (GitHub Actions)"];
-const complementarySkills = ["Netlify"]; // Nova categoria
 
 // --- COMPONENTE PRINCIPAL ---
 export default function SobreConteudo() {
@@ -143,12 +144,6 @@ export default function SobreConteudo() {
 	const handleOpenModal = (imageUrl: string) => {
 		setModalImage(imageUrl);
 		setModalOpen(true);
-	};
-
-	const getSkillType = (skill: string) => {
-		if (developingSkills.includes(skill)) return "developing";
-		if (complementarySkills.includes(skill)) return "complementary";
-		return "domain";
 	};
 
 	return (
@@ -248,9 +243,8 @@ export default function SobreConteudo() {
 								</h3>
 								<ul className="space-y-2">
 									{skillCategory.items.map((item) => {
-										const skillType = getSkillType(item);
+										const isDeveloping = developingSkills.includes(item);
 										const isHovered = hoveredSkill === item;
-
 										return (
 											<li
 												key={item}
@@ -258,11 +252,9 @@ export default function SobreConteudo() {
 												onMouseLeave={() => setHoveredSkill(null)}
 												className={`group relative cursor-default transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg rounded-md p-2 ${
 													isHovered
-														? {
-																domain: "bg-green-200 dark:bg-green-800",
-																developing: "bg-orange-200 dark:bg-orange-800",
-																complementary: "bg-blue-200 dark:bg-blue-800",
-														  }[skillType]
+														? isDeveloping
+															? "bg-orange-200 dark:bg-orange-800"
+															: "bg-green-200 dark:bg-green-800"
 														: ""
 												}`}>
 												<span className="text-base text-light-text dark:text-dark-text 2xl:text-lg">
@@ -270,19 +262,9 @@ export default function SobreConteudo() {
 												</span>
 												<div
 													className={`absolute inset-0 flex items-center justify-center rounded-md text-xs font-bold text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100 ${
-														{
-															domain: "bg-green-500",
-															developing: "bg-orange-500",
-															complementary: "bg-blue-500",
-														}[skillType]
+														isDeveloping ? "bg-orange-500" : "bg-green-500"
 													}`}>
-													{
-														{
-															domain: "Domínio",
-															developing: "Em desenvolvimento",
-															complementary: "Complementar",
-														}[skillType]
-													}
+													{isDeveloping ? "Em desenvolvimento" : "Domínio"}
 												</div>
 											</li>
 										);
@@ -396,3 +378,5 @@ export default function SobreConteudo() {
 		</>
 	);
 }
+
+

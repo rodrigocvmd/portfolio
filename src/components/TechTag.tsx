@@ -5,7 +5,7 @@ interface TechTagProps {
 
 const TechTag: React.FC<TechTagProps> = ({ name }) => {
   return (
-    <span className="inline-flex items-center justify-center bg-light-secondary dark:bg-dark-secondary text-lg font-medium text-light-text dark:text-dark-text px-2.5 py-1 rounded-full mr-2 transition-transform duration-200 hover:scale-110 cursor-default">
+    <span className="inline-flex items-center justify-center bg-light-accent/10 dark:bg-dark-accent/10 text-light-accent dark:text-dark-accent text-sm font-medium px-3 py-1 rounded-full cursor-default">
       {name}
     </span>
   );

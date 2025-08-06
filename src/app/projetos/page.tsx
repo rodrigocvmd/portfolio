@@ -71,7 +71,7 @@ export default function ProjetosPage() {
 				</h1>
 				<p className="mx-auto mt-4 max-w-3xl text-lg text-light-text/80 dark:text-dark-text/80 sm:text-xl 3xl:text-2xl">
 					Aqui você encontra uma seleção dos trabalhos que desenvolvi, demonstrando minhas
-					habilidades e paixão por criar soluções digitais.
+					habilidades e vontade de criar soluções digitais eficientes.
 				</p>
 			</header>
 
