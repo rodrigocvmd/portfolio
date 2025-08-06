@@ -7,27 +7,49 @@ import Image from "next/image";
 import Modal from "./Modal"; // Importar o Modal
 import Link from "next/link";
 
-// --- DADOS (mantidos como no original) ---
-const skills = [
-	{ category: "Linguagens", items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"] },
+// --- DADOS ---
+const allSkills = [
+	// Linguagens
+	{ title: "TypeScript", status: "Domínio", type: "Linguagens" },
+	{ title: "JavaScript (ES6+)", status: "Domínio", type: "Linguagens" },
+	{ title: "HTML5", status: "Domínio", type: "Linguagens" },
+	{ title: "CSS3", status: "Domínio", type: "Linguagens" },
+	// Frontend
+	{ title: "React", status: "Domínio", type: "Frontend" },
+	{ title: "Next.js", status: "Domínio", type: "Frontend" },
+	{ title: "Tailwind CSS", status: "Domínio", type: "Frontend" },
+	{ title: "Redux (Toolkit)", status: "Em desenvolvimento", type: "Frontend" },
+	{ title: "Context", status: "Em desenvolvimento", type: "Frontend" },
+	// Backend
+	{ title: "Node.js", status: "Domínio", type: "Backend" },
+	{ title: "Express.js", status: "Domínio", type: "Backend" },
+	{ title: "REST APIs", status: "Domínio", type: "Backend" },
+	// Bancos de Dados
+	{ title: "MongoDB", status: "Em desenvolvimento", type: "Bancos de Dados" },
+	{ title: "PostgreSQL", status: "Domínio", type: "Bancos de Dados" },
+	{ title: "Firebase", status: "Domínio", type: "Bancos de Dados" },
+	// Ferramentas & DevOps
+	{ title: "Git & GitHub", status: "Complementar", type: "Ferramentas & DevOps" },
+	{ title: "Vercel", status: "Domínio", type: "Ferramentas & DevOps" },
+	{ title: "Netlify", status: "Domínio", type: "Ferramentas & DevOps" },
+	{ title: "CI/CD (GitHub Actions)", status: "Em desenvolvimento", type: "Ferramentas & DevOps" },
+	// Outras Habilidades
 	{
-		category: "Frontend",
-		items: ["React", "Next.js", "Tailwind CSS", "Redux (Toolkit)", "Context"],
+		title: "Metodologias Ágeis (Scrum, Kanban)",
+		status: "Complementar",
+		type: "Outras Habilidades",
 	},
-	{ category: "Backend", items: ["Node.js", "Express.js", "REST APIs"] },
-	{ category: "Bancos de Dados", items: ["MongoDB", "PostgreSQL", "Firebase"] },
-	{
-		category: "Ferramentas & DevOps",
-		items: ["Git & GitHub", "Vercel", "Netlify", "CI/CD (GitHub Actions)"],
-	},
-	{
-		category: "Outras Habilidades",
-		items: [
-			"Metodologias Ágeis (Scrum, Kanban)",
-			"UI/UX (Princípios)",
-			"Resolução Lógica de Problemas",
-		],
-	},
+	{ title: "UI/UX (Princípios)", status: "Complementar", type: "Outras Habilidades" },
+	{ title: "Resolução Lógica de Problemas", status: "Complementar", type: "Outras Habilidades" },
+];
+
+const skillCategories = [
+	"Linguagens",
+	"Frontend",
+	"Backend",
+	"Bancos de Dados",
+	"Ferramentas & DevOps",
+	"Outras Habilidades",
 ];
 
 const education = [
@@ -132,8 +154,6 @@ const certifications = [
 	},
 ];
 
-const developingSkills = ["Redux (Toolkit)", "Context", "MongoDB", "CI/CD (GitHub Actions)"];
-
 // --- COMPONENTE PRINCIPAL ---
 export default function SobreConteudo() {
 	const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
@@ -234,41 +254,51 @@ export default function SobreConteudo() {
 						Habilidades & Tecnologias
 					</h2>
 					<div className="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-						{skills.map((skillCategory) => (
+						{skillCategories.map((category) => (
 							<div
-								key={skillCategory.category}
+								key={category}
 								className="rounded-lg bg-light-secondary p-6 shadow-md dark:bg-dark-secondary">
 								<h3 className="mb-4 font-heading text-xl font-semibold text-light-accent dark:text-dark-accent 2xl:text-2xl">
-									{skillCategory.category}
+									{category}
 								</h3>
 								<ul className="space-y-2">
-									{skillCategory.items.map((item) => {
-										const isDeveloping = developingSkills.includes(item);
-										const isHovered = hoveredSkill === item;
-										return (
-											<li
-												key={item}
-												onMouseEnter={() => setHoveredSkill(item)}
-												onMouseLeave={() => setHoveredSkill(null)}
-												className={`group relative cursor-default transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg rounded-md p-2 ${
-													isHovered
-														? isDeveloping
-															? "bg-orange-200 dark:bg-orange-800"
-															: "bg-green-200 dark:bg-green-800"
-														: ""
-												}`}>
-												<span className="text-base text-light-text dark:text-dark-text 2xl:text-lg">
-													✓ {item}
-												</span>
-												<div
-													className={`absolute inset-0 flex items-center justify-center rounded-md text-xs font-bold text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100 ${
-														isDeveloping ? "bg-orange-500" : "bg-green-500"
+									{allSkills
+										.filter((skill) => skill.type === category)
+										.map((skill) => {
+											const isHovered = hoveredSkill === skill.title;
+											const isDeveloping = skill.status === "Em desenvolvimento";
+											const isComplementary = skill.status === "Complementar";
+
+											return (
+												<li
+													key={skill.title}
+													onMouseEnter={() => setHoveredSkill(skill.title)}
+													onMouseLeave={() => setHoveredSkill(null)}
+													className={`group relative cursor-default transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg rounded-md p-2 ${
+														isHovered
+															? isDeveloping
+																? "bg-orange-200 dark:bg-orange-800"
+																: isComplementary
+																? "bg-blue-200 dark:bg-blue-800"
+																: "bg-green-200 dark:bg-green-800"
+															: ""
 													}`}>
-													{isDeveloping ? "Em desenvolvimento" : "Domínio"}
-												</div>
-											</li>
-										);
-									})}
+													<span className="text-base text-light-text dark:text-dark-text 2xl:text-lg">
+														✓ {skill.title}
+													</span>
+													<div
+														className={`absolute inset-0 flex items-center justify-center rounded-md text-xs font-bold text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100 ${
+															isDeveloping
+																? "bg-orange-500"
+																: isComplementary
+																? "bg-blue-500"
+																: "bg-green-500"
+														}`}>
+														{skill.status}
+													</div>
+												</li>
+											);
+										})}
 								</ul>
 							</div>
 						))}
