@@ -102,11 +102,16 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 			</header>
 
 			<div className="relative w-full h-64 sm:h-80 md:h-[450px] rounded-lg overflow-hidden mb-8 shadow-lg mx-auto max-w-4xl group">
+				{project.inDevelopment && (
+					<div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+						<span className="text-white text-lg font-bold px-4 py-2 bg-yellow-500 rounded-md">Em Desenvolvimento</span>
+					</div>
+				)}
 				<Image
 					src={project.imageUrl}
 					alt={`Imagem do projeto ${project.title}`}
 					fill
-					className="object-cover transition-transform duration-300 group-hover:scale-105"
+					className={`object-cover transition-transform duration-300 group-hover:scale-105 ${project.inDevelopment ? 'opacity-30' : ''}`}
 					priority
 				/>
 			</div>

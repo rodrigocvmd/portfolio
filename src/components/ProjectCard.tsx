@@ -80,12 +80,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						</Link>
 						<div className="flex space-x-4">
 							{liveUrl && (
-								<div className="relative">
+								<div className="relative group">
 									<LiveLink
 										href={inDevelopment ? '' : liveUrl}
 										target="_blank"
 										rel="noopener noreferrer"
-										className={`text-base text-light-text dark:text-dark-text transition-colors ${inDevelopment ? 'cursor-not-allowed text-gray-500' : 'hover:text-light-accent dark:hover:text-dark-accent'}`}>
+										className={`text-base text-light-text dark:text-dark-text transition-colors ${inDevelopment ? 'cursor-default text-gray-500' : 'hover:text-light-accent dark:hover:text-dark-accent'}`}>
 										Ver Online
 									</LiveLink>
 									{inDevelopment && (
