@@ -61,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					</h3>
 				</Link>
 				<div className="mb-4">
-					<p className="text-lg text-light-text dark:text-dark-text text-left line-clamp-5">
+					<p className="text-lg text-light-text dark:text-dark-text text-center">
 						{description}
 					</p>
 				</div>

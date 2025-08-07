@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useState } from "react";
@@ -201,8 +199,8 @@ export default function SobreConteudo() {
 							<h2 className="text-center font-heading text-3xl font-semibold text-light-text dark:text-dark-text sm:text-4xl 2xl:text-5xl">
 								Minha Jornada
 							</h2>
-							<div className="textoSobre prose prose-lg mx-auto mt-6 max-w-none text-center text-light-text dark:prose-invert dark:text-dark-text sm:prose-xl 2xl:prose-2xl">
-								<p>
+							<div className="textoSobre prose prose-lg mx-auto mt-6 max-w-none text-light-text dark:prose-invert dark:text-dark-text sm:prose-xl 2xl:prose-2xl text-lg">
+								<p className="text-justify indent-16 mb-5">
 									Desenvolvedor Full Stack em transição de carreira, apaixonado por transformar
 									ideias em soluções web eficientes e intuitivas. Com uma sólida formação em Direito
 									pela Universidade de Brasília (UnB), busco trazer para a tecnologia um olhar
@@ -210,15 +208,15 @@ export default function SobreConteudo() {
 									meticulosa aos detalhes – competências que agora aplico na construção de software
 									de qualidade.
 								</p>
-								<p>
+								<p className="text-justify indent-16 mb-5">
 									Minha jornada na programação é impulsionada pela curiosidade e pelo desejo de
 									criar. Estou focado no desenvolvimento Full Stack, aprofundando meus conhecimentos
-									em TypeScript e React.js (com Tailwind CSS) para o frontend; Node.js,
-									Express.js, PostgreSQL | MongoDB para o backend. Tenho aplicado essas tecnologias
-									em projetos práticos que demonstram minha evolução e dedicação, disponíveis no meu
-									portfólio e GitHub.
+									em TypeScript e React.js (com Tailwind CSS) para o frontend; Node.js, Express.js,
+									PostgreSQL | MongoDB para o backend. Tenho aplicado essas tecnologias em projetos
+									práticos que demonstram minha evolução e dedicação, disponíveis no meu portfólio e
+									GitHub.
 								</p>
-								<p>
+								<p className="text-justify indent-16 mb-5">
 									Fluente em inglês e sempre em busca de novos aprendizados, estou comprometido com
 									as boas práticas de desenvolvimento, como Clean Code e testes unitários, e pronto
 									para colaborar em ambientes dinâmicos e inovadores. Meu comprometimento com a
@@ -226,7 +224,7 @@ export default function SobreConteudo() {
 									UCB, fundamental para minha jornada de aprendizado e especialização,
 									complementando minha base teórica e prática.
 								</p>
-								<p>
+								<p className="text-justify indent-16 mb-5">
 									Busco ativamente minha primeira oportunidade como Desenvolvedor para aplicar
 									minhas habilidades, contribuir para projetos desafiadores e crescer junto com uma
 									equipe de visão.
@@ -408,5 +406,3 @@ export default function SobreConteudo() {
 		</>
 	);
 }
-
-

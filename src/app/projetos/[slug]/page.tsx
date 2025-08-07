@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import TechTag from "@/components/TechTag";
+import { useState } from "react";
 
 const allProjects = [
 	{
