@@ -201,7 +201,7 @@ export default function SobreConteudo() {
 							<h2 className="text-center font-heading text-3xl font-semibold text-light-text dark:text-dark-text sm:text-4xl 2xl:text-5xl">
 								Minha Jornada
 							</h2>
-							<div className="prose prose-lg mx-auto mt-6 max-w-none text-justify text-light-text dark:prose-invert dark:text-dark-text sm:prose-xl 2xl:prose-2xl">
+							<div className="textoSobre prose prose-lg mx-auto mt-6 max-w-none text-center text-light-text dark:prose-invert dark:text-dark-text sm:prose-xl 2xl:prose-2xl">
 								<p>
 									Desenvolvedor Full Stack em transição de carreira, apaixonado por transformar
 									ideias em soluções web eficientes e intuitivas. Com uma sólida formação em Direito
@@ -213,7 +213,7 @@ export default function SobreConteudo() {
 								<p>
 									Minha jornada na programação é impulsionada pela curiosidade e pelo desejo de
 									criar. Estou focado no desenvolvimento Full Stack, aprofundando meus conhecimentos
-									em JavaScript/TypeScript e React.js (com Tailwind CSS) para o frontend; e Node.js,
+									em TypeScript e React.js (com Tailwind CSS) para o frontend; Node.js,
 									Express.js, PostgreSQL | MongoDB para o backend. Tenho aplicado essas tecnologias
 									em projetos práticos que demonstram minha evolução e dedicação, disponíveis no meu
 									portfólio e GitHub.
@@ -235,7 +235,7 @@ export default function SobreConteudo() {
 							<div className="mt-8 flex flex-wrap justify-center gap-4">
 								<Link
 									href="/curriculo"
-									className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform hover:scale-105 text-lg">
+									className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform text-lg hover:bg-opacity-80">
 									Veja meu Currículo
 								</Link>
 								<Link

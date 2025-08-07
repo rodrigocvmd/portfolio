@@ -4,7 +4,7 @@ import SobreConteudo from "@/components/SobreConteudo";
 
 export const metadata: Metadata = {
 	title: "Sobre Mim | Portfólio de Rodrigo",
-	description: "Conheça mais sobre minha trajetória, habilidades e paixão por tecnologia.",
+	description: "Conheça mais sobre minha trajetória, habilidades e fascínio por tecnologia.",
 };
 
 export default function SobrePage() {
