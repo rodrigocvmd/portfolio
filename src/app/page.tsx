@@ -31,27 +31,31 @@ const featuredProjects = [
 
 const allSkills = [
 	"TypeScript",
-	"JavaScript (ES6+)",
-	"HTML5",
-	"CSS3",
+	"Prisma (ORM)",
+	"Java",
+	"Express.js",
+	"CI/CD (GitHub Actions)",
+	"Post CSS",
 	"React",
-	"Next.js",
-	"Tailwind CSS",
-	"Redux (Toolkit)",
+	"Kanban",
+	"JavaScript (ES6+)",
 	"Context",
 	"Node.js",
-	"Express.js",
+	"Python",
 	"REST APIs",
+	"Nest.js",
 	"MongoDB",
-	"PostgreSQL",
 	"Firebase",
+	"PostgreSQL",
+	"Next.js",
 	"Git & GitHub",
+	"HTML5",
 	"Vercel",
 	"Netlify",
-	"CI/CD (GitHub Actions)",
-	"Metodologias Ágeis (Scrum, Kanban)",
+	"Tailwind CSS",
+	"Redux (RTK)",
+	"Scrum",
 	"UI/UX (Princípios)",
-	"Resolução Lógica de Problemas",
 ];
 
 export default function HomePage() {
@@ -93,10 +97,11 @@ export default function HomePage() {
 					<p className="mt-5 text-base leading-relaxed text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
 						Desenvolvedor Full Stack focado em transformar ideias em soluções web modernas,
 						intuitivas e eficientes. Minha jornada é movida pela curiosidade e pelo desejo de
-						construir aplicações de qualidade, combinando uma base analítica sólida com o entusiasmo e comprometimento com a programação. Em uma transição de carreira para a Ciência da Computação e Tecnologia da Informação, trago um olhar
-						analítico e dedicação à construção de software de qualidade. Busco ativamente minha
-						primeira oportunidade para aplicar e expandir minhas habilidades em projetos
-						desafiadores.
+						construir aplicações de qualidade, combinando uma base analítica sólida com o entusiasmo
+						e comprometimento com a programação. Em uma transição de carreira para a Ciência da
+						Computação e Tecnologia da Informação, trago um olhar analítico e dedicação à construção
+						de software de qualidade. Busco ativamente minha primeira oportunidade para aplicar e
+						expandir minhas habilidades em projetos desafiadores.
 					</p>
 					<div className="mt-6">
 						<Link

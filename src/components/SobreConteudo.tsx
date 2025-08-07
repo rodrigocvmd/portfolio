@@ -10,31 +10,40 @@ const allSkills = [
 	// Linguagens
 	{ title: "TypeScript", status: "Domínio", type: "Linguagens" },
 	{ title: "JavaScript (ES6+)", status: "Domínio", type: "Linguagens" },
-	{ title: "HTML5", status: "Domínio", type: "Linguagens" },
-	{ title: "CSS3", status: "Domínio", type: "Linguagens" },
+	{ title: "Python", status: "Em desenvolvimento", type: "Linguagens" },
+	{ title: "Java", status: "Complementar", type: "Linguagens" },
+	{ title: "HTML5 (Marcação)", status: "Domínio", type: "Linguagens" },
+	{ title: "Post CSS (Estilo)", status: "Domínio", type: "Linguagens" },
 	// Frontend
 	{ title: "React", status: "Domínio", type: "Frontend" },
 	{ title: "Next.js", status: "Domínio", type: "Frontend" },
 	{ title: "Tailwind CSS", status: "Domínio", type: "Frontend" },
-	{ title: "Redux (Toolkit)", status: "Em desenvolvimento", type: "Frontend" },
+	{ title: "Redux (RTK)", status: "Em desenvolvimento", type: "Frontend" },
 	{ title: "Context", status: "Em desenvolvimento", type: "Frontend" },
 	// Backend
 	{ title: "Node.js", status: "Domínio", type: "Backend" },
 	{ title: "Express.js", status: "Domínio", type: "Backend" },
 	{ title: "REST APIs", status: "Domínio", type: "Backend" },
+	{ title: "Nest.js", status: "Em desenvolvimento", type: "Backend" },
 	// Bancos de Dados
 	{ title: "MongoDB", status: "Em desenvolvimento", type: "Bancos de Dados" },
 	{ title: "PostgreSQL", status: "Domínio", type: "Bancos de Dados" },
 	{ title: "Firebase", status: "Domínio", type: "Bancos de Dados" },
+	{ title: "Prisma (ORM)", status: "Em desenvolvimento", type: "Bancos de Dados" },
 	// Ferramentas & DevOps
-	{ title: "Git & GitHub", status: "Complementar", type: "Ferramentas & DevOps" },
+	{ title: "Git & GitHub", status: "Domínio", type: "Ferramentas & DevOps" },
 	{ title: "Vercel", status: "Domínio", type: "Ferramentas & DevOps" },
 	{ title: "Netlify", status: "Domínio", type: "Ferramentas & DevOps" },
 	{ title: "CI/CD (GitHub Actions)", status: "Em desenvolvimento", type: "Ferramentas & DevOps" },
 	// Outras Habilidades
 	{
-		title: "Metodologias Ágeis (Scrum, Kanban)",
+		title: "Metodologias Ágeis - Scrum",
 		status: "Complementar",
+		type: "Outras Habilidades",
+	},
+	{
+		title: "Metodologias Ágeis - Kanban",
+		status: "Em desenvolvimento",
 		type: "Outras Habilidades",
 	},
 	{ title: "UI/UX (Princípios)", status: "Complementar", type: "Outras Habilidades" },
@@ -256,7 +265,7 @@ export default function SobreConteudo() {
 							<div
 								key={category}
 								className="rounded-lg bg-light-secondary p-6 shadow-md dark:bg-dark-secondary">
-								<h3 className="mb-4 font-heading text-xl font-semibold text-light-accent dark:text-dark-accent 2xl:text-2xl">
+								<h3 className="mb-4 font-heading text-xl font-semibold text-light-accent dark:text-dark-accent 2xl:text-2xl text-center">
 									{category}
 								</h3>
 								<ul className="space-y-2">
