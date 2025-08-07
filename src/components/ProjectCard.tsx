@@ -8,6 +8,7 @@ import { useState } from "react";
 
 interface ProjectCardProps {
 	title: string;
+	stack: string;
 	description: string;
 	imageUrl: string;
 	technologies: string[];
@@ -19,6 +20,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
 	title,
+	stack,
 	description,
 	imageUrl,
 	technologies,
@@ -56,10 +58,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 			</Link>
 			<div className="p-5 sm:p-6 flex flex-col flex-grow text-center">
 				<Link href={`/projetos/${projectSlug}`}>
-					<h3 className="text-2xl sm:text-3xl font-semibold font-heading text-light-text dark:text-dark-text mb-3 min-h-[4.5rem]">
+					<h3 className="text-2xl sm:text-3xl font-semibold font-heading text-light-text dark:text-dark-text mb-1">
 						{title}
 					</h3>
 				</Link>
+				<p className="text-lg font-semibold font-heading text-light-text dark:text-dark-text mb-3">
+					{stack}
+				</p>
 				<div className="mb-4">
 					<p className="text-lg text-light-text dark:text-dark-text text-center">{description}</p>
 				</div>

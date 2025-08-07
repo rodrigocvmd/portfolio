@@ -11,10 +11,11 @@ export const metadata: Metadata = {
 const allProjects = [
 	{
 		title: "EM DESENVOLVIMENTO",
+		stack: "(Full Stack)",
 		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"Plataforma de marketplace imobiliário desenvolvida em React, com sistema completo de CRUD de anúncios e autenticação segura via Firebase (login convencional e Google OAuth). A interface, construída com Tailwind CSS, oferece uma experiência de usuário moderna e totalmente responsiva para a busca e o gerenciamento de imóveis.",
 		imageUrl: "/images/imgSuporteUsuario.png",
-		technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+		technologies: ["Node.js", "Express", "MongoDB", "JWT", "Express", "MongoDB", "JWT", "Express", "MongoDB", "JWT"],
 		projectSlug: "projeto-reserva-de-recursos",
 		liveUrl: "https://suporte-ao-usuario.onrender.com/",
 		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
@@ -22,6 +23,7 @@ const allProjects = [
 	},
 	{
 		title: "Marketplace de Imóveis",
+		stack: "(Full Stack)",
 		description:
 			"Plataforma de marketplace imobiliário desenvolvida em React, com sistema completo de CRUD de anúncios e autenticação segura via Firebase (login convencional e Google OAuth). A interface, construída com Tailwind CSS, oferece uma experiência de usuário moderna e totalmente responsiva para a busca e o gerenciamento de imóveis.",
 		imageUrl: "/images/imgMarketPlaceImoveis.png",
@@ -52,6 +54,7 @@ const allProjects = [
 	},
 	{
 		title: "Sistema de Suporte ao Usuário",
+		stack: "(Full Stack)",
 		description:
 			"Backend e API RESTful para um sistema de Help Desk, responsável por gerenciar o ciclo de vida de tickets de suporte. Implementa um sistema de autenticação robusto com JWT e middleware para proteção de rotas e dados sensíveis. A arquitetura garante comunicação segura, escalabilidade e tratamento de erros em tempo real com o frontend.",
 		imageUrl: "/images/imgSuporteUsuario.png",
@@ -81,6 +84,7 @@ const allProjects = [
 	},
 	{
 		title: "Buscador GitHub",
+		stack: "(Frontend)",
 		description:
 			"Aplicação React que consome a API do GitHub para buscar e exibir perfis de usuários e seus repositórios. Utiliza React Router para navegação e um sistema avançado de gerenciamento de estado com Context API e Reducers. A interface é responsiva e possui tratamento de erros integrado para garantir uma ótima experiência ao usuário.",
 		imageUrl: "/images/buscador-github.png",
@@ -113,6 +117,7 @@ const allProjects = [
 	},
 	{
 		title: "Feedback App",
+		stack: "(Frontend)",
 		description:
 			"Aplicação interativa em React para um sistema de feedback, permitindo aos usuários realizar operações de CRUD. Utiliza a Context API para um gerenciamento de estado global eficiente e a Framer Motion para animações e micro-interações. O projeto conta com navegação via React Router e um design totalmente responsivo.",
 		imageUrl: "/images/feedback.png",
@@ -166,6 +171,7 @@ export default function ProjetosPage() {
 							<ProjectCard
 								key={project.projectSlug}
 								title={project.title}
+								stack={project.stack}
 								description={project.description}
 								imageUrl={project.imageUrl}
 								technologies={project.technologies}

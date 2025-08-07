@@ -8,6 +8,7 @@ import { useState } from "react";
 const allProjects = [
 	{
 		title: "Em desenvolvimento",
+		stack: "(Full Stack)",
 		description: [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -16,7 +17,7 @@ const allProjects = [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		],
 		imageUrl: "/images/imgMarketPlaceImoveis.png",
-		technologies: ["React", "Node.js", "TailwindCSS", "Git", "DaisyUI", "JavaScript"],
+		technologies: ["React", "Node.js", "TailwindCSS", "Git", "DaisyUI", "JavaScript", "Git", "DaisyUI", "JavaScript", "Git", "DaisyUI", "JavaScript"],
 		projectSlug: "projeto-reserva-de-recursos",
 		liveUrl: "",
 		repoUrl: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
@@ -24,7 +25,8 @@ const allProjects = [
 		progress: 50,
 	},
 	{
-		title: "Marketplace de Imóveis (Full Stack)",
+		title: "Marketplace de Imóveis",
+		stack: "(Full Stack)",
 		description: [
 			"Neste projeto, desenvolvi uma plataforma de marketplace imobiliário completa e robusta, utilizando React para construir uma Single-Page Application (SPA) dinâmica e de alta performance. O objetivo central foi criar uma experiência de usuário intuitiva e fluida, desde a busca de imóveis até o gerenciamento de anúncios. Para isso, orquestrei um ecossistema de tecnologias modernas, empregando Tailwind CSS e DaisyUI para criar uma interface responsiva e esteticamente agradável, que garante consistência visual e usabilidade em qualquer dispositivo. A interatividade foi enriquecida com a biblioteca Swiper, implementada para exibir listagens em destaque de forma elegante e engajadora.",
 			"Para garantir a segurança e a integridade dos dados, implementei um sistema de autenticação multifacetado com o Firebase Authentication. A solução suporta tanto o cadastro tradicional (email e senha) quanto a autenticação social via Google (OAuth), direcionando os usuários para rotas protegidas através de componentes PrivateRoute customizados. A persistência e o gerenciamento dos dados dos anúncios foram realizados no Cloud Firestore, o banco de dados NoSQL do Firebase, onde estruturei as informações para permitir operações CRUD (criação, leitura, edição e exclusão) de forma eficiente e escalável.",
@@ -57,7 +59,8 @@ const allProjects = [
 		repoUrl: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
 	},
 	{
-		title: "Sistema de Suporte ao Usuário (Full Stack)",
+		title: "Sistema de Suporte ao Usuário",
+		stack: "(Full Stack)",
 		description: [
 			"Neste projeto, projetei e implementei a arquitetura de backend completa para um sistema de suporte ao cliente, focando em escalabilidade, segurança e performance. Desenvolvi uma API RESTful como núcleo da aplicação, responsável por orquestrar toda a lógica de negócio, incluindo o ciclo de vida de tickets de suporte — desde a abertura e categorização até o acompanhamento e a resolução. A comunicação entre cliente e servidor foi protegida com um sistema de autenticação baseado em JWT (JSON Web Tokens), garantindo que todas as transações de dados fossem seguras e que o acesso aos recursos da API fosse rigorosamente controlado.",
 
@@ -91,7 +94,8 @@ const allProjects = [
 		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
 	},
 	{
-		title: "Feedback Application (Frontend)",
+		title: "Feedback Application",
+		stack: "(Frontend)",
 		description: [
 			"Este projeto destaca-se pelo desenvolvimento de um backend robusto e eficiente, responsável por gerenciar toda a lógica de suporte ao usuário, abertura e acompanhamento de tickets/ocorrências e seus respectivos estados de resolução.",
 			"A criação e integração de uma API RESTful foram essenciais para garantir uma comunicação fluida entre o frontend e o backend, proporcionando operações seguras e em tempo real. O sistema de autenticação foi desenvolvido utilizando JWT (JSON Web Tokens), garantindo que cada solicitação enviada pelos usuários estivesse devidamente autenticada e autorizada.",
@@ -106,7 +110,8 @@ const allProjects = [
 		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
 	},
 	{
-		title: "Buscador Github (Frontend)",
+		title: "Buscador Github",
+		stack: "(Frontend)",
 		description: [
 			"Desenvolvi uma Single-Page Application (SPA) em React para busca e visualização de perfis do GitHub, orquestrando uma integração direta com a API REST oficial da plataforma. Implementei o React Router para criar uma experiência de navegação fluida e intuitiva, permitindo que os usuários transitem de forma eficiente entre a busca, as páginas de perfil e os detalhes de repositórios. O sistema foi projetado com um robusto mecanismo de tratamento de erros, garantindo que a interface responda de maneira clara a cenários como perfis não encontrados ou falhas na comunicação com a API, o que assegura uma UX consistente e profissional.",
 			"O pilar técnico deste projeto foi a construção de um sistema de gerenciamento de estado escalável e desacoplado, utilizando a Context API do React em conjunto com o padrão Reducer (hook useReducer). Criei provedores de contexto específicos, como GithubProvider e AlertProvider, para gerenciar de forma isolada e eficiente o estado da aplicação — um para os dados assíncronos da API e outro para notificações de UI. Essa arquitetura evitou o prop drilling, resultando em um código mais limpo, manutenível e otimizado para lidar com os complexos fluxos de dados de uma aplicação moderna.",
@@ -142,6 +147,7 @@ const allProjects = [
 	},
 	{
 		title: "Feedback App (Frontend)",
+		stack: "(Full Stack)",
 		description: [
 			"Desenvolvi uma aplicação SPA (Single-Page Application) interativa para avaliação de produtos e serviços, focada em uma experiência de usuário rica e dinâmica. Para isso, utilizei React como base, orquestrando tecnologias como o React Router para uma navegação fluida entre páginas, e a Framer Motion para implementar micro-interações e animações sofisticadas que guiam o usuário. A aplicação permite o gerenciamento completo de feedbacks através de operações CRUD (Create, Read, Update, Delete) executadas em tempo real na interface.",
 			"O núcleo técnico do projeto reside na implementação de um sistema de gerenciamento de estado global, utilizando a Context API do React em conjunto com hooks como useState e useReducer. Essa arquitetura foi projetada para lidar de forma eficiente e previsível com a complexidade das operações CRUD, garantindo a consistência dos dados em toda a árvore de componentes. Superei o desafio de manter a integridade da UI e do estado durante as transições, refatorando o código de forma iterativa para otimizar a performance e garantir um design totalmente responsivo.",
@@ -196,19 +202,25 @@ interface ProjectPageProps {
 export default function ProjectPage({ params }: ProjectPageProps) {
 	const { slug } = params;
 	const project = getProjectDetails(slug);
+	const [showAllTech, setShowAllTech] = useState(false);
 
 	if (!project) {
 		return <div className="text-center py-10">Projeto não encontrado.</div>;
 	}
 
+	const visibleTechnologies = showAllTech ? project.technologies : project.technologies.slice(0, 8);
+
 	return (
 		<div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
 			<BackButton />
 
-			<header className="mb-8">
-				<h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl text-center">
+			<header className="mb-8 text-center">
+				<h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl">
 					{project.title}
 				</h1>
+				<p className="text-2xl font-semibold font-heading text-light-text dark:text-dark-text mt-2">
+					{project.stack}
+				</p>
 			</header>
 
 			<div className="relative w-full h-64 sm:h-80 md:h-[450px] rounded-lg overflow-hidden mb-8 shadow-lg mx-auto max-w-4xl group">
@@ -268,10 +280,19 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 					Tecnologias Utilizadas
 				</h2>
 				<div className="flex flex-wrap justify-center gap-3">
-					{project.technologies.map((tech) => (
+					{visibleTechnologies.map((tech) => (
 						<TechTag key={tech} name={tech} />
 					))}
 				</div>
+				{!showAllTech && project.technologies.length > 8 && (
+					<div className="text-center mt-4">
+						<button
+							onClick={() => setShowAllTech(true)}
+							className="text-light-accent dark:text-dark-accent font-semibold hover:underline">
+							Ver todas
+						</button>
+					</div>
+				)}
 			</section>
 
 			<div className="prose prose-lg max-w-4xl mx-auto dark:prose-invert text-justify space-y-4">
