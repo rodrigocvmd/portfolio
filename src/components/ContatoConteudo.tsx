@@ -154,132 +154,104 @@ export default function ContatoConteudo() {
 
 						<div className="space-y-6 mx-auto max-w-xs">
 							{/* Email */}
-							<div>
-								<h3 className="flex items-center justify-between text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
-									<span className="flex items-center">
-										<MdOutlineEmail className="mr-2" /> Email:
-									</span>
-									<div className="flex items-center">
-										<div className="relative group">
-											<button
-												onClick={() => handleCopy("rodrigocvmd@gmail.com", "email")}
-												className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												{copiedStatus["email"] ? <CheckIcon /> : <CopyIcon />}
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Copiar email
-											</div>
-										</div>
-										<div className="relative group">
-											<button
-												onClick={() => window.open("mailto:rodrigocvmd@gmail.com", "_blank")}
-												className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												<FaArrowRight />
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Enviar email
-											</div>
-										</div>
-									</div>
-								</h3>
-								<div className="flex items-center">
-								<div className="relative group">
-									<button
-										onClick={() => window.open("mailto:rodrigocvmd@gmail.com", "_blank")}
-										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
-										rodrigocvmd@gmail.com
-									</button>
-									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-										Enviar email
-									</div>
-								</div>
-								</div>
-							</div>
-
+							                            <div>
+							                                <div className="flex justify-between items-center">
+							                                    <div>
+							                                        <h3 className="flex items-center text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
+							                                            <MdOutlineEmail className="mr-2" /> Email:
+							                                        </h3>
+							                                        <a
+							                                            href="mailto:rodrigocvmd@gmail.com"
+							                                            title="Enviar email"
+							                                            className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
+							                                            rodrigocvmd@gmail.com
+							                                        </a>
+							                                    </div>
+							                                    <div className="flex items-center">
+							                                        <button
+							                                            onClick={() => handleCopy("rodrigocvmd@gmail.com", "email")}
+							                                            title="Copiar email"
+							                                            className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+							                                            {copiedStatus["email"] ? <CheckIcon /> : <CopyIcon />}
+							                                        </button>
+							                                        <a
+							                                            href="mailto:rodrigocvmd@gmail.com"
+							                                            target="_blank"
+							                                            rel="noopener noreferrer"
+							                                            title="Enviar email"
+							                                            className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+							                                            <FaArrowRight />
+							                                        </a>
+							                                    </div>
+							                                </div>
+							                            </div>
 							{/* LinkedIn */}
 							<div>
-								<h3 className="flex items-center justify-between text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
-									<span className="flex items-center">
-										<FaLinkedin className="mr-2" /> LinkedIn:
-									</span>
+								<div className="flex justify-between items-center">
+									<div>
+										<h3 className="flex items-center text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
+											<FaLinkedin className="mr-2" /> LinkedIn:
+										</h3>
+										<a
+											href="https://www.linkedin.com/in/rodrigocvmd/"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir LinkedIn"
+											className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
+											/in/rodrigocvmd
+										</a>
+									</div>
 									<div className="flex items-center">
-										<div className="relative group">
-											<button
-												onClick={() =>
-													handleCopy("https://www.linkedin.com/in/rodrigocvmd/", "linkedin")
-												}
-												className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												{copiedStatus["linkedin"] ? <CheckIcon /> : <CopyIcon />}
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Copiar link do LinkedIn
-											</div>
-										</div>
-										<div className="relative group">
-											<button
-												onClick={() => window.open("https://www.linkedin.com/in/rodrigocvmd/", "_blank")}
-												className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												<FaArrowRight />
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Abrir LinkedIn
-											</div>
-										</div>
+										<button
+											onClick={() =>
+												handleCopy("https://www.linkedin.com/in/rodrigocvmd/", "linkedin")
+											}
+											title="Copiar link do LinkedIn"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["linkedin"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a
+											href="https://www.linkedin.com/in/rodrigocvmd/"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir LinkedIn"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
 									</div>
-								</h3>
-								<div className="flex items-center">
-								<div className="relative group">
-									<button
-										onClick={() => window.open("https://www.linkedin.com/in/rodrigocvmd/", "_blank")}
-										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
-										/in/rodrigocvmd
-									</button>
-									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-										Abrir LinkedIn
-									</div>
-								</div>
 								</div>
 							</div>
 							{/* Telefone */}
 							<div>
-								<h3 className="flex items-center justify-between text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
-									<span className="flex items-center">
-										<FaPhoneAlt className="mr-2" /> Telefone:
-									</span>
+								<div className="flex justify-between items-center">
+									<div>
+										<h3 className="flex items-center text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
+											<FaPhoneAlt className="mr-2" /> Telefone:
+										</h3>
+										<a
+											href="#!"
+											onClick={handlePhoneCopyAndTextChange}
+											title="Copiar telefone"
+											className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all cursor-pointer"
+											role="button"
+											tabIndex={0}>
+											{phoneLinkText}
+										</a>
+									</div>
 									<div className="flex items-center">
-										<div className="relative group">
-											<button
-												onClick={() => handleCopy("+5561999662404", "telefone")}
-												className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												{copiedStatus["telefone"] ? <CheckIcon /> : <CopyIcon />}
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Copiar telefone
-											</div>
-										</div>
-										<div className="relative group">
-											<button
-												onClick={() => window.open("tel:+5561999662404", "_self")}
-												className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												<FaArrowRight />
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Ligar
-											</div>
-										</div>
+										<button
+											onClick={() => handleCopy("+5561999662404", "telefone")}
+											title="Copiar telefone"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["telefone"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a
+											href="tel:+5561999662404"
+											title="Ligar"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
 									</div>
-								</h3>
-								<div className="telefone flex items-center">
-								<div className="relative group">
-									<button
-										onClick={handlePhoneCopyAndTextChange}
-										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all cursor-pointer">
-										{phoneLinkText}
-									</button>
-									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-										Copiar telefone
-									</div>
-								</div>
 								</div>
 							</div>
 						</div>
@@ -300,130 +272,106 @@ export default function ContatoConteudo() {
 						<div className="mx-auto max-w-xs space-y-6">
 							{/* WhatsApp */}
 							<div>
-								<h3 className="flex items-center justify-between text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
-									<span className="flex items-center">
-										<FaWhatsapp className="mr-2" /> WhatsApp:
-									</span>
+								<div className="flex justify-between items-center">
+									<div>
+										<h3 className="flex items-center text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
+											<FaWhatsapp className="mr-2" /> WhatsApp:
+										</h3>
+										<a
+											href="https://wa.me/5561999662404"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir WhatsApp"
+											className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
+											Abrir uma conversa
+										</a>
+									</div>
 									<div className="flex items-center">
-										<div className="relative group">
-											<button
-												onClick={() => handleCopy("5561999662404", "whatsapp")}
-												className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												{copiedStatus["whatsapp"] ? <CheckIcon /> : <CopyIcon />}
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Copiar número do WhatsApp
-											</div>
-										</div>
-										<div className="relative group">
-											<button
-												onClick={() => window.open("https://wa.me/5561999662404", "_blank")}
-												className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												<FaArrowRight />
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Abrir WhatsApp
-											</div>
-										</div>
+										<button
+											onClick={() => handleCopy("5561999662404", "whatsapp")}
+											title="Copiar número do WhatsApp"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["whatsapp"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a
+											href="https://wa.me/5561999662404"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir WhatsApp"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
 									</div>
-								</h3>
-								<div className="flex items-center">
-								<div className="relative group">
-									<button
-										onClick={() => window.open("https://wa.me/5561999662404", "_blank")}
-										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
-										Abrir uma conversa
-									</button>
-									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-										Abrir WhatsApp
-									</div>
-								</div>
 								</div>
 							</div>
 
 							{/* GitHub */}
 							<div>
-								<h3 className="flex items-center justify-between text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
-									<span className="flex items-center">
-										<FaGithub className="mr-2" /> GitHub:
-									</span>
+								<div className="flex justify-between items-center">
+									<div>
+										<h3 className="flex items-center text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
+											<FaGithub className="mr-2" /> GitHub:
+										</h3>
+										<a
+											href="https://github.com/rodrigocvmd"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir GitHub"
+											className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
+											/rodrigocvmd
+										</a>
+									</div>
 									<div className="flex items-center">
-										<div className="relative group">
-											<button
-												onClick={() => handleCopy("https://github.com/rodrigocvmd", "github")}
-												className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												{copiedStatus["github"] ? <CheckIcon /> : <CopyIcon />}
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Copiar link GitHub
-											</div>
-										</div>
-										<div className="relative group">
-											<button
-												onClick={() => window.open("https://github.com/rodrigocvmd", "_blank")}
-												className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												<FaArrowRight />
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Abrir GitHub
-											</div>
-										</div>
+										<button
+											onClick={() => handleCopy("https://github.com/rodrigocvmd", "github")}
+											title="Copiar link GitHub"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["github"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a
+											href="https://github.com/rodrigocvmd"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir GitHub"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
 									</div>
-								</h3>
-								<div className="flex items-center">
-								<div className="relative group">
-									<button
-										onClick={() => window.open("https://github.com/rodrigocvmd", "_blank")}
-										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
-										/rodrigocvmd
-									</button>
-									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-										Abrir GitHub
-									</div>
-								</div>
 								</div>
 							</div>
 
 							{/* Discord */}
 							<div>
-								<h3 className="flex items-center justify-between text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
-									<span className="flex items-center">
-										<FaDiscord className="mr-2" /> Discord:
-									</span>
+								<div className="flex justify-between items-center">
+									<div>
+										<h3 className="flex items-center text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
+											<FaDiscord className="mr-2" /> Discord:
+										</h3>
+										<a
+											href="https://discordapp.com/users/1067993447706931243"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir Discord"
+											className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
+											&lt;@rodrigocvmd&gt;
+										</a>
+									</div>
 									<div className="flex items-center">
-										<div className="relative group">
-											<button
-												onClick={() => handleCopy("1067993447706931243", "discord")}
-												className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												{copiedStatus["discord"] ? <CheckIcon /> : <CopyIcon />}
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Copiar Discord ID
-											</div>
-										</div>
-										<div className="relative group">
-											<button
-												onClick={() => window.open("https://discordapp.com/users/1067993447706931243", "_blank")}
-												className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
-												<FaArrowRight />
-											</button>
-											<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-												Abrir Discord
-											</div>
-										</div>
+										<button
+											onClick={() => handleCopy("1067993447706931243", "discord")}
+											title="Copiar Discord ID"
+											className="mr-2 p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											{copiedStatus["discord"] ? <CheckIcon /> : <CopyIcon />}
+										</button>
+										<a
+											href="https://discordapp.com/users/1067993447706931243"
+											target="_blank"
+											rel="noopener noreferrer"
+											title="Abrir Discord"
+											className="p-1 rounded-md hover:bg-light-primary dark:hover:bg-dark-primary text-light-text dark:text-dark-text transition-colors">
+											<FaArrowRight />
+										</a>
 									</div>
-								</h3>
-								<div className="flex items-center">
-								<div className="relative group">
-									<button
-										onClick={() => window.open("https://discordapp.com/users/1067993447706931243", "_blank")}
-										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
-										&lt;@rodrigocvmd&gt;
-									</button>
-									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-										Abrir Discord
-									</div>
-								</div>
 								</div>
 							</div>
 						</div>
