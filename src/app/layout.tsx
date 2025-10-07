@@ -40,7 +40,7 @@ export default function RootLayout({
 			className={`${inter.variable} ${poppins.variable} scroll-smooth`}
 			suppressHydrationWarning>
 			{/* ThemeProvider deve envolver o conteúdo que precisa da troca de tema */}
-			<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+			<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
 				<body className="flex min-h-screen flex-col bg-light-primary text-light-text dark:bg-dark-primary dark:text-dark-text">
 					<Navbar />
 					{/*

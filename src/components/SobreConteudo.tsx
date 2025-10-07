@@ -5,6 +5,14 @@ import Image from "next/image";
 import Modal from "./Modal"; // Importar o Modal
 import Link from "next/link";
 
+const contacts = {
+	linkedin: "https://www.linkedin.com/in/rodrigocvmd/",
+	github: "https://github.com/rodrigocvmd",
+	email: "mailto:rodrigocvmd@gmail.com",
+	whatsapp: "https://wa.me/5561999662404",
+	repo: "https://github.com/rodrigocvmd/meu-portfolio", // Atualizado
+};
+
 // --- DADOS ---
 const allSkills = [
 	// Linguagens
@@ -211,44 +219,61 @@ export default function SobreConteudo() {
 							</h2>
 							<div className="textoSobre prose prose-lg mx-auto mt-6 max-w-none text-light-text dark:prose-invert dark:text-dark-text sm:prose-xl 2xl:prose-2xl text-lg">
 								<p className="text-justify indent-16 mb-5">
-									Desenvolvedor Full Stack em transição de carreira, apaixonado por transformar
-									ideias em soluções web eficientes e intuitivas. Com uma sólida formação em Direito
-									pela Universidade de Brasília (UnB), busco trazer para a tecnologia um olhar
-									analítico aguçado, habilidade na resolução de problemas complexos e atenção
-									meticulosa aos detalhes – competências que agora aplico na construção de software
-									de qualidade.
+									Minha carreira é definida pela busca de sistemas lógicos e eficientes, primeiro no
+									universo jurídico, agora no código. Com uma formação consolidada em Direito pela
+									Universidade de Brasília (UnB), desenvolvi uma habilidade aguçada para a análise
+									crítica, resolução de problemas complexos e a estruturação de argumentos –
+									competências que hoje formam a base do meu trabalho como Desenvolvedor Backend.
 								</p>
 								<p className="text-justify indent-16 mb-5">
-									Minha jornada na programação é impulsionada pela curiosidade e pelo desejo de
-									criar. Estou focado no desenvolvimento Full Stack, aprofundando meus conhecimentos
-									em TypeScript e React.js (com Tailwind CSS) para o frontend; Node.js, Express.js,
-									PostgreSQL | MongoDB para o backend. Tenho aplicado essas tecnologias em projetos
-									práticos que demonstram minha evolução e dedicação, disponíveis no meu portfólio e
-									GitHub.
+									A transição para a tecnologia foi uma evolução natural, trocando a complexidade
+									das leis pela da lógica de programação. Meu foco se aprofundou no ecossistema
+									backend, onde me especializei na construção de APIs RESTful com Node.js e Nest.js,
+									na modelagem de bancos de dados relacionais com PostgreSQL e Prisma, e na criação
+									de ambientes de desenvolvimento consistentes com Docker. Meus projetos,
+									disponíveis no&nbsp;
+									<Link
+										href={contacts.repo}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="underline hover:text-light-accent dark:hover:text-dark-accent transition-colors">
+										GitHub
+									</Link>
+									, são a prova prática da minha dedicação em construir a infraestrutura que
+									sustenta aplicações modernas.
 								</p>
 								<p className="text-justify indent-16 mb-5">
-									Fluente em inglês e sempre em busca de novos aprendizados, estou comprometido com
-									as boas práticas de desenvolvimento, como Clean Code e testes unitários, e pronto
-									para colaborar em ambientes dinâmicos e inovadores. Meu comprometimento com a
-									excelência técnica é reforçado pela atual graduação em Ciência da Computação na
-									UCB, fundamental para minha jornada de aprendizado e especialização,
-									complementando minha base teórica e prática.
+									Acredito que um bom software vai além da funcionalidade: ele precisa ser
+									sustentável, escalável e, principalmente, moderno. Por isso, sou um defensor de
+									práticas como Clean Code e Test-Driven Development (TDD) como ferramentas
+									pragmáticas para garantir que o código seja legível, manutenível e confiável a
+									longo prazo. Meu objetivo é escrever código do qual não apenas eu, mas toda a
+									equipe possa se orgulhar e evoluir com segurança.
 								</p>
 								<p className="text-justify indent-16 mb-5">
-									Busco ativamente minha primeira oportunidade como Desenvolvedor para aplicar
-									minhas habilidades, contribuir para projetos desafiadores e crescer junto com uma
-									equipe de visão.
+									Atualmente cursando Ciência da Computação, sigo em constante aprendizado e em
+									busca de uma oportunidade para integrar uma equipe onde eu possa aplicar todo o
+									conhecimento técnico que venho acumulando e contribuir para projetos desafiadores.
+									Se você busca um desenvolvedor com uma perspectiva única, focado em qualidade e
+									com uma enorme capacidade de aprendizado, convido você a explorar meus projetos ou
+									a entrar em contato diretamente.
 								</p>
 							</div>
 							<div className="mt-8 flex flex-wrap justify-center gap-4">
 								<Link
+									href="/projetos"
+									className="inline-block rounded-lg bg-light-accent px-7 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 text-base sm:text-lg">
+									Veja meus projetos
+								</Link>
+
+								<Link
 									href="/curriculo"
-									className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform text-lg hover:bg-opacity-80">
+									className="inline-block rounded-lg border-2 border-light-accent px-8 py-3 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-lg">
 									Veja meu Currículo
 								</Link>
 								<Link
 									href="/contato"
-									className="inline-block rounded-lg border-2 border-light-accent px-8 py-3 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-lg">
+									className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform text-lg hover:bg-opacity-80">
 									Entre em Contato
 								</Link>
 							</div>

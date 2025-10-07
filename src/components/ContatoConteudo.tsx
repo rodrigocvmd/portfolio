@@ -152,7 +152,7 @@ export default function ContatoConteudo() {
 							Melhores formas para me encontrar:
 						</p>
 
-						<div className="space-y-6">
+						<div className="space-y-6 mx-auto max-w-xs">
 							{/* Email */}
 							<div>
 								<h3 className="flex items-center justify-between text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">
@@ -270,7 +270,7 @@ export default function ContatoConteudo() {
 							Aproveite para me visitar em outras redes:
 						</p>
 
-						<div className="space-y-6">
+						<div className="mx-auto max-w-xs space-y-6">
 							{/* WhatsApp */}
 							<div>
 								<h3 className="flex items-center justify-between text-lg font-medium text-light-accent dark:text-dark-accent 3xl:text-xl">

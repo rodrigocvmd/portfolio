@@ -67,7 +67,7 @@ const Footer = () => {
 				</p>
 
 				{/* Tecnologias Utilizadas */}
-				<p className="text-sm mt-4">Desenvolvido com Next.js, React, TypeScript e Tailwind CSS.</p>
+				<p className="text-sm mt-4">Desenvolvido com TypeScript, Next.js, React e Tailwind CSS. Hospedado na Vercel.</p>
 			</div>
 		</footer>
 	);

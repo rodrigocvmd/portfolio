@@ -88,28 +88,32 @@ export default function HomePage() {
 			</section>
 
 			{/* Seção Sobre Mim */}
-			<section
-				id="sobre-mim"
-				className="container mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="mx-auto max-w-4xl rounded-lg bg-light-secondary p-8 text-center shadow-md dark:bg-dark-secondary">
-					<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl">
-						Um Pouco Sobre Mim
-					</h2>
-					<p className="mt-5 text-base leading-relaxed text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
-						Desenvolvedor Full Stack focado em transformar ideias em soluções web modernas,
-						intuitivas e eficientes. Minha jornada é movida pela curiosidade e pelo desejo de
-						construir aplicações de qualidade, combinando uma base analítica sólida com o entusiasmo
-						e comprometimento com a programação. Em uma transição de carreira para a Ciência da
-						Computação e Tecnologia da Informação, trago um olhar analítico e dedicação à construção
-						de software de qualidade. Busco ativamente minha primeira oportunidade para aplicar e
-						expandir minhas habilidades em projetos desafiadores.
-					</p>
-					<div className="mt-6">
-						<Link
-							href="/projetos"
-							className="inline-block rounded-lg border-2 border-light-accent px-7 py-2.5 font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-base sm:text-lg 2xl:px-8 2xl:py-3 2xl:text-xl">
-							Veja mais sobre mim
-						</Link>
+			<section id="sobre-mim" className="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="mx-auto max-w-6xl rounded-lg bg-light-secondary p-8 text-center shadow-md dark:bg-dark-secondary">
+					<div className="mx-auto max-w-5xl space-y-8">
+						<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl">
+							Um Pouco Sobre Mim
+						</h2>
+						<div className="space-y-4">
+							<p className="mt-5 text-base text-center leading-relaxed text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
+								Desenvolvedor Backend focado na arquitetura e construção de APIs robustas e
+								escaláveis. Busco traduzir desafios em soluções de software eficientes utilizando
+								Node.js, Nest.js e PostgreSQL para criar a espinha dorsal de aplicações
+								performáticas.
+							</p>
+							<p className="mt-5 text-base text-center leading-relaxed text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
+								Vindo de uma carreira em Direito, trago uma capacidade analítica apurada e uma
+								obsessão por lógica e atenção aos detalhes para o mundo do código. Em busca de oportunidades para aplicar todo o conhecimento que venho adquirindo na construção de sistemas
+								backend resilientes e bem documentados.
+							</p>
+						</div>
+						<div className="mt-6">
+							<Link
+								href="/sobre"
+								className="inline-block rounded-lg border-2 border-light-accent px-7 py-2.5 font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-base sm:text-lg 2xl:px-8 2xl:py-3 2xl:text-xl">
+								Veja mais sobre mim
+							</Link>
+						</div>
 					</div>
 				</div>
 			</section>
