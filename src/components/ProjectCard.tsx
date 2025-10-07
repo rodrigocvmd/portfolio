@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	const LiveLink = inDevelopment ? "div" : Link;
 
 	return (
-		<div className="group bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col h-full">
+		<div className="group/card bg-light-secondary dark:bg-dark-secondary rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col h-full">
 			<Link
 				href={`/projetos/${projectSlug}`}
 				className="relative w-full h-48 sm:h-52 overflow-hidden">
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					src={imageUrl}
 					alt={`Thumbnail do projeto ${title}`}
 					fill
-					className={`object-cover transition-transform duration-300 group-hover:scale-105 ${
+					className={`object-cover transition-transform duration-300 group-hover/card:scale-105 ${
 						inDevelopment ? "opacity-30" : ""
 					}`}
 				/>
@@ -89,7 +89,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						</Link>
 						<div className="flex space-x-4">
 							{liveUrl && (
-								<div className="relative group">
+								<div id="divHover" className="relative group/tooltip">
 									<LiveLink
 										href={inDevelopment ? "" : liveUrl}
 										target="_blank"
@@ -102,7 +102,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 										Ver Online
 									</LiveLink>
 									{inDevelopment && (
-										<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-md py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+										<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-md py-1 px-3 opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none">
 											Desenvolvimento em curso
 										</div>
 									)}
