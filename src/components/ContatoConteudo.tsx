@@ -183,12 +183,16 @@ export default function ContatoConteudo() {
 									</div>
 								</h3>
 								<div className="flex items-center">
-									<a
-										href="mailto:rodrigocvmd@gmail.com"
-										title="Enviar email"
+								<div className="relative group">
+									<button
+										onClick={() => window.open("mailto:rodrigocvmd@gmail.com", "_blank")}
 										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										rodrigocvmd@gmail.com
-									</a>
+									</button>
+									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+										Enviar email
+									</div>
+								</div>
 								</div>
 							</div>
 
@@ -224,14 +228,16 @@ export default function ContatoConteudo() {
 									</div>
 								</h3>
 								<div className="flex items-center">
-									<a
-										href="https://www.linkedin.com/in/rodrigocvmd/"
-										target="_blank"
-										rel="noopener noreferrer"
-										title="Abrir LinkedIn"
+								<div className="relative group">
+									<button
+										onClick={() => window.open("https://www.linkedin.com/in/rodrigocvmd/", "_blank")}
 										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										/in/rodrigocvmd
-									</a>
+									</button>
+									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+										Abrir LinkedIn
+									</div>
+								</div>
 								</div>
 							</div>
 							{/* Telefone */}
@@ -264,15 +270,16 @@ export default function ContatoConteudo() {
 									</div>
 								</h3>
 								<div className="telefone flex items-center">
-									<a
-										href="#!"
+								<div className="relative group">
+									<button
 										onClick={handlePhoneCopyAndTextChange}
-										title="Copiar telefone"
-										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all cursor-pointer"
-										role="button"
-										tabIndex={0}>
+										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all cursor-pointer">
 										{phoneLinkText}
-									</a>
+									</button>
+									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+										Copiar telefone
+									</div>
+								</div>
 								</div>
 							</div>
 						</div>
@@ -321,14 +328,16 @@ export default function ContatoConteudo() {
 									</div>
 								</h3>
 								<div className="flex items-center">
-									<a
-										href="https://wa.me/5561999662404"
-										target="_blank"
-										rel="noopener noreferrer"
-										title="Abrir WhatsApp"
+								<div className="relative group">
+									<button
+										onClick={() => window.open("https://wa.me/5561999662404", "_blank")}
 										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										Abrir uma conversa
-									</a>
+									</button>
+									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+										Abrir WhatsApp
+									</div>
+								</div>
 								</div>
 							</div>
 
@@ -362,14 +371,16 @@ export default function ContatoConteudo() {
 									</div>
 								</h3>
 								<div className="flex items-center">
-									<a
-										href="https://github.com/rodrigocvmd"
-										target="_blank"
-										rel="noopener noreferrer"
-										title="Abrir GitHub"
+								<div className="relative group">
+									<button
+										onClick={() => window.open("https://github.com/rodrigocvmd", "_blank")}
 										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										/rodrigocvmd
-									</a>
+									</button>
+									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+										Abrir GitHub
+									</div>
+								</div>
 								</div>
 							</div>
 
@@ -403,14 +414,16 @@ export default function ContatoConteudo() {
 									</div>
 								</h3>
 								<div className="flex items-center">
-									<a
-										href="https://discordapp.com/users/1067993447706931243"
-										target="_blank"
-										rel="noopener noreferrer"
-										title="Abrir Discord"
+								<div className="relative group">
+									<button
+										onClick={() => window.open("https://discordapp.com/users/1067993447706931243", "_blank")}
 										className="alterar text-light-text hover:underline dark:text-dark-text 3xl:text-lg break-all">
 										&lt;@rodrigocvmd&gt;
-									</a>
+									</button>
+									<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-full py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+										Abrir Discord
+									</div>
+								</div>
 								</div>
 							</div>
 						</div>
