@@ -101,6 +101,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 										}`}>
 										Ver Online
 									</LiveLink>
+									{inDevelopment && (
+										<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-md py-1 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+											Desenvolvimento em curso
+										</div>
+									)}
 								</div>
 							)}
 

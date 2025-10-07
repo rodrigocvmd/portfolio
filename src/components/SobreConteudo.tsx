@@ -24,14 +24,15 @@ const allSkills = [
 	{ title: "Node.js", status: "Domínio", type: "Backend" },
 	{ title: "Express.js", status: "Domínio", type: "Backend" },
 	{ title: "REST APIs", status: "Domínio", type: "Backend" },
-	{ title: "Nest.js", status: "Em desenvolvimento", type: "Backend" },
+	{ title: "Nest.js", status: "Domínio", type: "Backend" },
 	// Bancos de Dados
 	{ title: "MongoDB", status: "Em desenvolvimento", type: "Bancos de Dados" },
 	{ title: "PostgreSQL", status: "Domínio", type: "Bancos de Dados" },
 	{ title: "Firebase", status: "Domínio", type: "Bancos de Dados" },
-	{ title: "Prisma (ORM)", status: "Em desenvolvimento", type: "Bancos de Dados" },
+	{ title: "Prisma (ORM)", status: "Domínio", type: "Bancos de Dados" },
 	// Ferramentas & DevOps
 	{ title: "Git & GitHub", status: "Domínio", type: "Ferramentas & DevOps" },
+	{ title: "Postman", status: "Domínio", type: "Ferramentas & DevOps" },
 	{ title: "Vercel", status: "Domínio", type: "Ferramentas & DevOps" },
 	{ title: "Netlify", status: "Domínio", type: "Ferramentas & DevOps" },
 	{ title: "CI/CD (GitHub Actions)", status: "Em desenvolvimento", type: "Ferramentas & DevOps" },
@@ -175,9 +176,9 @@ export default function SobreConteudo() {
 
 	return (
 		<>
-			<div className="space-y-12 sm:space-y-16">
+			<div className="space-y-8 sm:space-y-12">
 				{/* Hero Section */}
-				<section className="container mx-auto px-4 pt-10 pb-8 text-center sm:px-6 md:pt-12 md:pb-10 lg:px-8 2xl:pt-16">
+				<section className="container mx-auto px-4 pt-10 text-center sm:px-6 md:pt-12 lg:px-8 2xl:pt-16">
 					<div className="mx-auto max-w-5xl">
 						<div className="relative mx-auto mb-5 h-32 w-32 overflow-hidden rounded-full shadow-lg bg-light-secondary dark:bg-dark-secondary sm:h-36 sm:w-36 2xl:h-40 2xl:w-40">
 							<Image
@@ -194,7 +195,7 @@ export default function SobreConteudo() {
 							Rodrigo Carvalho
 						</h1>
 						<p className="mt-3 font-medium text-xl text-light-accent dark:text-dark-accent sm:text-2xl 2xl:text-3xl">
-							Desenvolvedor Web Full-Stack
+							Desenvolvedor Backend | Backend Engineer
 						</p>
 						<p className="mt-1.5 font-medium text-lg text-light-accent/80 dark:text-dark-accent/80 sm:text-xl 2xl:text-2xl">
 							Graduando em Ciência da Computação
@@ -202,9 +203,9 @@ export default function SobreConteudo() {
 					</div>
 				</section>
 
-				<section className="w-full bg-light-secondary py-12 shadow-md dark:bg-dark-secondary sm:py-16 2xl:py-20">
+				<section id="sobre" className="pb-4 sm:pb-6 2xl:pb-8">
 					<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-						<div className="mx-auto max-w-4xl">
+						<div className="mx-auto max-w-7xl rounded-lg bg-light-secondary p-8 shadow-md dark:bg-dark-secondary">
 							<h2 className="text-center font-heading text-3xl font-semibold text-light-text dark:text-dark-text sm:text-4xl 2xl:text-5xl">
 								Minha Jornada
 							</h2>

@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const BackButtons = () => (
-    <div className="flex flex-wrap justify-center gap-4 my-6">
+    <div className="flex flex-wrap justify-center gap-14 my-6">
         <Link href="/" className="inline-block text-sm text-light-accent dark:text-dark-accent hover:underline">
             &larr; Voltar à Página Inicial
         </Link>
         <Link href="/sobre" className="inline-block text-sm text-light-accent dark:text-dark-accent hover:underline">
-            &larr; Voltar para Sobre
+            Ir à área Sobre Mim &rarr;
         </Link>
     </div>
 );
@@ -33,6 +33,7 @@ export default function CurriculoPage() {
           frameBorder="0"
         />
       </div>
+      <BackButtons />
     </div>
   );
 }

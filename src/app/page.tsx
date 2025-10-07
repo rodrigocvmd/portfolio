@@ -37,6 +37,7 @@ const allSkills = [
 	"CI/CD (GitHub Actions)",
 	"Post CSS",
 	"React",
+	"Postman",
 	"Kanban",
 	"JavaScript (ES6+)",
 	"Context",
@@ -64,7 +65,7 @@ export default function HomePage() {
 	return (
 		<div className="space-y-8 sm:space-y-12">
 			{/* Hero Section */}
-			<section className="w-full py-12 sm:py-16 2xl:py-20">
+			<section className="section w-full py-4 sm:py-8 2xl:py-12">
 				<div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
 					<div className="mx-auto max-w-4xl">
 						<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl md:text-5xl 2xl:text-6xl py-4">
@@ -89,8 +90,8 @@ export default function HomePage() {
 			{/* Seção Sobre Mim */}
 			<section
 				id="sobre-mim"
-				className="container mx-auto w-full rounded-lg bg-light-secondary p-8 shadow-md dark:bg-dark-secondary sm:px-6 lg:px-8">
-				<div className="mx-auto max-w-4xl text-center">
+				className="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="mx-auto max-w-4xl rounded-lg bg-light-secondary p-8 text-center shadow-md dark:bg-dark-secondary">
 					<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl">
 						Um Pouco Sobre Mim
 					</h2>
@@ -114,7 +115,7 @@ export default function HomePage() {
 			</section>
 
 			{/* Seção Destaque de Projetos */}
-			<section id="destaque-projetos" className="py-12 sm:py-16 2xl:py-20">
+			<section id="destaque-projetos" className="py-4 sm:py-6 2xl:py-8">
 				<div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
 					<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl 2xl:text-5xl">
 						Projetos em Destaque
@@ -143,7 +144,7 @@ export default function HomePage() {
 						<Link
 							href="/projetos"
 							className="inline-block rounded-lg bg-light-accent px-7 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 text-base sm:text-lg">
-							Ver Todos os Projetos
+							Ver mais projetos
 						</Link>
 					</div>
 				</div>
@@ -152,7 +153,7 @@ export default function HomePage() {
 			{/* Seção Habilidades */}
 			<section
 				id="habilidades"
-				className="container mx-auto w-full rounded-xl bg-light-secondary py-8 shadow-md dark:bg-dark-secondary">
+				className="container mx-auto w-full rounded-xl bg-light-secondary py-4 shadow-md dark:bg-dark-secondary">
 				<div className="mx-auto max-w-4xl text-center mb-6">
 					<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl">
 						Principais Habilidades
@@ -182,7 +183,7 @@ export default function HomePage() {
 						id="curriculo"
 						className="flex h-full min-h-[300px] w-full flex-col justify-center rounded-lg border-2 border-light-secondary p-8 text-center shadow-md dark:border-dark-secondary">
 						<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl">
-							Consulte Meu Currículo
+							Veja meu Currículo
 						</h2>
 						<p className="mt-4 flex-grow text-base leading-relaxed text-light-text dark:text-dark-text sm:text-lg">
 							Acesse meu currículo completo para ver mais detalhes sobre minha formação, experiência
@@ -192,7 +193,7 @@ export default function HomePage() {
 							<Link
 								href="/curriculo"
 								className="inline-block rounded-lg border-2 border-light-accent px-7 py-2.5 font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-base sm:text-lg">
-								Veja Meu Currículo
+								Ver o Currículo
 							</Link>
 						</div>
 					</section>
@@ -201,7 +202,7 @@ export default function HomePage() {
 						id="contato"
 						className="flex h-full min-h-[300px] w-full flex-col justify-center rounded-lg bg-light-secondary p-8 text-center shadow-md dark:bg-dark-secondary">
 						<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text sm:text-4xl">
-							Entre em Contato
+							Entre em contato
 						</h2>
 						<p className="mt-4 flex-grow text-base leading-relaxed text-light-text dark:text-dark-text sm:text-lg">
 							Tem alguma pergunta ou proposta? Sinta-se à vontade para entrar em contato comigo.
@@ -210,7 +211,7 @@ export default function HomePage() {
 							<Link
 								href="/contato"
 								className="inline-block rounded-lg bg-light-accent px-7 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 text-base sm:text-lg">
-								Fale Comigo
+								Fale comigo
 							</Link>
 						</div>
 					</section>

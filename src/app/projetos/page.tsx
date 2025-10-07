@@ -10,12 +10,23 @@ export const metadata: Metadata = {
 // Dados para todos os projetos
 const allProjects = [
 	{
-		title: "EM DESENVOLVIMENTO",
-		stack: "(Full Stack)",
+		title: "Plataforma de Gestão e     Reserva de Ativos",
+		stack: "(Backend)",
 		description:
-			"Plataforma de marketplace imobiliário desenvolvida em React, com sistema completo de CRUD de anúncios e autenticação segura via Firebase (login convencional e Google OAuth). A interface, construída com Tailwind CSS, oferece uma experiência de usuário moderna e totalmente responsiva para a busca e o gerenciamento de imóveis.",
+			"API RESTful completa para um sistema de agendamento de recursos, com autenticação JWT, modelagem de dados relacional com Prisma e ambiente totalmente containerizado com Docker.",
 		imageUrl: "/images/imgSuporteUsuario.png",
-		technologies: ["Node.js", "Express", "MongoDB", "JWT", "Express", "MongoDB", "JWT", "Express", "MongoDB", "JWT"],
+		technologies: [
+			"Nest.js",
+			"TypeScript",
+			"Node.js",
+			"PostgreSQL",
+			"Prisma",
+			"JWT",
+			"Docker",
+			"Git",
+			"GitHub",
+			"Jest",
+		],
 		projectSlug: "projeto-reserva-de-recursos",
 		liveUrl: "https://suporte-ao-usuario.onrender.com/",
 		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
@@ -23,9 +34,9 @@ const allProjects = [
 	},
 	{
 		title: "Marketplace de Imóveis",
-		stack: "(Full Stack)",
+		stack: "(Full Stack com BaaS)",
 		description:
-			"Plataforma de marketplace imobiliário desenvolvida em React, com sistema completo de CRUD de anúncios e autenticação segura via Firebase (login convencional e Google OAuth). A interface, construída com Tailwind CSS, oferece uma experiência de usuário moderna e totalmente responsiva para a busca e o gerenciamento de imóveis.",
+			"Desenvolvi uma aplicação full stack consumindo serviços de Backend-as-a-Service (Firebase). Fui responsável pela modelagem dos dados no banco NoSQL (Firestore) e pela implementação das regras de segurança para proteger os dados dos usuários e anúncios.",
 		imageUrl: "/images/imgMarketPlaceImoveis.png",
 		technologies: [
 			"JavaScript (ES6+)",
@@ -54,7 +65,7 @@ const allProjects = [
 	},
 	{
 		title: "Sistema de Suporte ao Usuário",
-		stack: "(Full Stack)",
+		stack: "(Foco em Backend)",
 		description:
 			"Backend e API RESTful para um sistema de Help Desk, responsável por gerenciar o ciclo de vida de tickets de suporte. Implementa um sistema de autenticação robusto com JWT e middleware para proteção de rotas e dados sensíveis. A arquitetura garante comunicação segura, escalabilidade e tratamento de erros em tempo real com o frontend.",
 		imageUrl: "/images/imgSuporteUsuario.png",
@@ -77,39 +88,6 @@ const allProjects = [
 			"Gestão de Dados Sensíveis",
 			"Redux",
 			"Gerenciamento de Estado Global",
-		],
-		projectSlug: "projeto-suporte-usuario",
-		liveUrl: "https://suporte-ao-usuario.onrender.com/",
-		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
-	},
-	{
-		title: "Buscador GitHub",
-		stack: "(Frontend)",
-		description:
-			"Aplicação React que consome a API do GitHub para buscar e exibir perfis de usuários e seus repositórios. Utiliza React Router para navegação e um sistema avançado de gerenciamento de estado com Context API e Reducers. A interface é responsiva e possui tratamento de erros integrado para garantir uma ótima experiência ao usuário.",
-		imageUrl: "/images/buscador-github.png",
-		technologies: [
-			"React.js",
-			"JavaScript (ES6+)",
-			"HTML5",
-			"CSS3",
-			"API REST",
-			"React Router",
-			"React Hooks",
-			"Context API",
-			"useReducer",
-			"useState",
-			"useEffect",
-			"Gerenciamento de Estado Avançado",
-			"Single-Page Application (SPA)",
-			"Integração de APIs de Terceiros",
-			"Requisições Assíncronas",
-			"Promises (async/await)",
-			"Design Responsivo",
-			"Arquitetura Modular",
-			"Error Handling",
-			"Controle de Versão com Git/GitHub",
-			"Debugging",
 		],
 		projectSlug: "projeto-suporte-usuario",
 		liveUrl: "https://suporte-ao-usuario.onrender.com/",
@@ -157,7 +135,7 @@ export default function ProjetosPage() {
 				</h1>
 				<p className="mx-auto mt-4 max-w-3xl text-lg text-light-text/80 dark:text-dark-text/80 sm:text-xl 3xl:text-2xl">
 					Aqui você encontra uma seleção dos trabalhos que desenvolvi, demonstrando minhas
-					habilidades e vontade de criar soluções digitais eficientes.
+					habilidades e capacidade de criar soluções digitais eficientes.
 				</p>
 			</header>
 

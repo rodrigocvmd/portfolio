@@ -17,7 +17,18 @@ const allProjects = [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		],
 		imageUrl: "/images/imgMarketPlaceImoveis.png",
-		technologies: ["React", "Node.js", "TailwindCSS", "Git", "DaisyUI", "JavaScript", "Git", "DaisyUI", "JavaScript", "Git", "DaisyUI", "JavaScript"],
+		technologies: [
+			"Nest.js",
+			"TypeScript",
+			"Node.js",
+			"PostgreSQL",
+			"Prisma",
+			"JWT",
+			"Docker",
+			"Git",
+			"GitHub",
+			"Jest",
+		],
 		projectSlug: "projeto-reserva-de-recursos",
 		liveUrl: "",
 		repoUrl: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
@@ -242,17 +253,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 				/>
 			</div>
 
-			{project.inDevelopment && project.progress !== undefined && (
-				<div className="mb-8 max-w-4xl mx-auto">
-					<h3 className="text-center text-xl font-semibold mb-2">Progresso do Projeto</h3>
-					<div className="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
-						<div
-							className="bg-blue-600 h-4 rounded-full"
-							style={{ width: `${project.progress}%` }}></div>
-					</div>
-					<p className="text-center mt-2">{project.progress}% concluído</p>
-				</div>
-			)}
 
 			<div className="flex flex-wrap items-center justify-center gap-4 mb-10">
 				{project.liveUrl && !project.inDevelopment && (

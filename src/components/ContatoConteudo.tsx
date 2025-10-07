@@ -113,7 +113,6 @@ export default function ContatoConteudo() {
 
 			if (response.ok) {
 				setStatus("success");
-				setResponseMessage(data.message || "Mensagem enviada com sucesso!");
 				setFormData({ name: "", email: "", phone: "", message: "" }); // Limpa o formulário
 			} else {
 				setStatus("error");
@@ -483,11 +482,14 @@ export default function ContatoConteudo() {
 								{status === "loading" ? "Enviando..." : "Enviar Mensagem"}
 							</button>
 						</div>
-						{status !== "idle" && (
-							<p
-								className={`mt-4 text-center text-sm ${
-									status === "success" ? "text-green-500" : "text-red-500"
-								}`}>
+						{status === "success" && (
+							<div className="mt-4 text-center text-sm text-green-500">
+								<p>Mensagem enviada com sucesso!</p>
+								<p>Responderei assim que possível.</p>
+							</div>
+						)}
+						{status === "error" && (
+							<p className="mt-4 text-center text-sm text-red-500">
 								{responseMessage}
 							</p>
 						)}

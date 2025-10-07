@@ -27,7 +27,7 @@ const Navbar = () => {
 	const isHomePage = pathname === '/';
 
 	return (
-		<header className="sticky top-0 z-50 w-full mb-8 bg-light-primary/80 dark:bg-dark-primary/80 backdrop-blur-md shadow-sm">
+		<header className="sticky top-0 z-50 w-full mb-8 bg-light-secondary/80 dark:bg-dark-secondary/80 backdrop-blur-md shadow-xl">
 			<nav className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
 				{/* Logo ou Nome */}
 				<Link
@@ -90,7 +90,7 @@ const Navbar = () => {
 
 			{/* Menu Mobile Dropdown */}
 			{isMobileMenuOpen && (
-				<div className="absolute w-full bg-light-primary dark:bg-dark-primary shadow-lg md:hidden">
+				<div className="absolute w-full bg-light-secondary dark:bg-dark-secondary shadow-lg md:hidden">
 					<nav className="flex flex-col space-y-2 px-4 py-4">
 						{navLinks.map((link) => (
 							<Link key={`mobile-${link.href}`} href={link.href} onClick={handleMobileLinkClick} className="block rounded px-3 py-2 text-base font-medium text-light-text hover:bg-light-secondary hover:text-light-accent dark:text-dark-text dark:hover:bg-dark-secondary dark:hover:text-dark-accent">
