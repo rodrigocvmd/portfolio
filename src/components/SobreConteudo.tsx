@@ -255,25 +255,26 @@ export default function SobreConteudo() {
 									busca de uma oportunidade para integrar uma equipe onde eu possa aplicar todo o
 									conhecimento técnico que venho acumulando e contribuir para projetos desafiadores.
 									Se você busca um desenvolvedor com uma perspectiva única, focado em qualidade e
-									com uma enorme capacidade de aprendizado, convido você a explorar meus projetos ou
-									a entrar em contato diretamente.
+									com uma enorme capacidade de aprendizado, convido você a explorar meus&nbsp;
+									<Link
+										href="/projetos"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="underline hover:text-light-accent dark:hover:text-dark-accent transition-colors">
+										projetos
+									</Link>{" "}
+									ou a entrar em contato diretamente.
 								</p>
 							</div>
 							<div className="mt-8 flex flex-wrap justify-center gap-4">
 								<Link
-									href="/projetos"
-									className="inline-block rounded-lg bg-light-accent px-7 py-2.5 font-semibold text-dark-primary transition-colors hover:bg-opacity-80 text-base sm:text-lg">
-									Veja meus projetos
-								</Link>
-
-								<Link
 									href="/curriculo"
-									className="inline-block rounded-lg border-2 border-light-accent px-8 py-3 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-lg">
+									className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform text-lg hover:bg-opacity-80">
 									Veja meu Currículo
 								</Link>
 								<Link
 									href="/contato"
-									className="inline-block rounded-lg bg-light-accent px-8 py-3 text-center font-semibold text-dark-primary shadow-md transition-transform text-lg hover:bg-opacity-80">
+									className="inline-block rounded-lg border-2 border-light-accent px-8 py-3 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-lg">
 									Entre em Contato
 								</Link>
 							</div>
