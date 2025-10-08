@@ -32,7 +32,9 @@ const featuredProjects = [
 const allSkills = [
 	"TypeScript",
 	"Prisma (ORM)",
-	"Java",
+	"PostgreSQL",
+	"Next.js",
+	"Docker",
 	"Express.js",
 	"CI/CD (GitHub Actions)",
 	"Post CSS",
@@ -47,11 +49,10 @@ const allSkills = [
 	"Nest.js",
 	"MongoDB",
 	"Firebase",
-	"PostgreSQL",
-	"Next.js",
 	"Git & GitHub",
 	"HTML5",
 	"Vercel",
+	"Java",
 	"Netlify",
 	"Tailwind CSS",
 	"Redux (RTK)",
@@ -103,8 +104,9 @@ export default function HomePage() {
 							</p>
 							<p className="mt-5 text-base text-center leading-relaxed text-light-text dark:text-dark-text sm:text-lg 2xl:text-xl">
 								Vindo de uma carreira em Direito, trago uma capacidade analítica apurada e uma
-								obsessão por lógica e atenção aos detalhes para o mundo do código. Em busca de oportunidades para aplicar todo o conhecimento que venho adquirindo na construção de sistemas
-								backend resilientes e bem documentados.
+								obsessão por lógica e atenção aos detalhes para o mundo do código. Em busca de
+								oportunidades para aplicar todo o conhecimento que venho adquirindo na construção de
+								sistemas backend resilientes e bem documentados.
 							</p>
 						</div>
 						<div className="mt-6">

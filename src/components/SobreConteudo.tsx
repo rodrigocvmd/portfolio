@@ -40,6 +40,7 @@ const allSkills = [
 	{ title: "Prisma (ORM)", status: "Domínio", type: "Bancos de Dados" },
 	// Ferramentas & DevOps
 	{ title: "Git & GitHub", status: "Domínio", type: "Ferramentas & DevOps" },
+	{ title: "Docker", status: "Domínio", type: "Ferramentas & DevOps" },
 	{ title: "Postman", status: "Domínio", type: "Ferramentas & DevOps" },
 	{ title: "Vercel", status: "Domínio", type: "Ferramentas & DevOps" },
 	{ title: "Netlify", status: "Domínio", type: "Ferramentas & DevOps" },
