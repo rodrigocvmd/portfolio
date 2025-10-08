@@ -8,61 +8,70 @@ import { useState } from "react";
 const allProjects = [
 	{
 		title: "Em desenvolvimento",
-		stack: "(Full Stack)",
+		stack: "(Backend)",
 		description: [
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"Neste projeto, construí o backend completo para um sistema de agendamento de recursos, desenvolvendo uma API RESTful robusta e escalável com Nest.js. Meu principal objetivo foi criar uma arquitetura modular e segura, onde implementei um sistema de autenticação de ponta a ponta utilizando JSON Web Tokens (JWT) e Passport.js. Para garantir a integridade e a segurança das rotas, desenvolvi guards de autorização personalizados, como o OwnerGuard, que assegura que apenas os proprietários de uma reserva possam modificá-la, demonstrando meu cuidado com o controle de acesso e a proteção dos dados do usuário.",
+			"A gestão de dados foi um pilar central, onde utilizei o Prisma como ORM para modelar o banco de dados PostgreSQL e realizar consultas de forma type-safe e eficiente. Desenvolvi toda a lógica de negócio para os módulos de autenticação, usuários, recursos e reservas, aplicando validações rigorosas nos DTOs (Data Transfer Objects) com class-validator para garantir a consistência dos dados que entram na aplicação. Um dos desafios técnicos que solucionei foi a implementação de uma lógica para evitar conflitos de agendamento, garantindo que um recurso não possa ser reservado por múltiplos usuários no mesmo intervalo de tempo.",
+			"Para otimizar o ambiente de desenvolvimento e garantir a portabilidade da aplicação, utilizei Docker e Docker Compose para containerizar toda a aplicação e o banco de dados. Essa abordagem não apenas simplificou a configuração do ambiente, mas também assegurou a consistência entre as fases de desenvolvimento, teste e produção. A execução deste projeto solidificou minhas competências em desenvolvimento backend com Node.js e Nest.js, design de APIs RESTful, modelagem de dados relacionais e práticas de DevOps, resultando em uma aplicação segura, performática e pronta para integração.",
 		],
-		imageUrl: "/images/imgMarketPlaceImoveis.png",
+		imageUrl: "/images/imgTempPgra.png",
 		technologies: [
-			"Nest.js",
 			"TypeScript",
 			"Node.js",
+			"Nest.js",
+			"Prisma ORM",
 			"PostgreSQL",
-			"Prisma",
-			"JWT",
 			"Docker",
-			"Git",
-			"GitHub",
+			"Docker Compose",
+			"RESTful API Design",
+			"Autenticação e Autorização",
+			"JSON Web Tokens (JWT)",
+			"Passport.js",
+			"Arquitetura Modular",
+			"Test-Driven Development (TDD)",
 			"Jest",
+			"Supertest (E2E Testing)",
+			"Data Validation (class-validator)",
+			"Controle de Acesso (Guards)",
+			"Dependency Injection",
+			"Modelagem de Dados Relacional",
+			"Containerização",
 		],
 		projectSlug: "projeto-reserva-de-recursos",
-		liveUrl: "",
-		repoUrl: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
+		liveUrl: "#",
+		repoUrl: "https://github.com/rodrigocvmd/pgra-backend",
 		inDevelopment: true,
-		progress: 50,
+		// progress: 50,
 	},
 	{
 		title: "Marketplace de Imóveis",
 		stack: "(Full Stack)",
 		description: [
 			"Neste projeto, desenvolvi uma plataforma de marketplace imobiliário completa e robusta, utilizando React para construir uma Single-Page Application (SPA) dinâmica e de alta performance. O objetivo central foi criar uma experiência de usuário intuitiva e fluida, desde a busca de imóveis até o gerenciamento de anúncios. Para isso, orquestrei um ecossistema de tecnologias modernas, empregando Tailwind CSS e DaisyUI para criar uma interface responsiva e esteticamente agradável, que garante consistência visual e usabilidade em qualquer dispositivo. A interatividade foi enriquecida com a biblioteca Swiper, implementada para exibir listagens em destaque de forma elegante e engajadora.",
-			"Para garantir a segurança e a integridade dos dados, implementei um sistema de autenticação multifacetado com o Firebase Authentication. A solução suporta tanto o cadastro tradicional (email e senha) quanto a autenticação social via Google (OAuth), direcionando os usuários para rotas protegidas através de componentes PrivateRoute customizados. A persistência e o gerenciamento dos dados dos anúncios foram realizados no Cloud Firestore, o banco de dados NoSQL do Firebase, onde estruturei as informações para permitir operações CRUD (criação, leitura, edição e exclusão) de forma eficiente e escalável.",
+			"Para garantir a segurança e a integridade dos dados, implementei um sistema de autenticação multifacetado com o Firebase Authentication. A solução suporta tanto o cadastro tradicional (email e senha) quanto a autenticação social via Google (OAuth), direcionando os usuários para rotas protegidas através de componentes PrivateRoute customizados, que desenvolvi utilizando hooks para verificar o status da autenticação em tempo real. A persistência e o gerenciamento dos dados dos anúncios foram realizados no Cloud Firestore, o banco de dados NoSQL do Firebase, onde estruturei as informações para permitir operações CRUD (criação, leitura, edição e exclusão) de forma eficiente e escalável.",
 			"A execução deste projeto solidificou competências cruciais em arquitetura de front-end e na integração de serviços de Backend-as-a-Service (BaaS). Superar desafios como o gerenciamento de estado complexo durante o ciclo de autenticação e a otimização de consultas ao Firestore aprimorou minhas habilidades em React Hooks, componentização e práticas de desenvolvimento seguro. O resultado é uma aplicação web funcional, escalável e pronta para o mercado, que demonstra minha capacidade de traduzir requisitos de negócio em soluções técnicas eficazes e com foco na experiência do usuário.",
 		],
 		imageUrl: "/images/imgMarketPlaceImoveis.png",
 		technologies: [
 			"JavaScript (ES6+)",
 			"React.js",
-			"Node.js",
+			"React Router",
+			"React Hooks",
+			"Firebase",
+			"Firestore",
+			"Firebase Authentication",
+			"Google OAuth 2.0",
 			"Tailwind CSS",
+			"DaisyUI",
 			"HTML5",
 			"CSS3",
-			"DaisyUI",
-			"Design Responsivo (Mobile-First)",
-			"UI/UX Design",
-			"Component-Based Architecture",
-			"Swiper.js",
-			"Custom Hooks",
-			"Gerenciamento de Estado Global",
-			"Private Routes",
-			"Firebase",
-			"Google OAuth 2.0",
 			"Single-Page Applications (SPA)",
-			"Integração de APIs e Serviços Externos",
+			"Design Responsivo (Mobile-First)",
+			"Component-Based Architecture",
+			"Gerenciamento de Estado",
+			"CRUD Operations",
+			"Swiper.js",
+			"Leaflet",
 			"Controle de Versão com Git",
 		],
 		projectSlug: "projeto-marketplace-imoveis",
@@ -73,32 +82,31 @@ const allProjects = [
 		title: "Sistema de Suporte ao Usuário",
 		stack: "(Full Stack)",
 		description: [
-			"Neste projeto, projetei e implementei a arquitetura de backend completa para um sistema de suporte ao cliente, focando em escalabilidade, segurança e performance. Desenvolvi uma API RESTful como núcleo da aplicação, responsável por orquestrar toda a lógica de negócio, incluindo o ciclo de vida de tickets de suporte — desde a abertura e categorização até o acompanhamento e a resolução. A comunicação entre cliente e servidor foi protegida com um sistema de autenticação baseado em JWT (JSON Web Tokens), garantindo que todas as transações de dados fossem seguras e que o acesso aos recursos da API fosse rigorosamente controlado.",
-
-			"A arquitetura de segurança foi um pilar central, materializada através de um pipeline de middleware customizado. Este pipeline intercepta cada requisição para validar o token de autenticação, verificar permissões e proteger rotas críticas, garantindo a integridade e a confidencialidade dos dados dos usuários. Além da autenticação, construí um sistema robusto de tratamento de erros e logging, projetado para fornecer feedback instantâneo e claro ao frontend. Essa abordagem não só melhora a experiência do usuário com notificações em tempo real, mas também facilita a depuração e a manutenção do sistema no lado do servidor.",
-
-			"Este projeto foi fundamental para consolidar minha expertise em design de sistemas backend e na implementação de padrões de segurança modernos. A experiência demonstra minha proficiência na criação de APIs RESTful eficientes, na gestão de autenticação e autorização em ambientes de produção e na construção de uma lógica de servidor que é ao mesmo tempo confiável e escalável. O resultado é um backend que não apenas funciona como a espinha dorsal da aplicação, mas que também agrega valor ao garantir performance, segurança e uma base sólida para futuras expansões.",
+			"Neste projeto, desenvolvi uma aplicação full-stack de suporte ao cliente, utilizando a stack MERN para criar uma solução completa e integrada. No frontend, construí uma interface reativa e intuitiva com React, onde os usuários podem se registrar, autenticar e gerenciar seus tickets de suporte. Utilizei o Redux Toolkit para gerenciar o estado global da aplicação de forma centralizada e previsível, simplificando a comunicação entre componentes e a manipulação de dados assíncronos, como o status dos tickets e as informações do usuário logado. A navegação foi implementada com React Router, incluindo a criação de rotas protegidas que garantem que apenas usuários autenticados possam acessar áreas restritas do sistema.",
+			"No backend, desenvolvi uma API RESTful robusta com Node.js e Express, responsável por toda a lógica de negócio. Modelei os dados utilizando Mongoose para interagir com o banco de dados NoSQL MongoDB, definindo schemas para usuários, tickets e notas. O desafio principal foi implementar um sistema de autenticação seguro, que solucionei com JSON Web Tokens (JWT). Criei middlewares de autenticação para proteger as rotas da API, assegurando que apenas usuários autorizados pudessem criar, visualizar e modificar tickets, garantindo a integridade e a segurança dos dados.",
+			"A integração entre o frontend e o backend foi um ponto crucial do projeto, onde utilizei o Axios para realizar as requisições HTTP e o Redux Toolkit Thunk para gerenciar as chamadas assíncronas à API. Este projeto solidificou minhas habilidades em desenvolvimento full-stack, desde a criação da interface do usuário com React até a implementação de uma API segura e eficiente com Node.js e Express. O resultado é uma aplicação funcional e coesa, que demonstra minha capacidade de construir sistemas completos e prontos para o uso.",
 		],
 		imageUrl: "/images/imgSuporteUsuario.png",
 		technologies: [
 			"JavaScript (ES6+)",
 			"React.js",
+			"React Hooks",
+			"Redux Toolkit",
+			"React Router",
 			"Node.js",
-			"Tailwind CSS",
-			"HTML5",
-			"CSS3",
-			"API RESTful",
-			"Design de API",
-			"JSON Web Tokens",
-			"Middlewares",
-			"Proteção de Rotas",
-			"Server-Side Logic",
-			"Gerenciamento de Estado",
-			"Error Handling",
-			"Notificações Push",
-			"Gestão de Dados Sensíveis",
-			"Redux",
+			"Express.js",
+			"MongoDB",
+			"Mongoose",
+			"RESTful API Design",
+			"JSON Web Tokens (JWT)",
+			"Autenticação e Autorização",
+			"Middleware",
 			"Gerenciamento de Estado Global",
+			"Desenvolvimento Full-Stack (MERN)",
+			"Axios",
+			"bcryptjs",
+			"Component-Based Architecture",
+			"Controle de Versão com Git",
 		],
 		projectSlug: "projeto-suporte-usuario",
 		liveUrl: "https://suporte-ao-usuario.onrender.com/",
@@ -108,17 +116,34 @@ const allProjects = [
 		title: "Feedback Application",
 		stack: "(Frontend)",
 		description: [
-			"Este projeto destaca-se pelo desenvolvimento de um backend robusto e eficiente, responsável por gerenciar toda a lógica de suporte ao usuário, abertura e acompanhamento de tickets/ocorrências e seus respectivos estados de resolução.",
-			"A criação e integração de uma API RESTful foram essenciais para garantir uma comunicação fluida entre o frontend e o backend, proporcionando operações seguras e em tempo real. O sistema de autenticação foi desenvolvido utilizando JWT (JSON Web Tokens), garantindo que cada solicitação enviada pelos usuários estivesse devidamente autenticada e autorizada.",
-			"Além disso, as rotas protegidas, gerenciadas pelo backend, asseguram que apenas usuários autenticados possam acessar áreas sensíveis da aplicação, garantindo a segurança e integridade dos dados. O maior desafio deste projeto foi a implementação de uma lógica sólida no server side para autenticação e autorização de usuários, aliada à gestão do estado global via Redux no frontend.",
-			"No backend, foi essencial desenvolver e estruturar um sistema de middleware para verificar tokens de autenticação em cada requisição e proteger as rotas privadas. Também foi fundamental implementar um sistema de registro e tratamento de erros que possibilitasse feedback em tempo real para o usuário, fornecendo respostas claras e imediatas por meio de notificações. Esta abordagem resultou em uma aplicação com um backend confiável, escalável e seguro.",
-			"Este projeto foi um marco no meu aprendizado sobre o desenvolvimento de backend, contribuindo significativamente para minha expertise em autenticação e roteamento seguro. A construção de um sistema backend escalável e seguro me ensinou lições valiosas sobre a importância da arquitetura e da proteção de dados sensíveis. O backend não só facilitou a interação do usuário com o sistema, mas também garantiu que as operações fossem realizadas de maneira segura, rápida e eficiente, resultando em uma aplicação que oferece tanto uma experiência de uso otimizada quanto de segurança.",
+			"Neste projeto, desenvolvi um sistema de feedback interativo e dinâmico, utilizando React para criar uma interface de usuário fluida e responsiva. O objetivo principal foi construir uma aplicação que permitisse o gerenciamento completo de avaliações em tempo real, implementando as funcionalidades de CRUD (Create, Read, Update, Delete) de forma intuitiva. Para enriquecer a experiência do usuário, integrei a biblioteca Framer Motion, que me permitiu adicionar animações elegantes nas transições e interações, tornando a navegação mais envolvente e visualmente agradável.",
+			"O maior desafio técnico foi o gerenciamento do estado global da aplicação. Para solucioná-lo, utilizei a Context API do React em conjunto com Hooks para criar um FeedbackContext. Essa abordagem permitiu o compartilhamento de dados e funções entre os componentes de forma eficiente, centralizando a lógica de adicionar, editar e excluir feedbacks sem a necessidade de bibliotecas externas de gerenciamento de estado. Isso garantiu que a interface reagisse de forma consistente às ações do usuário.",
+			"A execução deste projeto aprimorou minhas habilidades em arquitetura de componentes React, gerenciamento de estado global e na implementação de interfaces ricas e animadas. Ao superar os desafios de manter a consistência dos dados durante as operações de CRUD e transições de UI, demonstrei minha capacidade de construir aplicações front-end robustas, escaláveis e focadas na experiência do usuário. O resultado é uma aplicação funcional, performática e com um design moderno.",
 		],
 		imageUrl: "/images/feedback.png",
-		technologies: ["Node.js", "Express", "MongoDB", "JWT"],
-		projectSlug: "projeto-suporte-usuario",
-		liveUrl: "https://suporte-ao-usuario.onrender.com/",
-		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
+		technologies: [
+			"React.js",
+			"React Hooks",
+			"Context API",
+			"State Management",
+			"React Router",
+			"Framer Motion",
+			"JavaScript (ES6+)",
+			"HTML5",
+			"CSS3",
+			"Component-Based Architecture",
+			"CRUD Operations",
+			"UI/UX Design",
+			"Animações de UI",
+			"Design Responsivo",
+			"JSON Server",
+			"React Icons",
+			"prop-types",
+			"Controle de Versão com Git",
+		],
+		projectSlug: "feedback-app",
+		liveUrl: "https://main--projeto-feedback.netlify.app/",
+		repoUrl: "https://github.com/rodrigocvmd/feedback-app",
 	},
 	{
 		title: "Buscador Github",
@@ -187,8 +212,8 @@ const allProjects = [
 			"Controle de Versão com Git/GitHub",
 		],
 		projectSlug: "feedback-app",
-		liveUrl: "https://suporte-ao-usuario.onrender.com/",
-		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
+		liveUrl: "https://main--projeto-feedback.netlify.app/",
+		repoUrl: "https://https://github.com/rodrigocvmd/feedback-app",
 	},
 ];
 
@@ -196,10 +221,12 @@ const getProjectDetails = (slug: string) => {
 	return allProjects.find((p) => p.projectSlug === slug);
 };
 
-const BackButton = () => (
+const BackButton = ({ className }: { className?: string }) => (
 	<Link
 		href="/projetos"
-		className="inline-block text-lg text-light-accent dark:text-dark-accent hover:underline mb-8 font-semibold">
+		className={`inline-block text-lg text-light-accent dark:text-dark-accent hover:underline font-semibold ${
+			className || ""
+		}`}>
 		&larr; Voltar aos Projetos
 	</Link>
 );
@@ -219,11 +246,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 		return <div className="text-center py-10">Projeto não encontrado.</div>;
 	}
 
-	const visibleTechnologies = showAllTech ? project.technologies : project.technologies.slice(0, 8);
+	const visibleTechnologies = showAllTech
+		? project.technologies
+		: project.technologies.slice(0, 8);
 
 	return (
 		<div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
-			<BackButton />
+			<BackButton className="mb-8" />
 
 			<header className="mb-8 text-center">
 				<h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl">
@@ -253,17 +282,26 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 				/>
 			</div>
 
-
 			<div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-				{project.liveUrl && !project.inDevelopment && (
-					<Link
-						href={project.liveUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="inline-block rounded-lg bg-light-accent px-10 py-4 text-center font-semibold text-dark-primary shadow-md transition-transform hover:scale-105 text-xl">
-						Ver Online
-					</Link>
-				)}
+				{project.liveUrl &&
+					(project.inDevelopment ? (
+						<div className="relative group/tooltip">
+							<div className="inline-block rounded-lg bg-gray-400 px-10 py-4 text-center font-semibold text-gray-600 shadow-md cursor-not-allowed text-xl">
+								Ver Online
+							</div>
+							<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max whitespace-nowrap bg-gray-800 text-white text-xs font-semibold rounded-md py-1 px-3 opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none">
+								Desenvolvimento em curso
+							</div>
+						</div>
+					) : (
+						<Link
+							href={project.liveUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-block rounded-lg bg-light-accent px-10 py-4 text-center font-semibold text-dark-primary shadow-md transition-transform hover:scale-105 text-xl">
+							Ver Online
+						</Link>
+					))}
 				{project.repoUrl && (
 					<Link
 						href={project.repoUrl}
@@ -277,7 +315,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
 			<section className="mb-12">
 				<h2 className="font-heading text-2xl font-bold text-light-text dark:text-dark-text mb-4 text-center">
-					Tecnologias Utilizadas
+					Tecnologias e Habilidades Aplicadas
 				</h2>
 				<div className="flex flex-wrap justify-center gap-3">
 					{visibleTechnologies.map((tech) => (
@@ -306,7 +344,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 				))}
 			</div>
 
-			<div className="mt-12 pt-8 border-t border-light-secondary dark:border-dark-secondary">
+			<div className="mt-8 pt-4 border-t border-light-secondary dark:border-dark-secondary">
 				<BackButton />
 			</div>
 		</div>
