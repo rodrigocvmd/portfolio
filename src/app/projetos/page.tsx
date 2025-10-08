@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const allProjects = [
 	{
 		title: "Plataforma de Gestão de Ativos",
-		stack: "(Backend)",
+		stack: "Backend",
 		description:
 			"API RESTful robusta para um sistema de agendamento de recursos, construída com Nest.js e TypeScript. A arquitetura modular implementa autenticação com JWT e Passport.js, gerenciamento de dados com Prisma ORM e PostgreSQL, e um ambiente containerizado com Docker, garantindo escalabilidade e segurança da aplicação.",
 		imageUrl: "/images/imgTempPgra.png",
@@ -44,7 +44,7 @@ const allProjects = [
 	},
 	{
 		title: "Marketplace de Imóveis",
-		stack: "(Full Stack com BaaS)",
+		stack: "Full Stack com BaaS",
 		description:
 			"Plataforma de marketplace imobiliário desenvolvida com React e Firebase, oferecendo uma experiência de usuário completa. A aplicação implementa autenticação segura (email/senha e Google OAuth), operações CRUD para anúncios, e uma interface responsiva e moderna, construída com Tailwind CSS e DaisyUI para garantir usabilidade em qualquer dispositivo.",
 		imageUrl: "/images/imgMarketPlaceImoveis.png",
@@ -76,7 +76,7 @@ const allProjects = [
 	},
 	{
 		title: "Sistema de Suporte ao Usuário",
-		stack: "(Foco em Backend)",
+		stack: "Backend",
 		description:
 			"Aplicação full-stack de help desk construída com a stack MERN (MongoDB, Express, React, Node.js). O sistema permite a autenticação de usuários com JWT, criação e gerenciamento de tickets de suporte de forma sólida, e a adição de notas. O estado global no frontend é gerenciado de forma eficiente e intuitiva com Redux Toolkit.",
 		imageUrl: "/images/imgSuporteUsuario.png",
@@ -107,7 +107,7 @@ const allProjects = [
 	},
 	{
 		title: "Feedback App",
-		stack: "(Frontend)",
+		stack: "Frontend",
 		description:
 			"Aplicação de Feedback desenvolvida em React, que permite aos usuários adicionar, editar e excluir avaliações em tempo real. Utiliza a Context API para um gerenciamento de estado global eficiente, Framer Motion para animações fluidas e React Router para a navegação, resultando em uma interface dinâmica e responsiva.",
 		imageUrl: "/images/feedback.png",

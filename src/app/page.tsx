@@ -8,7 +8,7 @@ import { useRef } from "react";
 
 const featuredProjects = [
 	{
-		title: "Marketplace de Imóveis (Full Stack)",
+		title: "Marketplace de Imóveis",
 		description:
 			"Plataforma completa para listagem de imóveis com CRUD, autenticação de usuários (Email/Senha, Google OAuth) e interface responsiva.",
 		imageUrl: "/images/imgMarketPlaceImoveis.png",
@@ -16,9 +16,10 @@ const featuredProjects = [
 		projectSlug: "projeto-marketplace-imoveis",
 		liveUrl: "https://marketplace-de-imoveis.vercel.app/",
 		repoUrl: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
+		stack: "Full Stack",
 	},
 	{
-		title: "Sistema de Suporte ao Usuário (Full Stack)",
+		title: "App Suporte ao Usuário",
 		description:
 			"Aplicação de tickets de suporte com backend robusto (API RESTful) e frontend interativo para gerenciamento de solicitações.",
 		imageUrl: "/images/imgSuporteUsuario.png",
@@ -26,6 +27,7 @@ const featuredProjects = [
 		projectSlug: "projeto-suporte-usuario",
 		liveUrl: "https://suporte-ao-usuario.onrender.com/",
 		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
+		stack: "Backend",
 	},
 ];
 
@@ -138,6 +140,7 @@ export default function HomePage() {
 									projectSlug={project.projectSlug}
 									liveUrl={project.liveUrl}
 									repoUrl={project.repoUrl}
+									stack={project.stack}
 								/>
 							))
 						) : (

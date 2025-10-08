@@ -62,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						{title}
 					</h3>
 				</Link>
-				<p className="text-lg font-semibold font-heading text-light-text dark:text-dark-text mb-3">
+				<p className="text-xl font-semibold font-heading text-light-text dark:text-dark-text mb-3">
 					{stack}
 				</p>
 				<div className="mb-4">
