@@ -234,7 +234,7 @@ export default function SobreConteudo() {
 									de ambientes de desenvolvimento consistentes com Docker. Meus projetos,
 									disponíveis no&nbsp;
 									<Link
-										href={contacts.repo}
+										href={contacts.github}
 										target="_blank"
 										rel="noopener noreferrer"
 										className="underline hover:text-light-accent dark:hover:text-dark-accent transition-colors">
@@ -259,7 +259,7 @@ export default function SobreConteudo() {
 									com uma enorme capacidade de aprendizado, convido você a explorar meus&nbsp;
 									<Link
 										href="/projetos"
-										target="_blank"
+										target=""
 										rel="noopener noreferrer"
 										className="underline hover:text-light-accent dark:hover:text-dark-accent transition-colors">
 										projetos
