@@ -33,7 +33,7 @@ const Navbar = () => {
 				<Link
 					href="/"
 					className="text-2xl md:text-3xl font-bold font-heading text-light-text dark:text-dark-text transition-colors hover:text-light-accent dark:hover:text-dark-accent">
-					Portfólio Web
+					Portfólio | Rodrigo
 				</Link>
 
 				{/* Links de Navegação - Desktop */}
