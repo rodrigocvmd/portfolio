@@ -7,14 +7,14 @@ import { useState } from "react";
 
 const allProjects = [
 	{
-		title: "Em desenvolvimento",
+		title: "Plataforma de Gerenciamento de Recursos",
 		stack: "(Backend)",
 		description: [
-			"Neste projeto, construí o backend completo para um sistema de agendamento de recursos, desenvolvendo uma API RESTful robusta e escalável com Nest.js. Meu principal objetivo foi criar uma arquitetura modular e segura, onde implementei um sistema de autenticação de ponta a ponta utilizando JSON Web Tokens (JWT) e Passport.js. Para garantir a integridade e a segurança das rotas, desenvolvi guards de autorização personalizados, como o OwnerGuard, que assegura que apenas os proprietários de uma reserva possam modificá-la, demonstrando meu cuidado com o controle de acesso e a proteção dos dados do usuário.",
-			"A gestão de dados foi um pilar central, onde utilizei o Prisma como ORM para modelar o banco de dados PostgreSQL e realizar consultas de forma type-safe e eficiente. Desenvolvi toda a lógica de negócio para os módulos de autenticação, usuários, recursos e reservas, aplicando validações rigorosas nos DTOs (Data Transfer Objects) com class-validator para garantir a consistência dos dados que entram na aplicação. Um dos desafios técnicos que solucionei foi a implementação de uma lógica para evitar conflitos de agendamento, garantindo que um recurso não possa ser reservado por múltiplos usuários no mesmo intervalo de tempo.",
-			"Para otimizar o ambiente de desenvolvimento e garantir a portabilidade da aplicação, utilizei Docker e Docker Compose para containerizar toda a aplicação e o banco de dados. Essa abordagem não apenas simplificou a configuração do ambiente, mas também assegurou a consistência entre as fases de desenvolvimento, teste e produção. A execução deste projeto solidificou minhas competências em desenvolvimento backend com Node.js e Nest.js, design de APIs RESTful, modelagem de dados relacionais e práticas de DevOps, resultando em uma aplicação segura, performática e pronta para integração.",
+			"Neste projeto concluído, construí o backend completo para um sistema de agendamento de recursos, desenvolvendo uma API RESTful robusta e escalável com Nest.js. Meu principal objetivo foi criar uma arquitetura modular e segura, onde implementei um sistema de autenticação de ponta a ponta utilizando JSON Web Tokens (JWT) e Passport.js. Para garantir a integridade e a segurança das rotas, desenvolvi guards de autorização personalizados, como o OwnerGuard, que assegura que apenas os proprietários de uma reserva possam modificá-la, demonstrando meu cuidado com o controle de acesso e a proteção dos dados do usuário.",
+			"A gestão de dados foi um pilar central, onde utilizei o Prisma como ORM para modelar o banco de dados PostgreSQL e realizar consultas de forma type-safe e eficiente. Desenvolvi toda a lógica de negócio para os módulos de autenticação, usuários, recursos e reservas, aplicando validações rigorosas nos DTOs (Data Transfer Objects) com class-validator para garantir a consistência dos dados que entram na aplicação. Um dos desafios técnicos que solucionei é a implementação de uma lógica para evitar conflitos de agendamento, garantindo que um recurso não possa ser reservado por múltiplos usuários no mesmo intervalo de tempo.",
+			"Para otimizar o ambiente de desenvolvimento e garantir a portabilidade da aplicação, utilizei Docker e Docker Compose para containerizar toda a aplicação e o banco de dados. Essa abordagem não apenas simplifica a configuração do ambiente, mas também assegura a consistência entre as fases de desenvolvimento, teste e produção. A conclusão deste projeto consolidou minhas competências em desenvolvimento backend com Node.js e Nest.js, design de APIs RESTful, modelagem de dados relacionais e práticas de DevOps, resultando em uma aplicação segura, performática e pronta para integração.",
 		],
-		imageUrl: "/images/imgTempPgra.png",
+		imageUrl: "/images/imgPgra.png",
 		technologies: [
 			"TypeScript",
 			"Node.js",
@@ -38,16 +38,16 @@ const allProjects = [
 			"Containerização",
 		],
 		projectSlug: "projeto-reserva-de-recursos",
-		liveUrl: "#",
+		liveUrl: "https://pgra-backend.vercel.app/",
 		repoUrl: "https://github.com/rodrigocvmd/pgra-backend",
-		inDevelopment: true,
+		inDevelopment: false,
 		// progress: 50,
 	},
 	{
 		title: "Marketplace de Imóveis",
 		stack: "(Full Stack)",
 		description: [
-			"Neste projeto, desenvolvi uma plataforma de marketplace imobiliário completa e robusta, utilizando React para construir uma Single-Page Application (SPA) dinâmica e de alta performance. O objetivo central foi criar uma experiência de usuário intuitiva e fluida, desde a busca de imóveis até o gerenciamento de anúncios. Para isso, orquestrei um ecossistema de tecnologias modernas, empregando Tailwind CSS e DaisyUI para criar uma interface responsiva e esteticamente agradável, que garante consistência visual e usabilidade em qualquer dispositivo. A interatividade foi enriquecida com a biblioteca Swiper, implementada para exibir listagens em destaque de forma elegante e engajadora.",
+			"Desenvolvi uma plataforma de marketplace imobiliário completa e robusta, utilizando React para construir uma Single-Page Application (SPA) dinâmica e de alta performance. O objetivo central foi criar uma experiência de usuário intuitiva e fluida, desde a busca de imóveis até o gerenciamento de anúncios. Para isso, orquestrei um ecossistema de tecnologias modernas, empregando Tailwind CSS e DaisyUI para criar uma interface responsiva e esteticamente agradável, que garante consistência visual e usabilidade em qualquer dispositivo. A interatividade foi enriquecida com a biblioteca Swiper, implementada para exibir listagens em destaque de forma elegante e engajadora.",
 			"Para garantir a segurança e a integridade dos dados, implementei um sistema de autenticação multifacetado com o Firebase Authentication. A solução suporta tanto o cadastro tradicional (email e senha) quanto a autenticação social via Google (OAuth), direcionando os usuários para rotas protegidas através de componentes PrivateRoute customizados, que desenvolvi utilizando hooks para verificar o status da autenticação em tempo real. A persistência e o gerenciamento dos dados dos anúncios foram realizados no Cloud Firestore, o banco de dados NoSQL do Firebase, onde estruturei as informações para permitir operações CRUD (criação, leitura, edição e exclusão) de forma eficiente e escalável.",
 			"A execução deste projeto solidificou competências cruciais em arquitetura de front-end e na integração de serviços de Backend-as-a-Service (BaaS). Superar desafios como o gerenciamento de estado complexo durante o ciclo de autenticação e a otimização de consultas ao Firestore aprimorou minhas habilidades em React Hooks, componentização e práticas de desenvolvimento seguro. O resultado é uma aplicação web funcional, escalável e pronta para o mercado, que demonstra minha capacidade de traduzir requisitos de negócio em soluções técnicas eficazes e com foco na experiência do usuário.",
 		],
@@ -82,7 +82,7 @@ const allProjects = [
 		title: "Sistema de Suporte ao Usuário",
 		stack: "(Full Stack)",
 		description: [
-			"Neste projeto, desenvolvi uma aplicação full-stack de suporte ao cliente, utilizando a stack MERN para criar uma solução completa e integrada. No frontend, construí uma interface reativa e intuitiva com React, onde os usuários podem se registrar, autenticar e gerenciar seus tickets de suporte. Utilizei o Redux Toolkit para gerenciar o estado global da aplicação de forma centralizada e previsível, simplificando a comunicação entre componentes e a manipulação de dados assíncronos, como o status dos tickets e as informações do usuário logado. A navegação foi implementada com React Router, incluindo a criação de rotas protegidas que garantem que apenas usuários autenticados possam acessar áreas restritas do sistema.",
+			"Desenvolvimento de uma aplicação full-stack de suporte ao cliente, utilizando a stack MERN para criar uma solução completa e integrada. No frontend, construí uma interface reativa e intuitiva com React, onde os usuários podem se registrar, autenticar e gerenciar seus tickets de suporte. Utilizei o Redux Toolkit para gerenciar o estado global da aplicação de forma centralizada e previsível, simplificando a comunicação entre componentes e a manipulação de dados assíncronos, como o status dos tickets e as informações do usuário logado. A navegação foi implementada com React Router, incluindo a criação de rotas protegidas que garantem que apenas usuários autenticados possam acessar áreas restritas do sistema.",
 			"No backend, desenvolvi uma API RESTful robusta com Node.js e Express, responsável por toda a lógica de negócio. Modelei os dados utilizando Mongoose para interagir com o banco de dados NoSQL MongoDB, definindo schemas para usuários, tickets e notas. O desafio principal foi implementar um sistema de autenticação seguro, que solucionei com JSON Web Tokens (JWT). Criei middlewares de autenticação para proteger as rotas da API, assegurando que apenas usuários autorizados pudessem criar, visualizar e modificar tickets, garantindo a integridade e a segurança dos dados.",
 			"A integração entre o frontend e o backend foi um ponto crucial do projeto, onde utilizei o Axios para realizar as requisições HTTP e o Redux Toolkit Thunk para gerenciar as chamadas assíncronas à API. Este projeto solidificou minhas habilidades em desenvolvimento full-stack, desde a criação da interface do usuário com React até a implementação de uma API segura e eficiente com Node.js e Express. O resultado é uma aplicação funcional e coesa, que demonstra minha capacidade de construir sistemas completos e prontos para o uso.",
 		],
@@ -116,7 +116,7 @@ const allProjects = [
 		title: "Feedback Application",
 		stack: "(Frontend)",
 		description: [
-			"Neste projeto, desenvolvi um sistema de feedback interativo e dinâmico, utilizando React para criar uma interface de usuário fluida e responsiva. O objetivo principal foi construir uma aplicação que permitisse o gerenciamento completo de avaliações em tempo real, implementando as funcionalidades de CRUD (Create, Read, Update, Delete) de forma intuitiva. Para enriquecer a experiência do usuário, integrei a biblioteca Framer Motion, que me permitiu adicionar animações elegantes nas transições e interações, tornando a navegação mais envolvente e visualmente agradável.",
+			"Nesse projeto frontend, desenvolvi um sistema de feedback interativo e dinâmico, utilizando React para criar uma interface de usuário fluida e responsiva. O objetivo principal foi construir uma aplicação que permitisse o gerenciamento completo de avaliações em tempo real, implementando as funcionalidades de CRUD (Create, Read, Update, Delete) de forma intuitiva. Para enriquecer a experiência do usuário, integrei a biblioteca Framer Motion, que me permitiu adicionar animações elegantes nas transições e interações, tornando a navegação mais envolvente e visualmente agradável.",
 			"O maior desafio técnico foi o gerenciamento do estado global da aplicação. Para solucioná-lo, utilizei a Context API do React em conjunto com Hooks para criar um FeedbackContext. Essa abordagem permitiu o compartilhamento de dados e funções entre os componentes de forma eficiente, centralizando a lógica de adicionar, editar e excluir feedbacks sem a necessidade de bibliotecas externas de gerenciamento de estado. Isso garantiu que a interface reagisse de forma consistente às ações do usuário.",
 			"A execução deste projeto aprimorou minhas habilidades em arquitetura de componentes React, gerenciamento de estado global e na implementação de interfaces ricas e animadas. Ao superar os desafios de manter a consistência dos dados durante as operações de CRUD e transições de UI, demonstrei minha capacidade de construir aplicações front-end robustas, escaláveis e focadas na experiência do usuário. O resultado é uma aplicação funcional, performática e com um design moderno.",
 		],
@@ -145,8 +145,9 @@ const allProjects = [
 		liveUrl: "https://main--projeto-feedback.netlify.app/",
 		repoUrl: "https://github.com/rodrigocvmd/feedback-app",
 	},
+	// TODO
 	{
-		title: "Buscador Github",
+		title: "DELETAR Buscador Github",
 		stack: "(Frontend)",
 		description: [
 			"Desenvolvi uma Single-Page Application (SPA) em React para busca e visualização de perfis do GitHub, orquestrando uma integração direta com a API REST oficial da plataforma. Implementei o React Router para criar uma experiência de navegação fluida e intuitiva, permitindo que os usuários transitem de forma eficiente entre a busca, as páginas de perfil e os detalhes de repositórios. O sistema foi projetado com um robusto mecanismo de tratamento de erros, garantindo que a interface responda de maneira clara a cenários como perfis não encontrados ou falhas na comunicação com a API, o que assegura uma UX consistente e profissional.",
@@ -181,8 +182,9 @@ const allProjects = [
 		liveUrl: "https://suporte-ao-usuario.onrender.com/",
 		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
 	},
+	// TODO
 	{
-		title: "Feedback App (Frontend)",
+		title: "DELETAR Feedback App (Frontend)",
 		stack: "(Full Stack)",
 		description: [
 			"Desenvolvi uma aplicação SPA (Single-Page Application) interativa para avaliação de produtos e serviços, focada em uma experiência de usuário rica e dinâmica. Para isso, utilizei React como base, orquestrando tecnologias como o React Router para uma navegação fluida entre páginas, e a Framer Motion para implementar micro-interações e animações sofisticadas que guiam o usuário. A aplicação permite o gerenciamento completo de feedbacks através de operações CRUD (Create, Read, Update, Delete) executadas em tempo real na interface.",
@@ -246,9 +248,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 		return <div className="text-center py-10">Projeto não encontrado.</div>;
 	}
 
-	const visibleTechnologies = showAllTech
-		? project.technologies
-		: project.technologies.slice(0, 8);
+	const visibleTechnologies = showAllTech ? project.technologies : project.technologies.slice(0, 8);
 
 	return (
 		<div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">

@@ -14,7 +14,7 @@ const allProjects = [
 		stack: "Backend",
 		description:
 			"API RESTful robusta para um sistema de agendamento de recursos, construída com Nest.js e TypeScript. A arquitetura modular implementa autenticação com JWT e Passport.js, gerenciamento de dados com Prisma ORM e PostgreSQL, e um ambiente containerizado com Docker, garantindo escalabilidade e segurança da aplicação.",
-		imageUrl: "/images/imgTempPgra.png",
+		imageUrl: "/images/imgPgra.png",
 		technologies: [
 			"TypeScript",
 			"Node.js",
@@ -38,9 +38,9 @@ const allProjects = [
 			"Containerização",
 		],
 		projectSlug: "projeto-reserva-de-recursos",
-		liveUrl: "#",
+		liveUrl: "https://pgra-backend.vercel.app/",
 		repoUrl: "https://github.com/rodrigocvmd/pgra-backend",
-		inDevelopment: true,
+		inDevelopment: false,
 	},
 	{
 		title: "Marketplace de Imóveis",
@@ -142,7 +142,7 @@ export default function ProjetosPage() {
 		<div className="space-y-12 sm:space-y-16">
 			<header className="container mx-auto px-4 pt-8 text-center sm:px-6 lg:px-8">
 				<h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl md:text-6xl 3xl:text-7xl">
-					Meus Projetos
+					Alguns dos meus Projetos
 				</h1>
 				<p className="mx-auto mt-4 max-w-3xl text-lg text-light-text/80 dark:text-dark-text/80 sm:text-xl 3xl:text-2xl">
 					Aqui você encontra uma seleção de trabalhos que desenvolvi, demonstrando minhas
