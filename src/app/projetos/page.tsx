@@ -142,10 +142,10 @@ export default function ProjetosPage() {
 		<div className="space-y-12 sm:space-y-16">
 			<header className="container mx-auto px-4 pt-8 text-center sm:px-6 lg:px-8">
 				<h1 className="font-heading text-4xl font-bold text-light-text dark:text-dark-text sm:text-5xl md:text-6xl 3xl:text-7xl">
-					Alguns dos meus Projetos
+					Meus Projetos
 				</h1>
 				<p className="mx-auto mt-4 max-w-3xl text-lg text-light-text/80 dark:text-dark-text/80 sm:text-xl 3xl:text-2xl">
-					Aqui você encontra uma seleção de trabalhos que desenvolvi, demonstrando minhas
+					Aqui você encontra uma seleção variada de trabalhos que desenvolvi, demonstrando minhas
 					habilidades e capacidade de criar soluções digitais eficientes.
 				</p>
 			</header>
