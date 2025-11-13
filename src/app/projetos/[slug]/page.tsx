@@ -1,9 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import TechTag from "@/components/TechTag";
-import { useState } from "react";
+import TechList from "@/components/TechList";
 
 const allProjects = [
 	{
@@ -219,6 +217,12 @@ const allProjects = [
 	},
 ];
 
+export async function generateStaticParams() {
+	return allProjects.map((project) => ({
+		slug: project.projectSlug,
+	}));
+}
+
 const getProjectDetails = (slug: string) => {
 	return allProjects.find((p) => p.projectSlug === slug);
 };
@@ -234,21 +238,19 @@ const BackButton = ({ className }: { className?: string }) => (
 );
 
 interface ProjectPageProps {
-	params: {
+	params: Promise<{
 		slug: string;
-	};
+	}>;
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-	const { slug } = params;
+export default async function ProjectPage({ params }: ProjectPageProps) {
+	const { slug } = await params;
 	const project = getProjectDetails(slug);
-	const [showAllTech, setShowAllTech] = useState(false);
 
 	if (!project) {
 		return <div className="text-center py-10">Projeto não encontrado.</div>;
 	}
-
-	const visibleTechnologies = showAllTech ? project.technologies : project.technologies.slice(0, 8);
 
 	return (
 		<div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
@@ -313,25 +315,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 				)}
 			</div>
 
-			<section className="mb-12">
-				<h2 className="font-heading text-2xl font-bold text-light-text dark:text-dark-text mb-4 text-center">
-					Tecnologias e Habilidades Aplicadas
-				</h2>
-				<div className="flex flex-wrap justify-center gap-3">
-					{visibleTechnologies.map((tech) => (
-						<TechTag key={tech} name={tech} />
-					))}
-				</div>
-				{!showAllTech && project.technologies.length > 8 && (
-					<div className="text-center mt-4">
-						<button
-							onClick={() => setShowAllTech(true)}
-							className="text-light-accent dark:text-dark-accent font-semibold hover:underline">
-							Ver todas
-						</button>
-					</div>
-				)}
-			</section>
+			<TechList technologies={project.technologies} />
 
 			<div className="prose prose-lg max-w-4xl mx-auto dark:prose-invert text-justify space-y-4">
 				<h2 className="font-heading text-3xl font-bold text-light-text dark:text-dark-text mb-4 text-center">
