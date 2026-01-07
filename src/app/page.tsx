@@ -185,7 +185,7 @@ export default function HomePage() {
 				</div>
 			</section>
 
-			{/* Seções Currículo e Contato lado a lado */}
+			{/* Seções Currículo e Contato */}
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
 					<section

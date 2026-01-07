@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Modal from "./Modal"; // Importar o Modal
+import Modal from "./Modal";
 import Link from "next/link";
 
 const contacts = {
@@ -10,7 +10,7 @@ const contacts = {
 	github: "https://github.com/rodrigocvmd",
 	email: "mailto:rodrigocvmd@gmail.com",
 	whatsapp: "https://wa.me/5561999662404",
-	repo: "https://github.com/rodrigocvmd/meu-portfolio", // Atualizado
+	repo: "https://github.com/rodrigocvmd/meu-portfolio",
 };
 
 // --- DADOS ---

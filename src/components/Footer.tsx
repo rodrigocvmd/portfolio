@@ -6,13 +6,13 @@ import { MdOutlineEmail } from "react-icons/md";
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
-	// Definição dos links de contato para fácil manutenção
+	// Links de contato
 	const contacts = {
 		linkedin: "https://www.linkedin.com/in/rodrigocvmd/",
 		github: "https://github.com/rodrigocvmd",
 		email: "mailto:rodrigocvmd@gmail.com",
 		whatsapp: "https://wa.me/5561999662404",
-		repo: "https://github.com/rodrigocvmd/meu-portfolio", // Atualizado
+		repo: "https://github.com/rodrigocvmd/meu-portfolio",
 	};
 
 	return (

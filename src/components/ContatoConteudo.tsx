@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
-// Ícones SVG simples para copiar e verificado
+// Ícones SVG: copiar e check
 const CopyIcon = () => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"

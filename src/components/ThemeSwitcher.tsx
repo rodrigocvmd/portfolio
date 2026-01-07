@@ -13,13 +13,13 @@ const ThemeSwitcher = () => {
 	}, []);
 
 	if (!mounted) {
-		// Renderiza um placeholder ou nada para evitar mismatch de hidratação
-		return <div className="h-6 w-6" />; // Placeholder para manter o espaço
+		// Placeholder para manter o espaço
+		return <div className="h-6 w-6" />; 
 	}
 
 	const toggleTheme = () => {
-		// Alterna entre 'light' e 'dark'. Se o tema atual for 'system',
-		// ele usará o resolvedTheme para decidir qual será o próximo.
+		// Alterna entre 'light' e 'dark'. Caso o tema atual seja 'system',
+		// o resolvedTheme decide qual será o próximo.
 		const currentTheme = theme === "system" ? resolvedTheme : theme;
 		if (currentTheme === "dark") {
 			setTheme("light");

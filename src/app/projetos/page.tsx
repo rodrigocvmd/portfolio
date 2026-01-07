@@ -154,7 +154,7 @@ export default function ProjetosPage() {
 
 			<section className="container mx-auto px-4 sm:px-6 lg:px-8">
 				{allProjects.length > 0 ? (
-					// Grid adaptável que pode crescer para mais colunas em telas muito grandes
+					// Grid adaptável
 					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
 						{allProjects.map((project) => (
 							<ProjectCard

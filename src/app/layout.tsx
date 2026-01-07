@@ -43,12 +43,6 @@ export default function RootLayout({
 			<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
 				<body className="flex min-h-screen flex-col bg-light-primary text-light-text dark:bg-dark-primary dark:text-dark-text">
 					<Navbar />
-					{/*
-          A MUDANÇA ESTÁ AQUI:
-          Removemos as classes 'container mx-auto px-4 sm:px-6 lg:px-8' do <main>.
-          Agora ele é apenas um container flexível que cresce para preencher o espaço.
-          A responsabilidade pelo container de conteúdo passa para as páginas.
-        */}
 					<main className="flex-grow">{children}</main>
 					<Footer />
 				</body>
