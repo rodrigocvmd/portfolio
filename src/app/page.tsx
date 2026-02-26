@@ -8,6 +8,17 @@ import { useRef } from "react";
 
 const featuredProjects = [
 	{
+		title: "App Auto Defesa - IA",
+		description:
+			"SaaS jurídico para multas via Gemini AI, com checkout Stripe (Pix/Boleto), segurança App Check e integração total com o Firebase.",
+		imageUrl: "/images/auto-defesa.png",
+		technologies: ["Next.js", "Firebase", "Stripe API", "Git", "GCP/IA", "TypeScript"],
+		projectSlug: "auto-defesa",
+		liveUrl: "https://meuautodefesa.com.br/",
+		repoUrl: "https://github.com/rodrigocvmd/auto-defesa",
+		stack: "Full Stack",
+	},
+	{
 		title: "Marketplace de Imóveis",
 		description:
 			"Plataforma completa para listagem de imóveis com CRUD, autenticação de usuários (Email/Senha, Google OAuth) e interface responsiva.",
@@ -18,17 +29,17 @@ const featuredProjects = [
 		repoUrl: "https://github.com/rodrigocvmd/marketplace-de-imoveis",
 		stack: "Full Stack",
 	},
-	{
-		title: "App Suporte ao Usuário",
-		description:
-			"Aplicação de tickets de suporte com backend robusto (API RESTful) e frontend interativo para gerenciamento de solicitações.",
-		imageUrl: "/images/imgSuporteUsuario.png",
-		technologies: ["Node.js", "Express", "MongoDB", "JWT"],
-		projectSlug: "projeto-suporte-usuario",
-		liveUrl: "https://suporte-ao-usuario.onrender.com/",
-		repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
-		stack: "Backend",
-	},
+	// {
+	// 	title: "App Suporte ao Usuário",
+	// 	description:
+	// 		"Aplicação de tickets de suporte com backend robusto (API RESTful) e frontend interativo para gerenciamento de solicitações.",
+	// 	imageUrl: "/images/imgSuporteUsuario.png",
+	// 	technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+	// 	projectSlug: "projeto-suporte-usuario",
+	// 	liveUrl: "https://suporte-ao-usuario.onrender.com/",
+	// 	repoUrl: "https://github.com/rodrigocvmd/suporte-ao-usuario",
+	// 	stack: "Backend",
+	// },
 ];
 
 const allSkills = [
