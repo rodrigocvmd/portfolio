@@ -31,11 +31,11 @@ const allProjects = [
 			"Node.js",
 			"Tailwind CSS",
 		],
-		projectSlug: "auto-defesa",
-		liveUrl: "https://meuautodefesa.com.br",
-		repoUrl: "https://github.com/rodrigocvmd/auto-defesa",
-	},
-	{
+		                        projectSlug: "auto-defesa",
+		                        liveUrl: "https://meuautodefesa.com.br",
+		                        repoUrl: "https://github.com/rodrigocvmd/auto-defesa",
+		                        repoPrivate: true,
+		                },	{
 		title: "Plataforma de Gestão de Ativos",
 		stack: "Backend",
 		description:
@@ -190,12 +190,12 @@ export default function ProjetosPage() {
 								description={project.description}
 								imageUrl={project.imageUrl}
 								technologies={project.technologies}
-								projectSlug={project.projectSlug}
-								liveUrl={project.liveUrl}
-								repoUrl={project.repoUrl}
-								inDevelopment={project.inDevelopment}
-							/>
-						))}
+								                                                                projectSlug={project.projectSlug}
+								                                                                liveUrl={project.liveUrl}
+								                                                                repoUrl={project.repoUrl}
+								                                                                repoPrivate={project.repoPrivate}
+								                                                                inDevelopment={project.inDevelopment}
+								                                                        />						))}
 					</div>
 				) : (
 					<p className="text-center text-lg text-light-text dark:text-dark-text">

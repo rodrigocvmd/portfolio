@@ -16,6 +16,7 @@ interface ProjectCardProps {
 	liveUrl?: string;
 	repoUrl?: string;
 	inDevelopment?: boolean;
+	repoPrivate?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -28,6 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	liveUrl,
 	repoUrl,
 	inDevelopment,
+	repoPrivate,
 }) => {
 	const [showAllTech, setShowAllTech] = useState(false);
 
@@ -110,13 +112,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 							)}
 
 							{repoUrl && (
-								<Link
-									href={repoUrl}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="text-base text-light-text dark:text-dark-text hover:text-light-accent dark:hover:text-dark-accent transition-colors">
-									Repositório
-								</Link>
+								<div className="relative group/tooltip">
+									{repoPrivate ? (
+										<div className="text-base text-gray-500 cursor-not-allowed">
+											Repositório
+										</div>
+									) : (
+										<Link
+											href={repoUrl}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="text-base text-light-text dark:text-dark-text hover:text-light-accent dark:hover:text-dark-accent transition-colors">
+											Repositório
+										</Link>
+									)}
+									{repoPrivate && (
+										<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max max-w-[200px] bg-gray-800 text-white text-xs font-semibold rounded-md py-2 px-3 opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none text-center leading-tight">
+											O repositório deste projeto é privado por questões comerciais.
+										</div>
+									)}
+								</div>
 							)}
 						</div>
 					</div>

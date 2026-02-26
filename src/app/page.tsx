@@ -16,6 +16,7 @@ const featuredProjects = [
 		projectSlug: "auto-defesa",
 		liveUrl: "https://meuautodefesa.com.br/",
 		repoUrl: "https://github.com/rodrigocvmd/auto-defesa",
+		repoPrivate: true,
 		stack: "Full Stack",
 	},
 	{
@@ -151,6 +152,7 @@ export default function HomePage() {
 									projectSlug={project.projectSlug}
 									liveUrl={project.liveUrl}
 									repoUrl={project.repoUrl}
+									repoPrivate={project.repoPrivate}
 									stack={project.stack}
 								/>
 							))

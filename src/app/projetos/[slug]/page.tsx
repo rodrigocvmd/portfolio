@@ -39,6 +39,7 @@ const allProjects = [
 		projectSlug: "auto-defesa",
 		liveUrl: "https://meuautodefesa.com.br",
 		repoUrl: "https://github.com/rodrigocvmd/auto-defesa",
+		repoPrivate: true,
 	},
 	{
 		title: "Plataforma de Gerenciamento de Recursos",
@@ -341,13 +342,26 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 						</Link>
 					))}
 				{project.repoUrl && (
-					<Link
-						href={project.repoUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="inline-block rounded-lg border-2 border-light-accent px-10 py-4 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-xl">
-						Repositório
-					</Link>
+					<div className="relative group/tooltip">
+						{project.repoPrivate ? (
+							<div className="inline-block rounded-lg border-2 border-gray-400 px-10 py-4 text-center font-semibold text-gray-500 cursor-not-allowed text-xl">
+								Repositório
+							</div>
+						) : (
+							<Link
+								href={project.repoUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-block rounded-lg border-2 border-light-accent px-10 py-4 text-center font-semibold text-light-accent transition-colors hover:bg-light-accent hover:text-dark-primary dark:border-dark-accent dark:text-dark-accent dark:hover:bg-dark-accent dark:hover:text-dark-primary text-xl">
+								Repositório
+							</Link>
+						)}
+						{project.repoPrivate && (
+							<div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max max-w-[250px] bg-gray-800 text-white text-xs font-semibold rounded-md py-2 px-3 opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none text-center leading-tight">
+								O repositório deste projeto é privado por questões comerciais.
+							</div>
+						)}
+					</div>
 				)}
 			</div>
 
