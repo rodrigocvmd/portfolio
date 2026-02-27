@@ -372,7 +372,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 					Descrição do Projeto
 				</h2>
 				{project.description.map((paragraph, index) => (
-					<p className="indent-16" key={index}>
+					<p className="indent-10" key={index}>
 						{paragraph}
 					</p>
 				))}

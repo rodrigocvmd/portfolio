@@ -8,7 +8,7 @@ import { useRef } from "react";
 
 const featuredProjects = [
 	{
-		title: "App Auto Defesa - IA",
+		title: "App Auto Defesa",
 		description:
 			"SaaS jurídico para multas via Gemini AI, com checkout Stripe (Pix/Boleto), segurança App Check e integração total com o Firebase.",
 		imageUrl: "/images/auto-defesa.png",
