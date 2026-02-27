@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const allProjects = [
 	{
 		title: "Auto Defesa",
-		stack: "Fullstack",
+		stack: "Full Stack",
 		description:
 			"SaaS 'Auto Defesa', focado na automação de recursos de multas via IA. Desenvolvido com Next.js e Firebase, utiliza a API do Gemini para redação jurídica e Stripe para pagamentos. Infraestrutura robusta com Cloudflare e Firebase App Check no seu domínio, unindo engenharia de software moderna e segurança jurídica.",
 		imageUrl: "/images/auto-defesa.png",
@@ -70,7 +70,7 @@ const allProjects = [
 	},
 	{
 		title: "Marketplace de Imóveis",
-		stack: "Fullstack",
+		stack: "Full Stack",
 		description:
 			"Plataforma de marketplace imobiliário desenvolvida com React e Firebase, oferecendo uma experiência de usuário completa. A aplicação implementa autenticação segura (email/senha e Google OAuth), operações CRUD para anúncios, e uma interface responsiva e moderna, construída com Tailwind CSS e DaisyUI para garantir usabilidade em qualquer dispositivo.",
 		imageUrl: "/images/imgMarketPlaceImoveis.png",
